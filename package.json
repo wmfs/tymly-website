@@ -1,0 +1,36 @@
+{
+  "name": "@wmfs/tymly-website",
+  "version": "0.0.0-semantically-released",
+  "description": "Grabs metadata from a PostgreSQL database",
+  "author": "West Midlands Fire Service",
+  "homepage": "https://github.com/wmfs/pg-info#readme",
+  "keywords": [
+    "tymly",
+    "package",
+    "tymly.io"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wmfs/tymly-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wmfs/tymly-website/issues"
+  },
+  "main": "./lib/index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "nyc mocha && standard",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "semantic-release": "semantic-release"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
