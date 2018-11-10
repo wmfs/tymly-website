@@ -1,6 +1,6 @@
 # tymly-website
 
-> Grabs metadata from a PostgreSQL database
+> A dynamically generated, static website for Tymly
 
 ## <a name="install"></a>Install
 ```bash
