@@ -2,9 +2,10 @@
 home: true
 actionText: Get Started →
 actionLink: /guide/
+heroImage: /dino-reichmuth-115620-unsplash.jpg
 features:
 - title: Open Standards
-  details: "Tymly fundamentally separates the objectives of a digital service from the suppliers and technology which would traditionally deliver them. If that's not disruptive enough, these objectives are defined using open standards: opening-up a whole new world of collaborative working and interoperability."
+  details: "Tymly separates the purpose of a digital service from the suppliers and technology that usually deliver them. If that's not disruptive enough, these objectives are defined using open standards: opening-up a whole new world of collaborative working and interoperability."
 - title: Open Source
   details: Once all your digital-service objectives are written using a standard vocabulary, Tymly offers an Open Source platform to deliver them effortlessly throughout your organisation... and beyond! Built by a UK Fire Service, Tymly is designed to deploy digital capability into the most demanding of environments.
 - title: Open Ethos
