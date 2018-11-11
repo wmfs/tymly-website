@@ -1,13 +1,13 @@
 module.exports = {
   base: '/tymly-website/',
   title: 'Tymly',
-  description: 'Building better digital services',
+  description: 'An open and declarative enterprise platform',
   head: [
     ['link', {rel: 'icon', href: '/favicon.png'}]
   ],
   themeConfig: {
     repo: 'wmfs/tymly',
-    logo: '/favicon.png',
+    logo: '/tymly-motif.svg',
     search: true,
     searchMaxSuggestions: 10,
     repoLabel: 'GitHub',
