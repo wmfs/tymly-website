@@ -12,15 +12,23 @@ $ npm install tymly-website --save
 To serve a development site at http://localhost:8080/
 
 ``` bash
-$ npm run markdown:dev
+$ npm run docs:dev
 ```
 
 ## Build
 
-To build a site for use via Github Pages
+``` bash
+$ npm run docs:build
+```
+
+## Deploy
+
+* Bit of a WIP, but be in `tymly-website`
+
+Windows:
 
 ``` bash
-$ npm run markdown:build
+"scripts/deploy.bat"
 ```
 
 ## <a name="license"></a>License

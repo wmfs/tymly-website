@@ -23,8 +23,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "markdown:dev": "vuepress dev markdown",
-    "markdown:build": "vuepress build markdown"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "config": {
     "commitizen": {

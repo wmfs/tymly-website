@@ -11,11 +11,3 @@ features:
   details: As per government best practice, Tymly is built in-the-open on GitHub. Anyone is free to use and contribute to Tymly, helping make it capable of even bigger-and-better things. We've already had contributions from central government departments and even internet-giant Amazon!
 footer: Built with ❤ at West Midlands Fire Service
 ---
-
-## Getting Started
-
-Install:
-
-``` bash
-npm install @wmfs/tymly
-```
