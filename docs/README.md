@@ -4,11 +4,11 @@ actionText: Get Started →
 actionLink: /guide/
 heroImage: /dino-reichmuth-115620-unsplash.jpg
 features:
-- title: Open Standards
-  details: "Tymly separates the purpose of a digital service from the suppliers and technology that usually deliver them. If that's not disruptive enough, these objectives are defined using open standards: opening-up a whole new world of collaborative working and interoperability."
+- title: Fresh thinking
+  details: "Tymly is a software platform that takes a fresh approach to digital service delivery. Our configurable 'digital building blocks' bring many organisational efficiencies - compared with procuring systems or undertaking bespoke software development."
 - title: Open Source
-  details: Once all your digital-service objectives are written using a standard vocabulary, Tymly offers an Open Source platform to deliver them effortlessly throughout your organisation... and beyond! Built by a UK Fire Service, Tymly is designed to deploy digital capability into the most demanding of environments.
-- title: Open Ethos
-  details: As per government best practice, Tymly is built in-the-open on GitHub. Anyone is free to use and contribute to Tymly, helping make it capable of even bigger-and-better things. We've already had contributions from central government departments and even internet-giant Amazon!
+  details: "We build Tymly in the open. This means anyone is free to use and contribute to the code powering Tymly - helping make it capable of bigger and better things for the benefit of everyone. We've already had contributions from central government and even Amazon!"
+- title: Open Standards
+  details: Using Open Standards is a fundamental part of Tymly's design. We use standards to define form layout, data structure and workflow. This focus on openess helps breakdown barriers normally associated with collaboration and interoperability.
 footer: Built with ❤ at West Midlands Fire Service
 ---
