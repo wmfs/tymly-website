@@ -5,7 +5,7 @@ actionLink: /guide/
 heroImage: /dino-reichmuth-115620-unsplash.jpg
 features:
 - title: Fresh thinking
-  details: "Tymly is a software platform for delivering modern digital services. Our innovative 'digital building blocks' approach brings many efficiencies compared with procuring different systems or undertaking bespoke software development."
+  details: "Tymly is a software platform for delivering modern digital services. Our innovative 'digital building bricks' approach brings many efficiencies compared with procuring different systems or undertaking single-use software development."
 - title: Freedom
   details: In Tymly, the constituent parts of a digital service (its forms, data structures, workflows etc.) are all described using open standards. This means organisations can create, adapt and share digital service definitions independently of any supplier.
 - title: Open Source

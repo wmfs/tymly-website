@@ -1,8 +1,5 @@
 ---
-sidebarDepth: 0
+sidebar: auto
 ---
 
 # Reference
-
-Hello
-

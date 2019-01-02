@@ -1,7 +1,7 @@
 module.exports = {
   base: '/tymly-website/',
   title: 'Tymly',
-  description: 'Software for here and now.',
+  description: 'Ethically sourced software.',
   head: [
     ['link', {rel: 'icon', href: '/favicon.png'}]
   ],
@@ -16,6 +16,13 @@ module.exports = {
       {text: 'Guide', link: '/guide/'},
       {text: 'Reference', link: '/reference/'},
       {text: 'Community', link: '/community/'}
-    ]
+    ],
+    themeConfig: {
+      sidebar: [
+        '/',
+        '/Page 1',
+        '/Page 2'
+      ]
+    }
   }
 }
