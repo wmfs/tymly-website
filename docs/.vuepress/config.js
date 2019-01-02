@@ -1,7 +1,7 @@
 module.exports = {
   base: '/tymly-website/',
   title: 'Tymly',
-  description: 'Ethically sourced software.',
+  description: 'Software for here and now.',
   head: [
     ['link', {rel: 'icon', href: '/favicon.png'}]
   ],

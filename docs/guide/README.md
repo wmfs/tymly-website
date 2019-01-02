@@ -9,13 +9,15 @@ sidebarDepth: 2
 
 **Tymly (pronounced "_timely_") is an open source [low-code software platform](https://www.cio.com/article/3263392/application-development/what-is-low-code-development-a-lego-like-approach-to-building-software.html).**
 
-Low Code platforms allow digital services to be configured by subject-matter experts.
-The forms, data structures and logic which coalesce to make a digital service are mostly maintained using graphical tools in the Low Code world, removing the need to write code.
+::: tip Low Code Platforms
 
-::: tip Case Study
-Empowering organisations to conceive and grow their own digital services is proving to be a liberating thing.
+In the world of Low Code, the forms, data-schemas and logic which coalesce to form a digital service are mostly maintained using graphical tools, reducing the reliance on suppliers to write code.
 
+**Regardless of whether Tymly's flavour of low-code appeals or not, the uptake of Low Code is proving to be quite compelling:**
+
+* [Low-Code in the Post Office](https://www.governmentcomputing.com/local-government/news/the-post-office-follows-local-councils-down-low-code-route)
 * [Low-Code in Hackney Council](https://government.diginomica.com/2018/11/30/digital-success-through-low-code-at-hackney-council-focus-on-user-need/)
+* [Low-Code in Adur and Worthing Councils](https://www.ukauthority.com/articles/a-low-code-platform-for-local-government/)
 
 :::
 
@@ -26,7 +28,7 @@ Adhering to [government best practice](https://gdstechnology.blog.gov.uk/2018/11
 ## Environment
 
 ::: tip Operating Systems
-We've developed Tymly using technology and standards which are actively supported on most popular operating systems. Tymly is equally at home running on Windows, Linux or iOS.
+We've developed Tymly using technology and standards that are actively supported on the popular operating systems. Tymly is equally at home running on Windows, Linux or iOS.
 :::
 
 
@@ -37,14 +39,16 @@ We've developed Tymly using technology and standards which are actively supporte
 **To run Tymly and try-out the examples in this guide, you'll need [Node.js](https://nodejs.org) installed on your system.**
 
 * Installers for most Operating Systems can be found on the official Node.js [download page](https://nodejs.org/en/download/).
-
+* Please ensure you have at least **Node.js** `V10.14.2` installed.
 
 ## Tymly CLI
 
-Throughout this guide we'll use the **Tymly CLI tool** to quickly scaffold new components in a digital service and eventually spin-up a GraphQL API. As such, Tymly CLI is a great fit for those comfortable with a command prompt.
+Throughout this guide we'll use the **Tymly CLI tool** to quickly scaffold new components in a digital service and eventually spin-up a GraphQL API.
+As such, Tymly CLI is a great fit for those comfortable sitting in front of command prompt.
 
-::: tip
-Please note Tymly CLI **isn't** the Low Code tooling intended for use by subject-matter-experts. For that particular audience, one of Tymly's GUI projects would probably be a better fit.
+::: tip About Tymly CLI
+Please note Tymly CLI **isn't** the Low Code tooling intended for use by subject-matter-experts.
+For that particular audience, one of Tymly's [GUI projects](https://github.com/wmfs) would probably be a better fit.
 :::
 
 **With [Node.js](#environment) available, install Tymly CLI by running the following command:**
@@ -53,7 +57,8 @@ Please note Tymly CLI **isn't** the Low Code tooling intended for use by subject
 npm install @wmfs/tymly-cli -g
 ```
 
-This will install the **Tymly CLI** package globally on your system, meaning you should be able to use the tymly command from any directory. To check you're good-to-go, try this:
+This will install the **Tymly CLI** package globally on your system, meaning you'll be able to use the `tymly` command from any directory.
+To check you're good-to-go, try this:
 
 ``` bash
 tymly --version
@@ -67,12 +72,14 @@ tymly init
 
 # Key Concepts
 
-In this section the main concepts that make Tymly are introduced alongside a running example. If you want to play along, you'll need to have [Tymly CLI](#tymly-cli) setup first.
+* In this section the main concepts that make Tymly are introduced alongside a running example. If you want to play along, you'll need to have [Tymly CLI](#tymly-cli) setup first.
 
 ## Blueprints
 
-::: tip TL;DR
-In Tymly a ***blueprint*** is a collection of files (mostly written in [JSON](https://www.w3schools.com/js/js_json_intro.asp) and adhering to relevant open standards) which when considered together will fully describe a digital service. Blueprints cover all three facets of the [Model, View, Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern.
+::: tip At a glance
+In Tymly a ***blueprint*** is a collection of files that are mostly written in [JSON](https://www.w3schools.com/js/js_json_intro.asp) and adhere to relevant open standards.
+When considered together, the files inside a blueprint should fully describe a digital service.
+Blueprints cover all three facets of the [Model, View, Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern.
 :::
 
 
@@ -84,7 +91,7 @@ tymly new blueprint
 
 You'll be prompted for a few details regarding your new digital service. For the purposes of this example specify the **name** `tymly-pizza-blueprint`.
 
-* You'll now have a new `/tymly-pizza-blueprint` directory, **change into there:**
+* **Boom!** :boom: You'll now have a new `/tymly-pizza-blueprint` directory, **change into there:**
 
 ``` bash
 cd tymly-pizza-blueprint
@@ -178,15 +185,17 @@ This mostly standard JSON Schema stuff, with a few Tymly extensions.
 
 ### Seed data
 
-As above, Tymly models are just a description of data that can be expected at a later point. In certain circumstances it might be useful to "seed" a model with some initial content, as defined within a [blueprint](#blueprints).
+As above, Tymly models are just a description of the data that can be expected to be thrown at it sometime later.
+In certain circumstances it might be useful to "seed" a model with some default data.
 
-* For example, Ordnance Survey's amazing [AddressBase products](https://www.ordnancesurvey.co.uk/business-and-government/products/addressbase-products.html) provide data relating to all properties, streets, land etc. throughout the UK. Within AddressBase, it's mandatory for each of these millions of entities to be associated with a value from a [500-strong set of classifications](https://www.ordnancesurvey.co.uk/docs/product-schemas/addressbase-plus-premium-classification-codes.zip).
+* For example, Ordnance Survey's amazing [AddressBase products](https://www.ordnancesurvey.co.uk/business-and-government/products/addressbase-products.html) provide data relating to all properties, streets, land etc. throughout the UK. Within AddressBase, all these millions of entities need to be associated with a value from a [500-strong set of classifications](https://www.ordnancesurvey.co.uk/docs/product-schemas/addressbase-plus-premium-classification-codes.zip).
 
-When West Midlands Fire Service set about configuring a companion [Addressbase Premium blueprint](https://github.com/wmfs/addressbase-premium-blueprint), we used Tymy's [seed-data](https://github.com/wmfs/addressbase-premium-blueprint/blob/master/seed-data/addressbase-classifications.json) mechanism to populate data for the [classification](https://github.com/wmfs/addressbase-premium-blueprint/blob/master/models/addressbase-classifications.json) model.
+West Midlands Fire Service identified a need to use Ordnance Survey's gazetteer data as part of it's emergency mobilisation work, so set about configuring an [AddressBase Premium blueprint](https://github.com/wmfs/addressbase-premium-blueprint).
+As can be seen [here](https://github.com/wmfs/addressbase-premium-blueprint/blob/master/seed-data/addressbase-classifications.json), seed-data was used to populate the [classification](https://github.com/wmfs/addressbase-premium-blueprint/blob/master/models/addressbase-classifications.json) model.
 
-Once seed data is applied then the model is free to be maintained as usual.
+**Once seed data is applied then the model is free to be maintained as usual.**
 
-* Though not particularly relevant for Tymly Pizza (bespoke pizzas would ordinarily be created by users using admin forms), for the purposes of illustration let's seed the pizza model with some usual suspects:
+* Though not particularly relevant for Tymly Pizza (bespoke pizzas would ordinarily be created by users using admin forms), for the purposes of illustration let's seed the `pizza` model with some usual suspects:
 
 ``` bash
 tymly add seed-data --model pizza
@@ -200,24 +209,24 @@ tymly-pizza-blueprint
     pizza-data.json
 ```
 
-You'll see an empty array (inferred from the `pizza` model-schema) has been scaffolded. Let's replace the empty JSON array in `/seed-data/pizza-data.json` with the following:
+You'll see an empty array (inferred from the `pizza` model-schema) has been scaffolded. Let's replace the empty `data` JSON array in `/seed-data/pizza-data.json` so the file looks like:
 
 `TODO: Provide demo pizza data`
 
 ## Card Templates
 
-::: tip TL;DR
-In Tymly, the layout and behavior of any user interface, be it used for collecting or displaying data, is configured via a "card template". Card templates can be considered as the "view" part of Tymly's implementation of the MVC pattern.
+::: tip Introducing Card Templates
+In Tymly, the layout and behaviour of any user interface, be it used for collecting or displaying data, is configured via a **Card template**. Card templates can be considered as the "view" part of Tymly's implementation of the MVC pattern.
 :::
 
-The following **card templates** might be considered good candidates for our Tymly Pizza blueprint:
+The following **Card Templates** might be considered good candidates for our Tymly Pizza blueprint:
 
 * `customer-details-form`
 * `order-form`
 * `order-tracker-dashboard`
 * `kitchen-dashboard`
 
-The JSON-based [Cardscript](https://github.com/wmfs/cardscript) language (a sister project of Tymly) is used to write **card templates**.
+The JSON-based [Cardscript](https://github.com/wmfs/cardscript) language (a sister project of Tymly) is used to write **Card Templates**.
 
 As mentioned in its documentation, Cardscript is actually an extended implementation of the [Adaptive Cards](https://adaptivecards.io/explorer/) open standard that originated from Microsoft. As such, any content written for use in a vanilla Adaptive Cards client will be usable in Tymly.
 
@@ -225,9 +234,9 @@ As mentioned in its documentation, Cardscript is actually an extended implementa
 It's worth stressing Adaptive Cards itself is a simple, extensible, **open** standard. As Cardscript and Tymly demonstrate, it's possible to work with the Adaptive Card vocabulary (and benefit from a modest ecosystem of tooling, linting and other resources) without installing any Microsoft technology whatsoever.
 :::
 
-The additional elements and features that Cardscript brings to-the-party adhere to the [extensibility principles](https://docs.microsoft.com/en-us/adaptive-cards/resources/principles) as set-out in the Adaptive Card specification.
+The additional elements and features that Cardscript brings-to-the-party adhere to the [extensibility principles](https://docs.microsoft.com/en-us/adaptive-cards/resources/principles) as set-out in the Adaptive Card specification.
 
-* As an aside, those familiar with the [GDS Design System](https://design-system.service.gov.uk/) may also recognise a subset of Cardscript's additional elements (e.g. the [addresses pattern](https://design-system.service.gov.uk/patterns/addresses/)).
+* **As an aside, those familiar with the [GDS Design System](https://design-system.service.gov.uk/) may also recognise a subset of Cardscript's additional elements (e.g. the [addresses pattern](https://design-system.service.gov.uk/patterns/addresses/)).**
 
 
 `TODO: Put a list of Cardscript elements here`
@@ -244,7 +253,7 @@ Let's scaffold a simple admin form for creating and updating pizza info. Again, 
 tymly add editable --model pizza
 ```
 
-**Boom!** Now we've a few more files, amongst them is:
+**Boom!** :boom: Now we've a few more files, amongst them is:
 
 ```
 tymly-pizza-blueprint
@@ -284,22 +293,23 @@ Before going any-much further, it's perhaps worth stressing Amazon States Langua
 
 ### State Types
 
-Thanks to the [Statebox](https://github.com/wmfs/statebox) (another sister project of Tymly), the following [state types](https://states-language.net/spec.html#states-fields) are supported from the ASL specification:
+Thanks to [Statebox](https://github.com/wmfs/statebox) (a sister-project of Tymly), the following [state types](https://states-language.net/spec.html#states-fields) are supported from the ASL specification:
 
-* [`Task` state](https://states-language.net/spec.html#task-state)
-* [`Choice` state](https://states-language.net/spec.html#choice-state)
-* [`Parallel` state](https://states-language.net/spec.html#parallel-state)
-* [`Wait` state](https://states-language.net/spec.html#wait-state)
-* [`Succeed` State](https://states-language.net/spec.html#succeed-state)
-* [`Fail` State](https://states-language.net/spec.html#fail-state)
+* [Task state](https://states-language.net/spec.html#task-state)
+* [Choice state](https://states-language.net/spec.html#choice-state)
+* [Parallel state](https://states-language.net/spec.html#parallel-state)
+* [Wait state](https://states-language.net/spec.html#wait-state)
+* [Succeed State](https://states-language.net/spec.html#succeed-state)
+* [Fail State](https://states-language.net/spec.html#fail-state)
 
 Simply by configuring and chaining a set of states built from this small palette of types, ASL is capable of describing complex workflows. Business analysts with a background in [BPEL](https://en.wikipedia.org/wiki/Business_Process_Execution_Language), [BPM](https://en.wikipedia.org/wiki/Business_process_management) or similar will hopefully feel right-at-home defining business processes via ASL-based tooling.
 
-* This mash-up of Finite State Machines, ASL and Tymly's [plugin](#plugins] mechanism has proven to be incredibly powerful in practice. Some parallels can be drawn between Tymly's loosely-coupled FSM approach and a microservices architecture.
+* This mash-up of Finite State Machines, ASL and Tymly's [plugin](#plugins) mechanism has proven to be incredibly powerful in practice. Some parallels can be drawn between Tymly's loosely-coupled FSM approach and a [microservices](https://en.wikipedia.org/wiki/Microservices) architecture.
 
 ### State Resources
 
-Finite State Machines exist to orchestrate a set of actions in a predictable and controlled manner. In ASL, each task state defined inside a state machine configures an action to be undertaken at a specific point during a process.
+Finite State Machines exist to orchestrate a set of actions in a predictable and controlled manner.
+In ASL, each `Task` state defined inside a State Machine configures an action to be undertaken at a specific point during a process.
 
 ::: tip Note
 Tymly and the ASL specification diverge slightly when it comes to the implementation of the `Task` state.
@@ -307,7 +317,7 @@ Tymly and the ASL specification diverge slightly when it comes to the implementa
 
 Instead of configuring a `Task` state to invoke a remote resource somewhere on Amazon's infrastructure, Tymly (via Statebox) wires `Task` states to local async functions. In Tymly, these functions are known as **State Resources**.
 
-**Fun fact**: In an insane twist, Amazon Professional Services actually use little ol' Statebox and the State Resource modification themselves, they say:
+**Fun fact**: Amazon Professional Services actually use little ol' Statebox and the State Resource modification themselves, they say:
 
 > Organizations may be reluctant to adopt services like AWS Step Functions due to cost, complexity or current limitations.
 > **Statebox** provides a compelling alternative for those wishing to leverage the Amazon State Language and do so in a lightweight manner that can be embedded within Lambda functions.
@@ -319,7 +329,7 @@ Here are a few examples to help get a feel for what state resources are about:
 
 * Please see the [Reference](/reference/) section for a full list of the official state resources currently available for Tymly.
 
-**For our Tymly Pizza blueprint to actually do stuff, we'll need some state machines then:**
+**For our Tymly Pizza blueprint to actually do anything we'll need some State Machines then:**
 
 * One to manage the process of creating or updating the details of a pizza
 * And a second to handle the pizza-ordering process
@@ -332,7 +342,7 @@ tymly add editable --model pizza
 tymly add creatable --model order
 ```
 
-We know already that these commands produced some [Card Template](#card-templates) files, but they also scaffolded some state machines to integrate them within a data collection process too:
+We know already that these commands produced some [Card Template](#card-templates) files, but they also scaffolded State Machines to embed the UI within a wider data-collection process too:
 
 ```
 /tymly-pizza-blueprint
@@ -347,7 +357,7 @@ The content of `create-order.json` is reproduced below:
 
 Here we can see a state machine has been conjured in ASL for handling the process of collecting orders from a user, via a form.
 
-* Let's also make the menu of pizzas publicly queryable so that apps can present a list the details of different pizzas to users:
+* Let's also make the menu of pizzas publicly queryable so that apps can present a list the details of different pizzas to prospective customers:
 
 ``` bash
 tymly add queryable --model pizza --roles $everyone
@@ -363,7 +373,7 @@ tymly-pizza-blueprint
 
 ## Services
 
-::: tip You might want to skip this section...
+::: tip You might want to skip this section!
 Tymly Services are a hidden, internal mechanism designed to help [State Resources](#state-resources) scale better and be more performant. Understanding services is useful to gain a more rounded understanding of plugins (covered in a later section) but this section can be safely [skipped](#access-control) if you prefer.
 :::
 
@@ -384,15 +394,15 @@ Nice one developer :thumbsup:, things can be handed back to the subject-matter-e
 
 **What if establishing a new connection to this beat-up database takes 30 seconds?**
 
-In a blasé implementation, every time one of our new `Task` resources is invoked it would first need to establish a new database connection, perform the necessary database operation and then close the connection before advancing to the next state.
+In a blasé implementation, each time one of our new `Task` resources is invoked it would first need to establish a new database connection, perform the necessary database operation and then close the connection before advancing to the next state.
 
-Apart from the obvious performance overhead, this approach clearly doesn't scale well at all. With any number of state machines running simultaneously, the load on our fragile database would soon become intolerable.
+Apart from the obvious performance horror, this approach clearly doesn't scale well at all. With any number of State Machines running simultaneously, the load on our fragile database would soon become intolerable.
 
-A better implementation would be to instantiate a small pool of connections to our database when Tymly first starts. Each of our four new State Resources could then grab a pre-instantiated connection from this shared pool (via a common pool API) when necessary.
+A better implementation would be to instantiate a small pool of connections to our database when Tymly first starts. Each of our four new State Resources could then grab a pre-instantiated connection from this shared pool (via a common pool API) as-and-when necessary.
 
 **This is where Tymly Services come into play.**
 
-**Services** in Tymly are nothing more than an expose class (therefore establishing state through its constructor and an API through its methods).
+**Services** in Tymly are nothing more than an exposed class in a [Plugin](#plugins) (therefore establishing state through its constructor and an API through its methods).
 
 Tymly will create a new instance of all registered service classes at boot time. Each service class can provide an optional asynchronous `boot()` method (e.g. to establish a connection pool or grab an authentication token for use with a SaaS solution). The use of some simple metadata helps ensure services are initialized in a logical order.
 
@@ -406,14 +416,14 @@ Tymly will create a new instance of all registered service classes at boot time.
 
 A couple of **roles** immediately spring-to-mind for the ongoing Tymly Pizza example:
 
-* `Customer`
-* `Manager`
+* `customer`
+* `manager`
 
 Customers wouldn't expect to be able to edit the price of a pizza, nor would someone dispensing managerial duties be ordering pizza on-the-clock.
 
 *"But managers are people too, why can't they eat nice things?"*
 
-* They can, a single person (or more specifically a single _user_) can be _granted_ both the `Customer` and `Manager` roles at the same time.
+* They can, a single person (or more specifically a single _user_) can be _granted_ both the `customer` and `manager` roles at the same time.
 
 **All of this leads us to the very important, yet very dry, world of [Role Based Access Control (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).**
 
@@ -423,21 +433,21 @@ Reassuringly, Tymly's RBAC implementation is no-nonsense and is applied right do
 
 ### Dynamic Roles
 
-Aside from explicit roles such as `customer` and `manager`, Tymly offers several "**dynamic**" roles whose membership is derived when a request to interact with a State Machine is received:
+Aside from explicit roles such as `customer` and `manager`, Tymly offers several ***dynamic*** roles whose membership is derived at runtime when a request to interact with a State Machine is received.
 
 | Dynamic Role     | Description |
 | ------------     | ----------- |
-| `$everyone`      | The entire world is automatically part of the `$everyone` role, regardless if they have a Tymly account or authentication token or not. This is useful for interacting with public things like bus service status dashboards. |
-| `$authenticated` | Any user making an authenticated request (i.e. a user attempts to interact with a state machine with a valid Tymly authentication token) is automatically granted membership of the `$authenticated` role. An example use-case for this dynamic role could be to implement organisation-wide initiatives such as a digital suggestion-box scheme. |
-| `$owner`         | In some scenarios, the user who originally instigated an event should be the only person allowed perform any subsequent actions related to it. For example, after a user creates a blog post via a state machine, then the ability to edit or delete it later may be welcome (even career-saving). But at the same time, allowing absolutely anyone permission to edit or delete any post would descend into chaos. It's in situations such as this where the `$owner` role can help, allowing permissions to be defined for the originator only. Note that a normal, fixed role such as `blog-moderator` (for wielding the power to delete any blog post) could be defined alongside the configuration of `$owner`. |
+| `$everyone`      | The entire world is automatically part of the `$everyone` role, regardless if they have a Tymly account or come brandishing an authentication token or not. This role is useful for interacting with public things like bus service status dashboards. |
+| `$authenticated` | Any user making an authenticated request (i.e. a user attempts to interact with a State Machine with a valid Tymly authentication token) is automatically granted membership of the `$authenticated` role. An example use-case for this dynamic role could be to implement organisation-wide initiatives such as a digital suggestion-box scheme. |
+| `$owner`         | In some scenarios, the user who originally instigated an event should be the only person allowed perform any subsequent actions related to it. For example, after a user creates a blog post via a State Machine, then the ability to edit or delete it later may be welcome (even career-saving). But at the same time, allowing absolutely anyone permission to edit or delete any post would descend into chaos. It's in situations such as this where the `$owner` role can help, allowing permissions to be defined for the originator only. Note that a normal, fixed role such as `blog-moderator` (for wielding the power to delete any blog post) could be defined alongside the configuration of `$owner`. |
 
 ### Role Inheritance
 
 **As above, many users can be *granted* membership to a particular *role*, and many roles can be bestowed upon a single *user*.**
 
-To help help reduce User Management complexity and bring some modularity to proceedings, Tymly supports roles being added to the membership of other roles.
+To help reduce User Management complexity and bring some modularity to proceedings, Tymly supports roles being added to the membership of other roles. :nerd_face:
 
-Revisiting the ongoing blueprint example, a one-size-fits-all manager role for a household-name like Tymly Pizza won't be suitable in practice.
+Revisiting the ongoing blueprint example, a one-size-fits-all manager role for a household-name like *Tymly Pizza* won't be suitable in practice.
 
 **Let's break the manager role into more specific roles:**
 
@@ -452,16 +462,16 @@ This refactor brings immediate benefits. Now the business of setting-up a new pi
 While we're at it, a `restaurant-manager` is always entitled to do anything a `shift-manager` can do (for example look at at a Kitchen Dashboard) along with some added financial responsibilities.
 To reduce ongoing User Management burden, the `shift-manager` role can simply be granted membership of the `restaurant-manager` role.
 
-* Through role inheritance, any manager of a Tymly Pizza restaurant instantly has access to the same functionality any Shift Manager enjoys.
-* Similarly, the `national-manager` role could be granted membership to the `menu-administrator` role. Again, through role inheritance, this arrangement would result in any regional manager being bestowed full control over the menu, alongside any administrators which have been trusted with direct user membership.
+* Through Role Inheritance, any manager of a Tymly Pizza restaurant instantly has access to the same functionality any Shift Manager enjoys.
+* Similarly, the `national-manager` role could be granted membership to the `menu-administrator` role. Again, through Role Inheritance, this arrangement would result in any regional manager being bestowed full control over the menu, alongside any administrators which have been trusted with direct user membership.
 
 ### Role templates
 
-**As part of the User Research work that will would eventually lead to the configuration of a Tymly Blueprint, the various roles (and the scope of their interaction) bouncing around a digital service would naturally be captured.**
+**As part of the User Research work that leads to the configuration of a Tymly Blueprint, many roles (and the scope of their interaction) within a digital service will be captured.**
 
 Such considered analysis is often gold-dust, and certainly worth holding onto and making the most of.
 
-This is where Tymly **Role Templates** come into play. A blueprint can ship with a selection of pre-canned roles that an organisation would be likely to use.
+This is where Tymly **Role Templates** come into play. A blueprint can ship with a selection of pre-canned roles that any organisation would be likely to use.
 
 ::: tip About Role Templates
 Please note Tymly offers total control over how users, roles, memberships and permissions are structured and can be adapted at any time. Role Templates serve as a convenience to automatically configure typical roles that can be embraced, modified or just ignored as an organisation sees fit.
@@ -489,7 +499,7 @@ Replace the content of `customer.json` with the following JSON:
 
 `TODO: Write some JSON`
 
-Here we're saying that any user of Tymly who is _granted_ membership to the `customer` role has the ability to start a brand new `order-creation` State Machine. Note that a customer has no permission to update or cancel an already-running order-creation state machine (or any other state machine for that matter).
+Here we're saying that any user of Tymly who is _granted_ membership to the `customer` role has the ability to start a brand new `order-creation` State Machine. Note that a customer has no permission to update or cancel an already-running `order-creation` State Machine (or any other State Machine, for that matter).
 
 And replace `manager.json` with this JSON too:
 
@@ -497,7 +507,7 @@ And replace `manager.json` with this JSON too:
 
 ### Plugins
 
-**Tymly Plugins can be considered as a simple package of related State Resources and Services.
+**Tymly Plugins can be considered as a simple package of related [State Resources](#state-resources) and [Services](#services).
 At boot-time, Tymly will load zero-or-more plugins from a specified file path.**
 
 In this way Tymly can be tailored to only import the exact capabilities necessary to deliver the blueprints it will encounter.
@@ -517,7 +527,7 @@ Alternatively, a [MongoDB](https://www.mongodb.com/) plugin _could_ be developed
 * Plugins allow organisations to continually experiment with different technologies and service providers without compromising the entire platform.
 * Plugins also allow for any [State Resource](#state-resources) or [Service](#services) to be adapted if necessary.
 This is possible because plugins are loaded in a predictable order.
-If a State Resource with the name `sendEmail` is defined in the first plugin to load, and it also appears in the last... the latter implementation will be used (i.e. the earlier implementation is _overridden_)..
+If a State Resource with the name `sendEmail` is defined in the first plugin to load, and it also appears in the last... the latter implementation will be taken through to the boot phase (i.e. the earlier implementation is _overridden_)..
 
 * The ability to target and override pretty-much any piece of functionality makes Tymly reassuringly malleable. Internally, Tymly features a core plugin to undertake low-level duties such as caching and logging. Even those state resources and services can be overridden if you ever feel the need to dive that deep!
 
