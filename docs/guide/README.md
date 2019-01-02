@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 ## What is Tymly?
 
-**Tymly (pronounced "_timely_" :nerd_face:) is an open source [low-code software platform](https://www.cio.com/article/3263392/application-development/what-is-low-code-development-a-lego-like-approach-to-building-software.html).**
+**Tymly (pronounced "_timely_" :smiley:) is an open source [low-code software platform](https://www.cio.com/article/3263392/application-development/what-is-low-code-development-a-lego-like-approach-to-building-software.html).**
 
 ::: tip About Low Code platforms
 
@@ -23,9 +23,9 @@ Regardless of whether Tymly's particular flavour of Low Code appeals or not, the
 
 :::
 
-**Why Tymly?**
+<img style="max-width:15rem;margin-top:2rem;margin-bottom:2rem;" :src="$withBase('/tymly-logo.svg')" alt="Tymly Logo">
 
-Adhering to [government best practice](https://gdstechnology.blog.gov.uk/2018/11/05/11-barriers-to-coding-in-the-open-and-how-to-overcome-them/), Tymly is built in-the-open on [GitHub](https://github.com/wmfs), offered freely as open source software, embraces open standards, can be heavily customised and features an innovative "blueprint" mechanism to support collaborative endeavours.
+Adhering to [government best practice](https://gdstechnology.blog.gov.uk/2018/11/05/11-barriers-to-coding-in-the-open-and-how-to-overcome-them/), Tymly is built in-the-open on [GitHub](https://github.com/wmfs), offered freely as open source software, embraces open standards, can be heavily customised and features an innovative [blueprint](#blueprints) mechanism to help support collaborative endeavours.
 
 **Tymly is built with :heart: at [West Midlands Fire Service](https://www.wmfs.net), contributions are very welcome!**
 
@@ -36,7 +36,7 @@ We've developed Tymly using technology and standards that are actively supported
 :::
 
 
-<img style="max-width:15rem" :src="$withBase('/nodejs-logo.png')" alt="foo">
+<img style="max-width:15rem" :src="$withBase('/nodejs-logo.png')" alt="Node.js Logo">
 
 ### Node.js
 
@@ -86,10 +86,9 @@ When considered together, the files inside a blueprint should fully describe a d
 Blueprints cover all three facets of the [Model, View, Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern.
 :::
 
+:pizza: **Welcome to Tymly Pizza! :pizza:**
 
 Let's make a new blueprint for a new pizza-ordering digital service...
-
-:pizza: **Welcome to Tymly Pizza! :pizza:**
 
 From inside a throwaway directory somewhere, run the following command:
 
