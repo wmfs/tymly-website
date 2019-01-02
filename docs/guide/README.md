@@ -7,19 +7,23 @@ sidebarDepth: 2
 
 ## What is Tymly?
 
-**Tymly (pronounced "_timely_") is an open source [low-code software platform](https://www.cio.com/article/3263392/application-development/what-is-low-code-development-a-lego-like-approach-to-building-software.html).**
+**Tymly (pronounced "_timely_" :smiley:) is an open source [low-code software platform](https://www.cio.com/article/3263392/application-development/what-is-low-code-development-a-lego-like-approach-to-building-software.html).**
 
-::: tip Low Code Platforms
+::: tip About Low Code platforms
 
-In the world of Low Code, the forms, data-schemas and logic which coalesce to form a digital service are mostly maintained using graphical tools, reducing the reliance on suppliers to write code.
+In the world of Low Code, the forms, data-schemas and logic that coalesce to form a digital service are maintained using simple drag-and-drop tools.
 
-**Regardless of whether Tymly's flavour of low-code appeals or not, the uptake of Low Code is proving to be quite compelling:**
+With Low Code, subject-matter-experts throughout an organisation are empowered to envisage and continually improve their own digital services, without the need to procure ill-fitting software or write code.
+
+Regardless of whether Tymly's particular flavour of Low Code appeals or not, the uptake of its _approach_ is becoming ever-more popular:
 
 * [Low-Code in the Post Office](https://www.governmentcomputing.com/local-government/news/the-post-office-follows-local-councils-down-low-code-route)
 * [Low-Code in Hackney Council](https://government.diginomica.com/2018/11/30/digital-success-through-low-code-at-hackney-council-focus-on-user-need/)
 * [Low-Code in Adur and Worthing Councils](https://www.ukauthority.com/articles/a-low-code-platform-for-local-government/)
 
 :::
+
+**Why Tymly?**
 
 Adhering to [government best practice](https://gdstechnology.blog.gov.uk/2018/11/05/11-barriers-to-coding-in-the-open-and-how-to-overcome-them/), Tymly is built in-the-open on [GitHub](https://github.com/wmfs), offered freely as open source software, embraces open standards, can be heavily customised and features an innovative "blueprint" mechanism to support collaborative endeavours.
 
