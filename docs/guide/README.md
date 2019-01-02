@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 ## What is Tymly?
 
-**Tymly (pronounced "_timely_" :smiley:) is an open source [low-code software platform](https://www.cio.com/article/3263392/application-development/what-is-low-code-development-a-lego-like-approach-to-building-software.html).**
+**Tymly (pronounced "_timely_" :nerd_face:) is an open source [low-code software platform](https://www.cio.com/article/3263392/application-development/what-is-low-code-development-a-lego-like-approach-to-building-software.html).**
 
 ::: tip About Low Code platforms
 
@@ -32,7 +32,7 @@ Adhering to [government best practice](https://gdstechnology.blog.gov.uk/2018/11
 ## Environment
 
 ::: tip Operating Systems
-We've developed Tymly using technology and standards that are actively supported on the popular operating systems. Tymly is equally at home running on Windows, Linux or iOS.
+We've developed Tymly using technology and standards that are actively supported on all the popular operating systems. Tymly is equally at home running on Windows, Linux or iOS.
 :::
 
 
@@ -68,7 +68,7 @@ To check you're good-to-go, try this:
 tymly --version
 ```
 
-While we're still setting-up, let's set a few general config options. Run the following command and provide the requested info (it's all editable later via the `tymly set` command):
+While we're still setting-up, let's set a few general configuration options. Run the following command and provide the requested info (it's all editable later via the `tymly set` command):
 
 ``` bash
 tymly init
@@ -87,7 +87,11 @@ Blueprints cover all three facets of the [Model, View, Controller](https://en.wi
 :::
 
 
-**Let's make a new blueprint for a new *pizza-ordering* digital service. From inside a throwaway directory somewhere, run the following command:**
+Let's make a new blueprint for a new pizza-ordering digital service...
+
+:pizza: **Welcome to Tymly Pizza! :pizza:**
+
+From inside a throwaway directory somewhere, run the following command:
 
 ``` bash
 tymly new blueprint
@@ -220,7 +224,7 @@ You'll see an empty array (inferred from the `pizza` model-schema) has been scaf
 ## Card Templates
 
 ::: tip Introducing Card Templates
-In Tymly, the layout and behaviour of any user interface, be it used for collecting or displaying data, is configured via a **Card template**. Card templates can be considered as the "view" part of Tymly's implementation of the MVC pattern.
+In Tymly, the layout and behaviour of any user interface, be it used for collecting or displaying data, is configured via a **Card Template**. Card Templates can be considered as the "view" part of Tymly's implementation of the MVC pattern.
 :::
 
 The following **Card Templates** might be considered good candidates for our Tymly Pizza blueprint:
