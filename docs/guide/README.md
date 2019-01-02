@@ -80,7 +80,7 @@ tymly init
 
 ## Blueprints
 
-::: tip At a glance
+::: tip Introducing Blueprints
 In Tymly a ***blueprint*** is a collection of files that are mostly written in [JSON](https://www.w3schools.com/js/js_json_intro.asp) and adhere to relevant open standards.
 When considered together, the files inside a blueprint should fully describe a digital service.
 Blueprints cover all three facets of the [Model, View, Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern.
@@ -233,6 +233,8 @@ The following **Card Templates** might be considered good candidates for our Tym
 * `order-tracker-dashboard`
 * `kitchen-dashboard`
 
+### Cardscript
+
 The JSON-based [Cardscript](https://github.com/wmfs/cardscript) language (a sister project of Tymly) is used to write **Card Templates**.
 
 As mentioned in its documentation, Cardscript is actually an extended implementation of the [Adaptive Cards](https://adaptivecards.io/explorer/) open standard that originated from Microsoft. As such, any content written for use in a vanilla Adaptive Cards client will be usable in Tymly.
@@ -364,7 +366,7 @@ The content of `create-order.json` is reproduced below:
 
 Here we can see a state machine has been conjured in ASL for handling the process of collecting orders from a user, via a form.
 
-* Let's also make the menu of pizzas publicly queryable so that apps can present a list the details of different pizzas to prospective customers:
+* Let's also make the menu of pizzas publicly queryable so that apps can present the details of different pizzas to prospective customers:
 
 ``` bash
 tymly add queryable --model pizza --roles $everyone
@@ -452,7 +454,7 @@ Aside from explicit roles such as `customer` and `manager`, Tymly offers several
 
 **As above, many users can be *granted* membership to a particular *role*, and many roles can be bestowed upon a single *user*.**
 
-To help reduce User Management complexity and bring some modularity to proceedings, Tymly supports roles being added to the membership of other roles. :nerd_face:
+To help reduce User Management complexity and bring some modularity to proceedings, Tymly supports roles being added to the membership of other roles. :smiley:
 
 Revisiting the ongoing blueprint example, a one-size-fits-all manager role for a household-name like *Tymly Pizza* won't be suitable in practice.
 
