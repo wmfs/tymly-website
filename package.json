@@ -1,9 +1,9 @@
 {
   "name": "@wmfs/tymly-website",
   "version": "0.0.0-semantically-released",
-  "description": "Grabs metadata from a PostgreSQL database",
+  "description": "The technical docs site for Tymly",
   "author": "West Midlands Fire Service",
-  "homepage": "https://github.com/wmfs/pg-info#readme",
+  "homepage": "https://github.com/wmfs/tymly-website#readme",
   "keywords": [
     "tymly.io"
   ],
@@ -17,7 +17,7 @@
   },
   "main": "./lib/index.js",
   "dependencies": {
-    "vuepress": "1.0.0-alpha.20"
+    "vuepress": "0.14.8"
   },
   "devDependencies": {},
   "scripts": {

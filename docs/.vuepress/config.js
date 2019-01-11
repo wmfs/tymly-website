@@ -5,6 +5,8 @@ module.exports = {
   head: [
     ['link', {rel: 'icon', href: '/favicon.png'}]
   ],
+  plugins: [
+  ],
   themeConfig: {
     repo: 'wmfs/tymly',
     // logo: '/tymly-motif.svg',
