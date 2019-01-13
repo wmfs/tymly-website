@@ -13,7 +13,7 @@ sidebarDepth: 2
 
 In the world of Low Code, the forms, data-schemas and logic that coalesce to form a digital service are maintained using simple drag-and-drop tools.
 
-With Low Code, subject-matter-experts throughout an organisation are empowered to envisage and continually improve their own digital services, without the need to procure ill-fitting software or write code.
+With Low Code, subject-matter-experts throughout an organisation are empowered to envisage and continually improve their own digital services, without the need to procure ill-fitting software or write single-use code.
 
 Regardless of whether Tymly's particular flavour of Low Code appeals or not, the uptake of its _approach_ is becoming ever-more popular:
 

@@ -1,0 +1,529 @@
+---
+
+#     SSSSSSSSSSSSSSS TTTTTTTTTTTTTTTTTTTTTTT     OOOOOOOOO     PPPPPPPPPPPPPPPPP    !!!  
+#   SS:::::::::::::::ST:::::::::::::::::::::T   OO:::::::::OO   P::::::::::::::::P  !!:!! 
+#  S:::::SSSSSS::::::ST:::::::::::::::::::::T OO:::::::::::::OO P::::::PPPPPP:::::P !:::! 
+#  S:::::S     SSSSSSST:::::TT:::::::TT:::::TO:::::::OOO:::::::OPP:::::P     P:::::P!:::! 
+#  S:::::S            TTTTTT  T:::::T  TTTTTTO::::::O   O::::::O  P::::P     P:::::P!:::! 
+#  S:::::S                    T:::::T        O:::::O     O:::::O  P::::P     P:::::P!:::! 
+#   S::::SSSS                 T:::::T        O:::::O     O:::::O  P::::PPPPPP:::::P !:::! 
+#    SS::::::SSSSS            T:::::T        O:::::O     O:::::O  P:::::::::::::PP  !:::! 
+#      SSS::::::::SS          T:::::T        O:::::O     O:::::O  P::::PPPPPPPPP    !:::! 
+#         SSSSSS::::S         T:::::T        O:::::O     O:::::O  P::::P            !:::! 
+#              S:::::S        T:::::T        O:::::O     O:::::O  P::::P            !!:!! 
+#              S:::::S        T:::::T        O::::::O   O::::::O  P::::P             !!!   
+#  SSSSSSS     S:::::S      TT:::::::TT      O:::::::OOO:::::::OPP::::::PP                 
+#  S::::::SSSSSS:::::S      T:::::::::T       OO:::::::::::::OO P::::::::P           !!!  
+#  S:::::::::::::::SS       T:::::::::T         OO:::::::::OO   P::::::::P          !!:!! 
+#   SSSSSSSSSSSSSSS         TTTTTTTTTTT           OOOOOOOOO     PPPPPPPPPP           !!!  
+#                                                                                          
+#             T H I S   R E A D M E . M D   F I L E   I S   G E N E R A T E D !           
+#                                                                                         
+#     IF YOU EDIT IT DIRECTLY YOUR CHANGES WILL BE WASHED AWAY THE NEXT TIME THIS FILE  
+#                                GETS GENERATED !
+#                                                                                         
+
+sidebar: auto
+---
+
+
+# processingXmlFiles
+
+
+::: tip State Resource
+This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-etl-plugin](/reference/plugins/tymly-etl-plugin/)** plugin.
+:::
+
+## Purpose
+
+Takes an XML file and converts it to CSV
+
+## Usage
+
+### Example
+
+``` json
+{
+  "ProcessingXmlFiles": {
+    "Type": "Task",
+    "InputPath": "$",
+    "Resource": "module:processingXmlFiles",
+    "ResourceConfig": {
+      "rootXMLElement": "EstablishmentDetail",
+      "headerMap": [
+        [
+          "FHRSID",
+          "fhrsid",
+          "integer"
+        ],
+        [
+          "LocalAuthorityBusinessID",
+          "local_authority_business_id",
+          "string"
+        ],
+        [
+          "BusinessName",
+          "business_name",
+          "string"
+        ],
+        [
+          "BusinessType",
+          "business_type",
+          "string"
+        ],
+        [
+          "BusinessTypeID",
+          "business_type_id",
+          "integer"
+        ],
+        [
+          "AddressLine1",
+          "address_line_1",
+          "string"
+        ],
+        [
+          "AddressLine2",
+          "address_line_2",
+          "string"
+        ],
+        [
+          "AddressLine3",
+          "address_line_3",
+          "string"
+        ],
+        [
+          "AddressLine4",
+          "address_line_4",
+          "string"
+        ],
+        [
+          "PostCode",
+          "postcode",
+          "string"
+        ],
+        [
+          "RatingValue",
+          "rating_value",
+          "string"
+        ],
+        [
+          "RatingKey",
+          "rating_key",
+          "string"
+        ],
+        [
+          "RatingDate",
+          "rating_date",
+          "date"
+        ],
+        [
+          "LocalAuthorityCode",
+          "local_authority_code",
+          "integer"
+        ],
+        [
+          "LocalAuthorityName",
+          "local_authority_name",
+          "string"
+        ],
+        [
+          "LocalAuthorityWebSite",
+          "local_authority_website",
+          "string"
+        ],
+        [
+          "LocalAuthorityEmailAddress",
+          "local_authority_email_address",
+          "string"
+        ],
+        [
+          "Hygiene",
+          "hygiene",
+          "integer",
+          "Scores"
+        ],
+        [
+          "Structural",
+          "structural",
+          "integer",
+          "Scores"
+        ],
+        [
+          "ConfidenceInManagement",
+          "confidence_in_management",
+          "integer",
+          "Scores"
+        ],
+        [
+          "SchemeType",
+          "scheme_type",
+          "string"
+        ],
+        [
+          "NewRatingPending",
+          "new_rating_pending",
+          "string"
+        ],
+        [
+          "Longitude",
+          "longitude",
+          "integer",
+          "Geocode"
+        ],
+        [
+          "Latitude",
+          "latitude",
+          "integer",
+          "Geocode"
+        ]
+      ]
+    }
+  }
+}
+```
+
+``` json
+{
+  "type": "object",
+  "properties": {
+    "entities": {
+      "type": "object",
+      "description": "Identifies which XML tags map to a model."
+    }
+  }
+}
+```
+
+## Links
+
+* [State Resource class on GitHub]()
+
+``` json
+{
+  "name": "tymly-etl-plugin",
+  "nameCamel": "tymlyEtlPlugin",
+  "packageJson": {
+    "name": "@wmfs/tymly-etl-plugin",
+    "version": "0.0.0-semantically-released",
+    "description": "A collection of states for helping with Extract, Transform and Load tasks.",
+    "homepage": "https://github.com/wmfs/tymly-etl-plugin#readme",
+    "author": "West Midlands Fire Service",
+    "keywords": [
+      "tymly",
+      "plugin",
+      "extract",
+      "transform",
+      "load",
+      "tasks"
+    ],
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/wmfs/tymly-etl-plugin.git"
+    },
+    "bugs": {
+      "url": "https://github.com/wmfs/tymly-etl-plugin/issues"
+    },
+    "main": "./lib/index.js",
+    "dependencies": {
+      "boom": "7.3.0",
+      "debug": "4.1.0",
+      "glob": "7.1.3",
+      "@wmfs/tymly": "1.75.0",
+      "@wmfs/smithereens": "1.16.0",
+      "@wmfs/xml-flatten2csv": "1.0.1",
+      "@wmfs/xml2csv": "1.9.0"
+    },
+    "devDependencies": {
+      "chai": "4.2.0",
+      "codecov": "3.1.0",
+      "conventional-changelog-metahub": "2.0.2",
+      "csvtojson": "2.0.8",
+      "cz-conventional-changelog": "2.1.0",
+      "mocha": "5.2.0",
+      "nyc": "13.1.0",
+      "semantic-release": "15.13.1",
+      "standard": "12.0.1",
+      "@semantic-release/changelog": "3.0.1",
+      "@semantic-release/git": "7.0.6",
+      "@wmfs/tymly-test-helpers": "1.2.0"
+    },
+    "scripts": {
+      "lint": "standard",
+      "test": "nyc mocha && standard",
+      "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+      "semantic-release": "semantic-release"
+    },
+    "config": {
+      "commitizen": {
+        "path": "cz-conventional-changelog"
+      }
+    },
+    "publishConfig": {
+      "access": "public"
+    }
+  },
+  "version": "0.0.0-semantically-released",
+  "services": [],
+  "stateResources": [
+    {
+      "name": "flatten-xml-files",
+      "nameCamel": "flattenXmlFiles",
+      "pluginName": "tymly-etl-plugin",
+      "docs": {
+        "description": "Flatten XML Files"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "entities": {
+            "type": "object",
+            "description": "Transforms XML to CSV using supplied mapping."
+          }
+        }
+      },
+      "apiDocs": "<!-- Generated by documentation.js. Update this documentation by updating the source code. -->\n"
+    },
+    {
+      "name": "processing-csv-files",
+      "nameCamel": "processingCsvFiles",
+      "pluginName": "tymly-etl-plugin",
+      "docs": {
+        "description": "Smash CSV files into more manageable files based on column values - just a thin wrapper over [Smithereens](https://www.npmjs.com/package/smithereens)",
+        "example": {
+          "processingCsvFiles": {
+            "options": {
+              "parser": {
+                "quote": "\"",
+                "delimiter": ",",
+                "newline": "\r\n",
+                "skipFirstLine": false,
+                "trimWhitespace": true
+              },
+              "dirSplits": [
+                {
+                  "columnIndex": 3,
+                  "valueToDirMap": {
+                    "c": "children",
+                    "a": "adults"
+                  }
+                }
+              ],
+              "fileSplits": {
+                "columnIndex": 4,
+                "valueToFileMap": {
+                  "u": {
+                    "filename": "changes",
+                    "outputColumns": [
+                      {
+                        "name": "person_no",
+                        "columnIndex": 0
+                      },
+                      {
+                        "name": "first_name",
+                        "columnIndex": 1
+                      },
+                      {
+                        "name": "last_name",
+                        "columnIndex": 2
+                      }
+                    ]
+                  },
+                  "d": {
+                    "filename": "deletes",
+                    "outputColumns": [
+                      {
+                        "name": "person_no",
+                        "columnIndex": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "events": {
+              "csvFilesProcessed": {
+                "to": "importingCsvFiles"
+              }
+            }
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "parser": {
+            "type": "object",
+            "description": "Object controlling how CSV lines should be parsed. Uses [csv-streamify](https://www.npmjs.com/package/csv-streamify) under the bonnet... with the addition of a `skipFirstLine` property (`boolean`) for conditionally ignoring header lines."
+          },
+          "dirSplits": {
+            "type": "array",
+            "description": "Used to split CSV files across different directories, depending on column values. Please see the [dirSplit](https://github.com/wmfs/tymly/tree/master/smithereens#dirsplit-object) object in [Smithereens](https://github.com/wmfs/tymly/tree/master/smithereens)for more information."
+          },
+          "fileSplits": {
+            "type": "object",
+            "description": "In a similar way, CSV lines can be split across different file too. Please see the [fileSplit](https://github.com/wmfs/tymly/tree/master/smithereens#filesplit-object) object in [Smithereens](https://github.com/wmfs/tymly/tree/master/smithereens)for more information."
+          }
+        }
+      },
+      "apiDocs": "<!-- Generated by documentation.js. Update this documentation by updating the source code. -->\n"
+    },
+    {
+      "name": "processing-xml-files",
+      "nameCamel": "processingXmlFiles",
+      "pluginName": "tymly-etl-plugin",
+      "docs": {
+        "description": "Takes an XML file and converts it to CSV",
+        "example": {
+          "ProcessingXmlFiles": {
+            "Type": "Task",
+            "InputPath": "$",
+            "Resource": "module:processingXmlFiles",
+            "ResourceConfig": {
+              "rootXMLElement": "EstablishmentDetail",
+              "headerMap": [
+                [
+                  "FHRSID",
+                  "fhrsid",
+                  "integer"
+                ],
+                [
+                  "LocalAuthorityBusinessID",
+                  "local_authority_business_id",
+                  "string"
+                ],
+                [
+                  "BusinessName",
+                  "business_name",
+                  "string"
+                ],
+                [
+                  "BusinessType",
+                  "business_type",
+                  "string"
+                ],
+                [
+                  "BusinessTypeID",
+                  "business_type_id",
+                  "integer"
+                ],
+                [
+                  "AddressLine1",
+                  "address_line_1",
+                  "string"
+                ],
+                [
+                  "AddressLine2",
+                  "address_line_2",
+                  "string"
+                ],
+                [
+                  "AddressLine3",
+                  "address_line_3",
+                  "string"
+                ],
+                [
+                  "AddressLine4",
+                  "address_line_4",
+                  "string"
+                ],
+                [
+                  "PostCode",
+                  "postcode",
+                  "string"
+                ],
+                [
+                  "RatingValue",
+                  "rating_value",
+                  "string"
+                ],
+                [
+                  "RatingKey",
+                  "rating_key",
+                  "string"
+                ],
+                [
+                  "RatingDate",
+                  "rating_date",
+                  "date"
+                ],
+                [
+                  "LocalAuthorityCode",
+                  "local_authority_code",
+                  "integer"
+                ],
+                [
+                  "LocalAuthorityName",
+                  "local_authority_name",
+                  "string"
+                ],
+                [
+                  "LocalAuthorityWebSite",
+                  "local_authority_website",
+                  "string"
+                ],
+                [
+                  "LocalAuthorityEmailAddress",
+                  "local_authority_email_address",
+                  "string"
+                ],
+                [
+                  "Hygiene",
+                  "hygiene",
+                  "integer",
+                  "Scores"
+                ],
+                [
+                  "Structural",
+                  "structural",
+                  "integer",
+                  "Scores"
+                ],
+                [
+                  "ConfidenceInManagement",
+                  "confidence_in_management",
+                  "integer",
+                  "Scores"
+                ],
+                [
+                  "SchemeType",
+                  "scheme_type",
+                  "string"
+                ],
+                [
+                  "NewRatingPending",
+                  "new_rating_pending",
+                  "string"
+                ],
+                [
+                  "Longitude",
+                  "longitude",
+                  "integer",
+                  "Geocode"
+                ],
+                [
+                  "Latitude",
+                  "latitude",
+                  "integer",
+                  "Geocode"
+                ]
+              ]
+            }
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "entities": {
+            "type": "object",
+            "description": "Identifies which XML tags map to a model."
+          }
+        }
+      },
+      "apiDocs": "<!-- Generated by documentation.js. Update this documentation by updating the source code. -->\n"
+    }
+  ]
+}
+```
+

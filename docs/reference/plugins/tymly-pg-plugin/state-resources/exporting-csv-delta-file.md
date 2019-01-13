@@ -1,0 +1,375 @@
+---
+
+#     SSSSSSSSSSSSSSS TTTTTTTTTTTTTTTTTTTTTTT     OOOOOOOOO     PPPPPPPPPPPPPPPPP    !!!  
+#   SS:::::::::::::::ST:::::::::::::::::::::T   OO:::::::::OO   P::::::::::::::::P  !!:!! 
+#  S:::::SSSSSS::::::ST:::::::::::::::::::::T OO:::::::::::::OO P::::::PPPPPP:::::P !:::! 
+#  S:::::S     SSSSSSST:::::TT:::::::TT:::::TO:::::::OOO:::::::OPP:::::P     P:::::P!:::! 
+#  S:::::S            TTTTTT  T:::::T  TTTTTTO::::::O   O::::::O  P::::P     P:::::P!:::! 
+#  S:::::S                    T:::::T        O:::::O     O:::::O  P::::P     P:::::P!:::! 
+#   S::::SSSS                 T:::::T        O:::::O     O:::::O  P::::PPPPPP:::::P !:::! 
+#    SS::::::SSSSS            T:::::T        O:::::O     O:::::O  P:::::::::::::PP  !:::! 
+#      SSS::::::::SS          T:::::T        O:::::O     O:::::O  P::::PPPPPPPPP    !:::! 
+#         SSSSSS::::S         T:::::T        O:::::O     O:::::O  P::::P            !:::! 
+#              S:::::S        T:::::T        O:::::O     O:::::O  P::::P            !!:!! 
+#              S:::::S        T:::::T        O::::::O   O::::::O  P::::P             !!!   
+#  SSSSSSS     S:::::S      TT:::::::TT      O:::::::OOO:::::::OPP::::::PP                 
+#  S::::::SSSSSS:::::S      T:::::::::T       OO:::::::::::::OO P::::::::P           !!!  
+#  S:::::::::::::::SS       T:::::::::T         OO:::::::::OO   P::::::::P          !!:!! 
+#   SSSSSSSSSSSSSSS         TTTTTTTTTTT           OOOOOOOOO     PPPPPPPPPP           !!!  
+#                                                                                          
+#             T H I S   R E A D M E . M D   F I L E   I S   G E N E R A T E D !           
+#                                                                                         
+#     IF YOU EDIT IT DIRECTLY YOUR CHANGES WILL BE WASHED AWAY THE NEXT TIME THIS FILE  
+#                                GETS GENERATED !
+#                                                                                         
+
+sidebar: auto
+---
+
+
+# exportingCsvDeltaFile
+
+
+::: tip State Resource
+This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-pg-plugin](/reference/plugins/tymly-pg-plugin/)** plugin.
+:::
+
+## Purpose
+
+Outputs change-only-update CSV files (or “delta” files) that contain all the necessary actions required to re-synchronize rows in a cloned table - just a thin wrapper over [pg-delta-file](https://www.npmjs.com/package/pg-delta-file)
+
+## Usage
+
+### Example
+
+``` json
+{
+  "exportingCsvDeltaFile": {
+    "options": {
+      "since": "2000-07-16T20:37:26.847Z",
+      "createdColumnName": "_created",
+      "modifiedColumnName": "_modified",
+      "actionAliases": {
+        "insert": "u",
+        "update": "u",
+        "delete": "d"
+      },
+      "tables": [
+        {
+          "tableName": "people",
+          "csvColumns": [
+            "PERSON",
+            "$ACTION",
+            "$ROW_NUM",
+            "@social_security_id",
+            "@first_name",
+            "@last_name",
+            "@age"
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+``` json
+{
+  "type": "object",
+  "properties": {
+    "since": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The moment-in-time (e.g. an _epoch_) that the exported CSV file should contain changes since"
+    },
+    "actionAliases": {
+      "type": "object",
+      "description": "Maps the necessary action (`insert`, `update` or `delete`) to a value to include in the outgoing CSV line (see the dynamic `$ACTION` column)."
+    },
+    "tables": {
+      "type": "array",
+      "description": "An array of objects that contain a `table` object... which in turn define how to assemble each CSV line. Please see [pg-delta-file](https://github.com/wmfs/tymly/tree/master/pg-delta-file) for more information."
+    }
+  },
+  "required": [
+    "since"
+  ]
+}
+```
+
+## Links
+
+* [State Resource class on GitHub]()
+
+``` json
+{
+  "name": "tymly-pg-plugin",
+  "nameCamel": "tymlyPgPlugin",
+  "packageJson": {
+    "name": "@wmfs/tymly-pg-plugin",
+    "version": "0.0.0-semantically-released",
+    "description": "Replace Tymly's out-the-box memory storage with PostgreSQL",
+    "author": "West Midlands Fire Service",
+    "homepage": "https://github.com/wmfs/tymly-pg-plugin#readme",
+    "keywords": [
+      "tymly",
+      "plugin",
+      "low code",
+      "workflow",
+      "open source"
+    ],
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/wmfs/tymly-pg-plugin.git"
+    },
+    "bugs": {
+      "url": "https://github.com/wmfs/tymly-pg-plugin/issues"
+    },
+    "main": "./lib/index.js",
+    "dependencies": {
+      "async": "2.6.1",
+      "boom": "7.3.0",
+      "debug": "4.1.1",
+      "dottie": "2.0.1",
+      "lodash": "4.17.11",
+      "@wmfs/hl-pg-client": "1.10.0",
+      "@wmfs/pg-delta-file": "1.26.0",
+      "@wmfs/pg-diff-sync": "1.12.0",
+      "@wmfs/pg-info": "1.9.0",
+      "@wmfs/pg-model": "1.12.0",
+      "@wmfs/pg-telepods": "1.28.0",
+      "@wmfs/relationize": "1.10.0",
+      "@wmfs/supercopy": "1.13.0"
+    },
+    "devDependencies": {
+      "chai": "4.2.0",
+      "chai-subset": "1.6.0",
+      "codecov": "3.1.0",
+      "conventional-changelog-metahub": "2.0.2",
+      "cz-conventional-changelog": "2.1.0",
+      "mocha": "5.2.0",
+      "nyc": "13.1.0",
+      "rimraf": "2.6.3",
+      "semantic-release": "15.13.1",
+      "standard": "12.0.1",
+      "@semantic-release/changelog": "3.0.1",
+      "@semantic-release/git": "7.0.6",
+      "@wmfs/tymly": "1.75.0"
+    },
+    "scripts": {
+      "lint": "standard",
+      "test": "nyc mocha && standard",
+      "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+      "semantic-release": "semantic-release"
+    },
+    "config": {
+      "commitizen": {
+        "path": "cz-conventional-changelog"
+      }
+    },
+    "publishConfig": {
+      "access": "public"
+    }
+  },
+  "version": "0.0.0-semantically-released",
+  "services": [
+    {
+      "name": "audit",
+      "nameCamel": "audit",
+      "pluginName": "tymly-pg-plugin",
+      "docs": {
+        "description": "PG Audit Service"
+      },
+      "apiDocs": "<!-- Generated by documentation.js. Update this documentation by updating the source code. -->\n",
+      "schema": {
+        "type": "object",
+        "properties": {}
+      },
+      "bootBefore": "Boot before property not found",
+      "bootAfter": [
+        "storage",
+        "statebox"
+      ],
+      "refProperties": "Ref properties not found"
+    },
+    {
+      "name": "storage",
+      "nameCamel": "storage",
+      "pluginName": "tymly-pg-plugin",
+      "docs": {
+        "description": "Replaces the default in-memory storage solution with a Postgresql-backed alternative",
+        "blueprintDirs": {
+          "models": "One JSON file per model (contents to be a JSON schema for defining the model's data structure)"
+        }
+      },
+      "apiDocs": "<!-- Generated by documentation.js. Update this documentation by updating the source code. -->\n",
+      "schema": {
+        "type": "object",
+        "properties": {}
+      },
+      "bootBefore": "Boot before property not found",
+      "bootAfter": "Boot after property not found",
+      "refProperties": {
+        "modelId": "models"
+      }
+    }
+  ],
+  "stateResources": [
+    {
+      "name": "exporting-csv-delta-file",
+      "nameCamel": "exportingCsvDeltaFile",
+      "pluginName": "tymly-pg-plugin",
+      "docs": {
+        "description": "Outputs change-only-update CSV files (or “delta” files) that contain all the necessary actions required to re-synchronize rows in a cloned table - just a thin wrapper over [pg-delta-file](https://www.npmjs.com/package/pg-delta-file)",
+        "example": {
+          "exportingCsvDeltaFile": {
+            "options": {
+              "since": "2000-07-16T20:37:26.847Z",
+              "createdColumnName": "_created",
+              "modifiedColumnName": "_modified",
+              "actionAliases": {
+                "insert": "u",
+                "update": "u",
+                "delete": "d"
+              },
+              "tables": [
+                {
+                  "tableName": "people",
+                  "csvColumns": [
+                    "PERSON",
+                    "$ACTION",
+                    "$ROW_NUM",
+                    "@social_security_id",
+                    "@first_name",
+                    "@last_name",
+                    "@age"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "since": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The moment-in-time (e.g. an _epoch_) that the exported CSV file should contain changes since"
+          },
+          "actionAliases": {
+            "type": "object",
+            "description": "Maps the necessary action (`insert`, `update` or `delete`) to a value to include in the outgoing CSV line (see the dynamic `$ACTION` column)."
+          },
+          "tables": {
+            "type": "array",
+            "description": "An array of objects that contain a `table` object... which in turn define how to assemble each CSV line. Please see [pg-delta-file](https://github.com/wmfs/tymly/tree/master/pg-delta-file) for more information."
+          }
+        },
+        "required": [
+          "since"
+        ]
+      },
+      "apiDocs": "<!-- Generated by documentation.js. Update this documentation by updating the source code. -->\n\n## \n\nCreated by Aron.Moore on 12/07/2017.\n"
+    },
+    {
+      "name": "get-next-value-from-sequence",
+      "nameCamel": "getNextValueFromSequence",
+      "pluginName": "tymly-pg-plugin",
+      "docs": {
+        "description": "Gets next value from sequence",
+        "example": {}
+      },
+      "schema": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "apiDocs": "<!-- Generated by documentation.js. Update this documentation by updating the source code. -->\n"
+    },
+    {
+      "name": "importing-csv-files",
+      "nameCamel": "importingCsvFiles",
+      "pluginName": "tymly-pg-plugin",
+      "docs": {
+        "description": "Takes a specifically-named directory structure of CSV files and conjures bulk insert, update and delete statements and applies them to a PostgreSQL database - just a thin wrapper over [Supercopy](https://github.com/wmfs/tymly/tree/master/supercopy)",
+        "example": {
+          "importingCsvFiles": {
+            "options": {
+              "headerColumnNamePkPrefix": ".",
+              "topDownTableOrder": [
+                "addressbase_holding"
+              ]
+            }
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "headerColumnNamePkPrefix": {
+            "type": "string",
+            "description": "Used to denote primary key columns when dealing with update/upsert files. Please see the [options](https://github.com/wmfs/tymly/tree/master/supercopy#options) section in [Supercopy](https://github.com/wmfs/tymly/tree/master/supercopy) for more details."
+          },
+          "topDownTableOrder": {
+            "type": "array",
+            "description": "Used to resolve foreign-key constraint issues - will be deprecated in favour of something more automatic. Please see the [options](https://github.com/wmfs/tymly/tree/master/supercopy#options) section in [Supercopy](https://github.com/wmfs/tymly/tree/master/supercopy) for more details."
+          }
+        }
+      },
+      "apiDocs": "<!-- Generated by documentation.js. Update this documentation by updating the source code. -->\n\n## \n\nCreated by Aron.Moore on 12/07/2017.\n"
+    },
+    {
+      "name": "synchronizing-table",
+      "nameCamel": "synchronizingTable",
+      "pluginName": "tymly-pg-plugin",
+      "docs": {
+        "description": "Takes the contents of one PostgreSQL table, applies a transformation function to each row and ensures a target table is kept in sync - just a thin wrapper over [pg-telepods](https://www.npmjs.com/package/pg-telepods)",
+        "example": {
+          "synchronizingTable": {
+            "options": {
+              "transformerFunctionName": "someBlueprintFunction",
+              "source": {
+                "tableName": "someNamespace.some_table_name",
+                "hashSumColumnName": "hash_sum"
+              },
+              "target": {
+                "tableName": "someNamespace.another_table_name",
+                "hashSumColumnName": "origin_hash_sum"
+              },
+              "join": {
+                "source_pk_column": "target_pk_column"
+              }
+            }
+          }
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "transformerFunctionName": {
+            "type": "string",
+            "description": "Identifies which blueprint function should be used to undertake transformation duties. See [pg-telepods](https://github.com/wmfs/tymly/tree/master/pg-telepods) for more information."
+          },
+          "source": {
+            "type": "object",
+            "description": "Used to define a source table along with any other attributes (such as a hash sum column) for where data is to be sourced from. See [pg-telepods](https://github.com/wmfs/tymly/tree/master/pg-telepods) for more information."
+          },
+          "target": {
+            "type": "object",
+            "description": "Likewise, defines a target table with similar attributes explaining where data is to sent to. See [pg-telepods](https://github.com/wmfs/tymly/tree/master/pg-telepods) for more information."
+          },
+          "join": {
+            "type": "object",
+            "description": "A simple object denoting how primary keys on both tables are related - where `key` values are the name of a column on the source table and its `value` is a column on the target table"
+          }
+        }
+      },
+      "apiDocs": "<!-- Generated by documentation.js. Update this documentation by updating the source code. -->\n\n## \n\nCreated by Aron.Moore on 12/07/2017.\n"
+    }
+  ]
+}
+```
+
