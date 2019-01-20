@@ -43,7 +43,14 @@ Clears a registry key value
 ### Example
 
 ``` json
-
+{
+  "ClearRegistryKey": {
+    "Type": "Task",
+    "Resource": "module:clearRegistryKey",
+    "InputPath": "$",
+    "End": true
+  }
+}
 ```
 
 

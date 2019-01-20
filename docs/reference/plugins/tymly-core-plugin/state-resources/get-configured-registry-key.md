@@ -43,7 +43,17 @@ Gets a specific registry key value
 ### Example
 
 ``` json
-
+{
+  "GetConfiguredRegistryKey": {
+    "Type": "Task",
+    "Resource": "module:getConfiguredRegistryKey",
+    "ResourceConfig": {
+      "key": "tymlyTest_falseTestKey"
+    },
+    "ResultPath": "$.result",
+    "End": true
+  }
+}
 ```
 
 

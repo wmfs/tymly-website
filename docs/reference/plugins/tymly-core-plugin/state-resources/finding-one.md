@@ -43,7 +43,24 @@ Finds one document from storage
 ### Example
 
 ``` json
-
+{
+  "FindingOne": {
+    "Resource": "module:findingOne",
+    "ResourceConfig": {
+      "modelId": "safeAndWellAssessmentIndividual",
+      "filter": {
+        "where": {
+          "sawReportId": {
+            "equals": "$.sawReportId"
+          },
+          "individualReportId": {
+            "equals": "$.individualReportId"
+          }
+        }
+      }
+    }
+  }
+}
 ```
 
 

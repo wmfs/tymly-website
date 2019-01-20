@@ -36,14 +36,21 @@ This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-
 
 ## Purpose
 
-No description! :-(
+Allows listing of Auth0 Mappings
 
 ## Usage
 
 ### Example
 
 ``` json
-
+{
+  "AddAuth0Mapping": {
+    "Type": "Task",
+    "Resource": "module:listAuth0Mappings",
+    "ResultPath": "$",
+    "End": true
+  }
+}
 ```
 
 

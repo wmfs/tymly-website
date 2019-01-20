@@ -43,7 +43,17 @@ Gets next value from sequence
 ### Example
 
 ``` json
-{}
+{
+  "GetNextValueFromSequence": {
+    "Type": "Task",
+    "Resource": "module:getNextValueFromSequence",
+    "ResourceConfig": {
+      "namespace": "wmfs",
+      "id": "tempUprn"
+    },
+    "Next": "Create"
+  }
+}
 ```
 
 

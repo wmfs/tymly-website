@@ -36,14 +36,21 @@ This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-
 
 ## Purpose
 
-No description! :-(
+Allows deletion of an Auth0 Mapping
 
 ## Usage
 
 ### Example
 
 ``` json
-
+{
+  "AddAuth0Mapping": {
+    "Type": "Task",
+    "Resource": "module:removeAuth0Mapping",
+    "ResultPath": null,
+    "End": true
+  }
+}
 ```
 
 

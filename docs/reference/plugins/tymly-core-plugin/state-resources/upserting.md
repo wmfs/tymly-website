@@ -43,7 +43,18 @@ Perists a document to storage
 ### Example
 
 ``` json
-
+{
+  "Upserting": {
+    "Type": "Task",
+    "InputPath": "$.formData",
+    "Resource": "module:upserting",
+    "ResourceConfig": {
+      "modelId": "buildingDna",
+      "setMissingPropertiesToNull": false
+    },
+    "Next": "UpsertingBuilding"
+  }
+}
 ```
 
 

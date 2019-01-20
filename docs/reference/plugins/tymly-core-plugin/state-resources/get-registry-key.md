@@ -43,7 +43,14 @@ Gets a registry key value
 ### Example
 
 ``` json
-
+{
+  "GetRegistryKey": {
+    "Type": "Task",
+    "Resource": "module:getRegistryKey",
+    "InputPath": "$",
+    "End": true
+  }
+}
 ```
 
 

@@ -43,7 +43,16 @@ Run function from a blueprint
 ### Example
 
 ``` json
-
+{
+  "RunFunction": {
+    "Type": "Task",
+    "Resource": "module:runFunction",
+    "ResourceConfig": {
+      "functionName": "callbackFunction"
+    },
+    "End": true
+  }
+}
 ```
 
 

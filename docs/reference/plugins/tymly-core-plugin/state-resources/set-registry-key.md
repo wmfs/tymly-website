@@ -43,7 +43,14 @@ Sets an arbitrary registry key value
 ### Example
 
 ``` json
-
+{
+  "SetRegistryKey": {
+    "Type": "Task",
+    "Resource": "module:setRegistryKey",
+    "InputPath": "$.setRegistryKey",
+    "Next": "RefreshRanking"
+  }
+}
 ```
 
 

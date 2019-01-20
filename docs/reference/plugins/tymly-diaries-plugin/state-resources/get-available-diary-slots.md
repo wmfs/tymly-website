@@ -43,7 +43,16 @@ Get Available Diary Entry Slots
 ### Example
 
 ``` json
-
+{
+  "GetAvailableDiarySlots": {
+    "Type": "Task",
+    "Resource": "module:getAvailableDiarySlots",
+    "ResourceConfig": {
+      "diaryId": "safeAndWellBooking"
+    },
+    "End": true
+  }
+}
 ```
 
 

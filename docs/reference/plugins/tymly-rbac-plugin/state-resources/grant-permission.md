@@ -36,14 +36,21 @@ This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-
 
 ## Purpose
 
-No description! :-(
+Grants permission to a user
 
 ## Usage
 
 ### Example
 
 ``` json
-
+{
+  "GrantPermission": {
+    "Type": "Task",
+    "Resource": "module:grantPermission",
+    "ResultPath": null,
+    "End": true
+  }
+}
 ```
 
 

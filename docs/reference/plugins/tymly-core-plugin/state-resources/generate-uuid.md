@@ -43,7 +43,16 @@ Generate UUID (Long or short!)
 ### Example
 
 ``` json
-
+{
+  "GenerateUuid": {
+    "Type": "Task",
+    "Resource": "module:generateUuid",
+    "ResourceConfig": {
+      "length": 10,
+      "short": true
+    }
+  }
+}
 ```
 
 

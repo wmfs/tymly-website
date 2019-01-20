@@ -36,14 +36,21 @@ This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-
 
 ## Purpose
 
-No description! :-(
+Lists roles
 
 ## Usage
 
 ### Example
 
 ``` json
-
+{
+  "Roles": {
+    "Type": "Task",
+    "Resource": "module:listRoles",
+    "ResultPath": "$.roles",
+    "End": true
+  }
+}
 ```
 
 

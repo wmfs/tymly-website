@@ -42,8 +42,8 @@ Provides low-level functions for Tymly
 ## State Resources
 | Name | Description |
 | ---- | ----------- |
-| [availableResources](state-resources/available-resources.html) | No description! :-( |
-| [availableStateMachines](state-resources/available-state-machines.html) | No description! :-( |
+| [availableResources](state-resources/available-resources.html) | Returns a list of currently available resources |
+| [availableStateMachines](state-resources/available-state-machines.html) | Returns a list of currently available state machines |
 | [clearConfiguredRegistryKey](state-resources/clear-configured-registry-key.html) | Clears a registry specific value |
 | [clearRegistryKey](state-resources/clear-registry-key.html) | Clears a registry key value |
 | [deletingById](state-resources/deleting-by-id.html) | Deletes document by ID |

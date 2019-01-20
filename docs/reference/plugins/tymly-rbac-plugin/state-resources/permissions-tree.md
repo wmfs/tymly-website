@@ -36,14 +36,21 @@ This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-
 
 ## Purpose
 
-No description! :-(
+Returns a permission tree
 
 ## Usage
 
 ### Example
 
 ``` json
-
+{
+  "PermissionsTree": {
+    "Type": "Task",
+    "Resource": "module:permissionsTree",
+    "ResultPath": "$.permissions",
+    "End": true
+  }
+}
 ```
 
 

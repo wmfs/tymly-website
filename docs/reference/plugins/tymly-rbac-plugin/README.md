@@ -42,11 +42,11 @@ Plugin which provides role-based authentication
 ## State Resources
 | Name | Description |
 | ---- | ----------- |
-| [createRole](state-resources/create-role.html) | No description! :-( |
-| [grantPermission](state-resources/grant-permission.html) | No description! :-( |
-| [listRoles](state-resources/list-roles.html) | No description! :-( |
-| [permissionsTree](state-resources/permissions-tree.html) | No description! :-( |
-| [refreshPermissions](state-resources/refresh-permissions.html) | No description! :-( |
+| [createRole](state-resources/create-role.html) | Creates an RBAC role |
+| [grantPermission](state-resources/grant-permission.html) | Grants permission to a user |
+| [listRoles](state-resources/list-roles.html) | Lists roles |
+| [permissionsTree](state-resources/permissions-tree.html) | Returns a permission tree |
+| [refreshPermissions](state-resources/refresh-permissions.html) | Refreshes a users permissions |
 
 
 

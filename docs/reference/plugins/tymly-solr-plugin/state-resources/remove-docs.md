@@ -43,7 +43,20 @@ Remove SOLR Docs
 ### Example
 
 ``` json
-
+{
+  "RemoveDocs": {
+    "Type": "Task",
+    "Resource": "module:removeDocs",
+    "InputPath": "$",
+    "ResourceConfig": {
+      "query": {
+        "category": "iip",
+        "activeEvent": true
+      }
+    },
+    "Next": "GetIncidentsInProgress"
+  }
+}
 ```
 
 

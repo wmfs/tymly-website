@@ -43,7 +43,16 @@ Sets the context data
 ### Example
 
 ``` json
-
+{
+  "SetContextData": {
+    "Type": "Task",
+    "Resource": "module:setContextData",
+    "ResourceConfig": {
+      "$.formData.sawReportId": "$.boardKeys.sawReportId"
+    },
+    "Next": "AwaitingHumanInput"
+  }
+}
 ```
 
 

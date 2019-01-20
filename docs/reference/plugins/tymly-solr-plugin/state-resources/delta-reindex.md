@@ -43,7 +43,16 @@ Performs a delta reindex
 ### Example
 
 ``` json
-{}
+{
+  "DeltaReindex": {
+    "Type": "Task",
+    "Resource": "module:deltaReindex",
+    "ResourceConfig": {
+      "core": "tymly"
+    },
+    "End": true
+  }
+}
 ```
 
 

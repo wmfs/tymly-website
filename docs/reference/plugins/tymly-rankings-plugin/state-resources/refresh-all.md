@@ -36,14 +36,20 @@ This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-
 
 ## Purpose
 
-No description! :-(
+Refreshes all associated databases
 
 ## Usage
 
 ### Example
 
 ``` json
-
+{
+  "RefreshAll": {
+    "Type": "Task",
+    "Resource": "module:refreshAll",
+    "End": true
+  }
+}
 ```
 
 

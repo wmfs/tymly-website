@@ -36,14 +36,21 @@ This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-
 
 ## Purpose
 
-No description! :-(
+Returns a list of currently available resources
 
 ## Usage
 
 ### Example
 
 ``` json
-
+{
+  "AvailableResources": {
+    "Type": "Task",
+    "Resource": "module:availableResources",
+    "InputPath": "$",
+    "End": true
+  }
+}
 ```
 
 

@@ -42,7 +42,7 @@ Plugin which handles ranking of data for Tymly framework
 ## State Resources
 | Name | Description |
 | ---- | ----------- |
-| [refreshAll](state-resources/refresh-all.html) | No description! :-( |
+| [refreshAll](state-resources/refresh-all.html) | Refreshes all associated databases |
 | [refreshRanking](state-resources/refresh-ranking.html) | Regenerates a database view of ranked data |
 | [refreshRiskScore](state-resources/refresh-risk-score.html) | Regenerates a risk score usin growth curve |
 

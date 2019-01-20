@@ -36,14 +36,21 @@ This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-
 
 ## Purpose
 
-No description! :-(
+Returns a list of currently available state machines
 
 ## Usage
 
 ### Example
 
 ``` json
-
+{
+  "AvailableStateMachines": {
+    "Type": "Task",
+    "Resource": "module:availableStateMachines",
+    "InputPath": "$",
+    "End": true
+  }
+}
 ```
 
 

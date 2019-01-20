@@ -43,7 +43,16 @@ Run another state machine
 ### Example
 
 ``` json
-
+{
+  "RunStateMachine": {
+    "Type": "Task",
+    "Resource": "module:runStateMachine",
+    "ResourceConfig": {
+      "stateMachine": "vision3_synchronizeVision3Gazetteer_1_0"
+    },
+    "Next": "SynchronizeStreets"
+  }
+}
 ```
 
 

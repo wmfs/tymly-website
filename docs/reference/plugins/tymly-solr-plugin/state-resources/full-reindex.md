@@ -43,7 +43,16 @@ Performs a full reindex
 ### Example
 
 ``` json
-{}
+{
+  "FullReindex": {
+    "Type": "Task",
+    "Resource": "module:fullReindex",
+    "ResourceConfig": {
+      "core": "tymly"
+    },
+    "End": true
+  }
+}
 ```
 
 

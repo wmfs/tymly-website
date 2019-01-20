@@ -36,14 +36,21 @@ This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-
 
 ## Purpose
 
-No description! :-(
+Creates an RBAC role
 
 ## Usage
 
 ### Example
 
 ``` json
-
+{
+  "CreateRole": {
+    "Type": "Task",
+    "Resource": "module:createRole",
+    "ResultPath": null,
+    "End": true
+  }
+}
 ```
 
 

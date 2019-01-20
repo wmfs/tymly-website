@@ -36,14 +36,24 @@ This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-
 
 ## Purpose
 
-No description! :-(
+Returns the contents of a cloud storage folder
 
 ## Usage
 
 ### Example
 
 ``` json
-
+{
+  "GetCloudStorageContents": {
+    "Type": "Task",
+    "Resource": "module:getCloudStorageContents",
+    "ResourceConfig": {
+      "folderPath": "Shared Documents/General/uploads/ridge_uploads/${boardKeys.uprn}"
+    },
+    "ResultPath": "$.sharepoint",
+    "Next": "CreateSearchInput"
+  }
+}
 ```
 
 

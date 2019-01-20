@@ -43,7 +43,16 @@ Logs to the console via a template
 ### Example
 
 ``` json
-
+{
+  "Logging": {
+    "Type": "Task",
+    "Resource": "module:logging",
+    "ResourceConfig": {
+      "template": "Purge site!"
+    },
+    "End": true
+  }
+}
 ```
 
 

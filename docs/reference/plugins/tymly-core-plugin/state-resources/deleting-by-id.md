@@ -43,7 +43,16 @@ Deletes document by ID
 ### Example
 
 ``` json
-
+{
+  "DeletingById": {
+    "Type": "Task",
+    "InputPath": "$.id",
+    "Resource": "module:deletingById",
+    "ResourceConfig": {
+      "modelId": "contact"
+    }
+  }
+}
 ```
 
 

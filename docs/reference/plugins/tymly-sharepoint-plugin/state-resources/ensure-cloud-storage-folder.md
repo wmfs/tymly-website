@@ -36,14 +36,24 @@ This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-
 
 ## Purpose
 
-No description! :-(
+Ensures the existence of a cloud storage folder
 
 ## Usage
 
 ### Example
 
 ``` json
-
+{
+  "EnsureCloudStorageFolder": {
+    "Type": "Task",
+    "Resource": "module:ensureCloudStorageFolder",
+    "ResourceConfig": {
+      "folderPath": "Shared Documents/General/uploads/ridge_uploads/${boardKeys.uprn}"
+    },
+    "ResultPath": "$.sharepointMeta",
+    "Next": "GetSharepointContents"
+  }
+}
 ```
 
 

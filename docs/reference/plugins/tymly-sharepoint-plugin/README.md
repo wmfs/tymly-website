@@ -42,8 +42,8 @@ A plugin for accessing sharepoint from within Tymly
 ## State Resources
 | Name | Description |
 | ---- | ----------- |
-| [ensureCloudStorageFolder](state-resources/ensure-cloud-storage-folder.html) | No description! :-( |
-| [getCloudStorageContents](state-resources/get-cloud-storage-contents.html) | No description! :-( |
+| [ensureCloudStorageFolder](state-resources/ensure-cloud-storage-folder.html) | Ensures the existence of a cloud storage folder |
+| [getCloudStorageContents](state-resources/get-cloud-storage-contents.html) | Returns the contents of a cloud storage folder |
 
 
 

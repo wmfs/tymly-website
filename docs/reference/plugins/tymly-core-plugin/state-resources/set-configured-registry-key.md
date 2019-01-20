@@ -43,7 +43,17 @@ Sets a registry specific value
 ### Example
 
 ``` json
-
+{
+  "SetConfiguredRegistryKey": {
+    "Type": "Task",
+    "Resource": "module:setConfiguredRegistryKey",
+    "InputPath": "$.value",
+    "ResourceConfig": {
+      "key": "tymlyTest_anotherTestKey"
+    },
+    "End": true
+  }
+}
 ```
 
 

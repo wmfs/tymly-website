@@ -43,7 +43,14 @@ Cancel Diary Entry
 ### Example
 
 ``` json
-
+{
+  "CancelDiaryEntry": {
+    "Type": "Task",
+    "Resource": "module:cancelDiaryEntry",
+    "InputPath": "$.id",
+    "End": true
+  }
+}
 ```
 
 

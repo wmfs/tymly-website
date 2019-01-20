@@ -43,7 +43,17 @@ Create Diary Entry
 ### Example
 
 ``` json
-
+{
+  "CreateDiaryEntry": {
+    "Type": "Task",
+    "Resource": "module:createDiaryEntry",
+    "ResourceConfig": {
+      "diaryId": "safeAndWellBooking",
+      "originId": "Safe and Well"
+    },
+    "End": true
+  }
+}
 ```
 
 

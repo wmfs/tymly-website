@@ -43,7 +43,14 @@ Generates a timestamp
 ### Example
 
 ``` json
-
+{
+  "Timestamp": {
+    "Type": "Task",
+    "Resource": "module:timestamp",
+    "ResultPath": "$.timestamp",
+    "End": true
+  }
+}
 ```
 
 

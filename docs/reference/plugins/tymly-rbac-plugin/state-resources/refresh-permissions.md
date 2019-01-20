@@ -36,14 +36,21 @@ This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-
 
 ## Purpose
 
-No description! :-(
+Refreshes a users permissions
 
 ## Usage
 
 ### Example
 
 ``` json
-
+{
+  "Refresh": {
+    "Type": "Task",
+    "Resource": "module:refreshPermissions",
+    "ResultPath": null,
+    "End": true
+  }
+}
 ```
 
 

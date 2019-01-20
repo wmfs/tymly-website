@@ -43,7 +43,13 @@ Finds documents with where clause from storage
 ### Example
 
 ``` json
-
+{
+  "Finding": {
+    "Type": "Task",
+    "Resource": "module:findingById",
+    "End": true
+  }
+}
 ```
 
 
