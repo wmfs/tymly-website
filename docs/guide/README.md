@@ -81,9 +81,7 @@ tymly init
 ## Blueprints
 
 ::: tip Introducing Blueprints
-In Tymly a ***blueprint*** is a collection of files that are mostly written in [JSON](https://www.w3schools.com/js/js_json_intro.asp) and adhere to relevant open standards.
-When considered together, the files inside a blueprint should fully describe a digital service.
-Blueprints cover all three facets of the [Model, View, Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern.
+In Tymly a ***blueprint*** describes a digital service. A blueprint is a collection of files that are mostly written in [JSON](https://www.w3schools.com/js/js_json_intro.asp) and adhere to relevant open standards. Blueprints cover all three facets of the [Model, View, Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern.
 :::
 
 :pizza: **Welcome to Tymly Pizza! :pizza:**
@@ -93,7 +91,7 @@ Let's make a new blueprint for a new pizza-ordering digital service...
 From inside a throwaway directory somewhere, run the following command:
 
 ``` bash
-tymly new blueprint
+tymly new-blueprint
 ```
 
 You'll be prompted for a few details regarding your new digital service. For the purposes of this example specify the **name** `tymly-pizza-blueprint`.
@@ -145,8 +143,8 @@ At this point it's perhaps worth noting that, thanks to its [plugin](#plugins) a
 **From within the `/tymly-pizza-template` directory, run the following commands:**
 
 ``` bash
-tymly add model --name pizza
-tymly add model --name order
+tymly add-model --name pizza
+tymly add-model --name order
 ```
 
 Now we have a few more files to play with:
