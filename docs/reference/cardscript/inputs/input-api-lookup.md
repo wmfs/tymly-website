@@ -31,3 +31,51 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript input.
 :::
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Input.ApiLookup",
+  "description": "Lets a user look up a value via an API.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Input.ApiLookup\"`.",
+      "enum": [
+        "Input.ApiLookup"
+      ]
+    }
+  },
+  "required": [
+    "type",
+    "id"
+  ],
+  "typeSafe": "input-api-lookup",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "id",
+      "type": "string",
+      "required": "Required",
+      "text": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Input.ApiLookup\"`."
+    }
+  ]
+}
+</pre>
+

@@ -56,9 +56,13 @@ Allows a user to unwatch a board
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `subscriptionId` *{string}*
+#### `subscriptionId`
+
+The UUID of a subscription the user wants to cancel (as available as part of each subscription object).
+
+* **Type:** `string`
 
 
 

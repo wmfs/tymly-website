@@ -33,3 +33,66 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript Action.
 :::
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "description": "When invoked, show the given url either by launching it in an external web browser or showing in-situ with embedded web browser.",
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Action.OpenUrl\"`."
+    },
+    "title": {
+      "type": "string",
+      "description": "Label for button or link that represents this action."
+    },
+    "iconUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Optional icon to be shown on the action in conjunction with the title",
+      "version": "1.1"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "The URL to open."
+    }
+  },
+  "required": [
+    "type",
+    "url"
+  ],
+  "type": "Action.OpenUrl",
+  "typeSafe": "action-open-url",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Action.OpenUrl\"`."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": "Optional",
+      "text": "Label for button or link that represents this action."
+    },
+    {
+      "name": "iconUrl",
+      "type": "string",
+      "required": "Optional",
+      "text": "Optional icon to be shown on the action in conjunction with the title"
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "required": "Required",
+      "text": "The URL to open."
+    }
+  ]
+}
+</pre>
+

@@ -26,8 +26,90 @@
 sidebar: auto
 ---
 
-# Fact
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/fact.svg')" alt="Relevant Cardscript icon">Fact
 
-::: tip State Resource
-This is a Cardscript element.
+::: tip Cardscript Element
+Describes a Fact in a FactSet as a key/value pair.
 :::
+
+## Example
+
+``` json
+"FIXME!"
+```
+
+## Required properties
+
+### `title`
+
+The title of the fact.
+
+* **Type:** `string`
+
+----
+
+### `value`
+
+The value of the fact.
+
+* **Type:** `string`
+
+## Optional properties
+
+### `type`
+
+* **Type:** `string`
+* **Values:**
+  * `Fact`
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Fact",
+  "description": "Describes a Fact in a FactSet as a key/value pair.",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "Fact"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the fact."
+    },
+    "value": {
+      "type": "string",
+      "description": "The value of the fact."
+    }
+  },
+  "required": [
+    "title",
+    "value"
+  ],
+  "typeSafe": "fact",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Optional"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": "Required",
+      "text": "The title of the fact."
+    },
+    {
+      "name": "value",
+      "type": "string",
+      "required": "Required",
+      "text": "The value of the fact."
+    }
+  ]
+}
+</pre>
+

@@ -26,8 +26,88 @@
 sidebar: auto
 ---
 
-# PhaseBanner
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/phase-banner.svg')" alt="Relevant Cardscript icon">PhaseBanner
 
-::: tip State Resource
-This is a Cardscript element.
+::: tip Cardscript Element
+Displays a banner highlighting a phase.
 :::
+
+## Example
+
+``` json
+"FIXME!"
+```
+
+## Required properties
+
+### `type`
+
+Must be `"PhaseBanner"`.
+
+* **Type:** `string`
+* **Values:**
+  * `PhaseBanner`
+
+## Optional properties
+
+### `phase`
+
+The phase which the service is in.
+
+* **Type:** `string`
+* **Values:**
+  * `alpha`
+  * `beta`
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "PhaseBanner",
+  "description": "Displays a banner highlighting a phase.",
+  "version": "1.1",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"PhaseBanner\"`.",
+      "enum": [
+        "PhaseBanner"
+      ]
+    },
+    "phase": {
+      "type": "string",
+      "description": "The phase which the service is in.",
+      "enum": [
+        "alpha",
+        "beta"
+      ]
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "typeSafe": "phase-banner",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"PhaseBanner\"`."
+    },
+    {
+      "name": "phase",
+      "type": "string",
+      "required": "Optional",
+      "text": "The phase which the service is in."
+    }
+  ]
+}
+</pre>
+

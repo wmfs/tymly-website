@@ -31,3 +31,99 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript input.
 :::
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Input.Gender",
+  "description": "Lets a user enter a gender.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Input.Gender\"`.",
+      "enum": [
+        "Input.Gender"
+      ]
+    },
+    "term": {
+      "type": "string",
+      "description": "Whether the gender or sex should be asked.",
+      "enum": [
+        "sex",
+        "gender"
+      ],
+      "default": "gender"
+    },
+    "preferNotToSay": {
+      "type": "boolean",
+      "description": "Includes Prefer not to say gender in list.",
+      "default": false
+    },
+    "preferToSelfDescribe": {
+      "type": "boolean",
+      "description": "Includes Prefer not to self describe gender in list.",
+      "default": false
+    },
+    "includeTransgender": {
+      "type": "boolean",
+      "description": "Includes transgender in list.",
+      "default": false
+    }
+  },
+  "required": [
+    "type",
+    "id"
+  ],
+  "typeSafe": "input-gender",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "id",
+      "type": "string",
+      "required": "Required",
+      "text": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Input.Gender\"`."
+    },
+    {
+      "name": "term",
+      "type": "string",
+      "required": "Optional",
+      "text": "Whether the gender or sex should be asked."
+    },
+    {
+      "name": "preferNotToSay",
+      "type": "boolean",
+      "required": "Optional",
+      "text": "Includes Prefer not to say gender in list."
+    },
+    {
+      "name": "preferToSelfDescribe",
+      "type": "boolean",
+      "required": "Optional",
+      "text": "Includes Prefer not to self describe gender in list."
+    },
+    {
+      "name": "includeTransgender",
+      "type": "boolean",
+      "required": "Optional",
+      "text": "Includes transgender in list."
+    }
+  ]
+}
+</pre>
+

@@ -33,3 +33,54 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript Action.
 :::
+
+
+<pre>
+{
+  "type": "Action.Cancel",
+  "additionalProperties": true,
+  "description": "Allows to cancel out of a form.",
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Action.Cancel\"`."
+    },
+    "title": {
+      "type": "string",
+      "description": "Label for button or link that represents this action."
+    },
+    "iconUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Optional icon to be shown on the action in conjunction with the title",
+      "version": "1.1"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "typeSafe": "action-cancel",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Action.Cancel\"`."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": "Optional",
+      "text": "Label for button or link that represents this action."
+    },
+    {
+      "name": "iconUrl",
+      "type": "string",
+      "required": "Optional",
+      "text": "Optional icon to be shown on the action in conjunction with the title"
+    }
+  ]
+}
+</pre>
+

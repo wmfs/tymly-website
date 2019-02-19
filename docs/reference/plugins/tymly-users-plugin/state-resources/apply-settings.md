@@ -55,9 +55,13 @@ Applies settings for a user
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `categoryRelevance` *{array}*
+#### `categoryRelevance`
+
+Ordering of relevant categories for the user.
+
+* **Type:** `array`
 
 
 

@@ -26,8 +26,142 @@
 sidebar: auto
 ---
 
-# AddressBlock
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/address-block.svg')" alt="Relevant Cardscript icon">AddressBlock
 
-::: tip State Resource
-This is a Cardscript element.
+::: tip Cardscript Element
+Displays an address.
 :::
+
+## Example
+
+``` json
+"FIXME!"
+```
+
+## Required properties
+
+### `type`
+
+Must be `"AddressBlock"`.
+
+* **Type:** `string`
+* **Values:**
+  * `AddressBlock`
+
+----
+
+### `dataPath`
+
+Points to the holding the address.
+
+* **Type:** `string`
+
+## Optional properties
+
+### `title`
+
+Title of the AddressBlock.
+
+* **Type:** `string`
+* **Default:** `"Address"`
+
+----
+
+### `multiline`
+
+Wether the address in multiple lines.
+
+* **Type:** `boolean`
+* **Default:** `true`
+
+----
+
+### `lineDelimited`
+
+The string of character(s) which the address is delimited by.
+
+* **Type:** `string`
+* **Default:** `","`
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "AddressBlock",
+  "description": "Displays an address.",
+  "version": "1.1",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"AddressBlock\"`.",
+      "enum": [
+        "AddressBlock"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the AddressBlock.",
+      "default": "Address"
+    },
+    "dataPath": {
+      "type": "string",
+      "description": "Points to the holding the address."
+    },
+    "multiline": {
+      "type": "boolean",
+      "default": true,
+      "description": "Wether the address in multiple lines."
+    },
+    "lineDelimited": {
+      "type": "string",
+      "default": ",",
+      "description": "The string of character(s) which the address is delimited by."
+    }
+  },
+  "required": [
+    "type",
+    "dataPath"
+  ],
+  "typeSafe": "address-block",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"AddressBlock\"`."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": "Optional",
+      "text": "Title of the AddressBlock."
+    },
+    {
+      "name": "dataPath",
+      "type": "string",
+      "required": "Required",
+      "text": "Points to the holding the address."
+    },
+    {
+      "name": "multiline",
+      "type": "boolean",
+      "required": "Optional",
+      "text": "Wether the address in multiple lines."
+    },
+    {
+      "name": "lineDelimited",
+      "type": "string",
+      "required": "Optional",
+      "text": "The string of character(s) which the address is delimited by."
+    }
+  ]
+}
+</pre>
+

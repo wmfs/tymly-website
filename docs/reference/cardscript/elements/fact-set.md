@@ -26,8 +26,84 @@
 sidebar: auto
 ---
 
-# FactSet
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/fact-set.svg')" alt="Relevant Cardscript icon">FactSet
 
-::: tip State Resource
-This is a Cardscript element.
+::: tip Cardscript Element
+The FactSet element displays a series of facts (i.e. name/value pairs) in a tabular form.
 :::
+
+## Example
+
+``` json
+"FIXME!"
+```
+
+## Required properties
+
+### `facts`
+
+The array of `Fact`s.
+
+* **Type:** `array`
+
+----
+
+### `type`
+
+Must be `"FactSet"`.
+
+* **Type:** `string`
+* **Values:**
+  * `FactSet`
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "FactSet",
+  "description": "The FactSet element displays a series of facts (i.e. name/value pairs) in a tabular form.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "facts": {
+      "type": "array",
+      "description": "The array of `Fact`s.",
+      "items": {
+        "$ref": "#/definitions/Fact"
+      }
+    },
+    "type": {
+      "type": "string",
+      "description": "Must be `\"FactSet\"`.",
+      "enum": [
+        "FactSet"
+      ]
+    }
+  },
+  "required": [
+    "type",
+    "facts"
+  ],
+  "typeSafe": "fact-set",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "facts",
+      "type": "array",
+      "required": "Required",
+      "text": "The array of `Fact`s."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"FactSet\"`."
+    }
+  ]
+}
+</pre>
+

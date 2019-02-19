@@ -57,9 +57,13 @@ Creates ToDo Entry
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `todoTitle` *{string}*
+#### `todoTitle`
+
+Title of the to do entry.
+
+* **Type:** `string`
 
 
 

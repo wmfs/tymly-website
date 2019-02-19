@@ -106,11 +106,29 @@ Smash CSV files into more manageable files based on column values - just a thin 
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `parser` *{object}*
-* `dirSplits` *{array}*
-* `fileSplits` *{object}*
+#### `parser`
+
+Object controlling how CSV lines should be parsed. Uses [csv-streamify](https://www.npmjs.com/package/csv-streamify) under the bonnet... with the addition of a `skipFirstLine` property (`boolean`) for conditionally ignoring header lines.
+
+* **Type:** `object`
+
+----
+
+#### `dirSplits`
+
+Used to split CSV files across different directories, depending on column values. Please see the [dirSplit](https://github.com/wmfs/tymly/tree/master/smithereens#dirsplit-object) object in [Smithereens](https://github.com/wmfs/tymly/tree/master/smithereens)for more information.
+
+* **Type:** `array`
+
+----
+
+#### `fileSplits`
+
+In a similar way, CSV lines can be split across different file too. Please see the [fileSplit](https://github.com/wmfs/tymly/tree/master/smithereens#filesplit-object) object in [Smithereens](https://github.com/wmfs/tymly/tree/master/smithereens)for more information.
+
+* **Type:** `object`
 
 
 

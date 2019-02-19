@@ -31,3 +31,61 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript container.
 :::
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Tab",
+  "description": "Defines a container that is part of a TabSet.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Tab\"`.",
+      "enum": [
+        "Tab"
+      ]
+    },
+    "items": {
+      "description": "The card elements to include in the `Tab`.",
+      "$ref": "#/definitions/CardElements"
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the `Tab`."
+    }
+  },
+  "required": [
+    "items",
+    "title"
+  ],
+  "typeSafe": "tab",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Optional",
+      "text": "Must be `\"Tab\"`."
+    },
+    {
+      "name": "items",
+      "required": "Required",
+      "text": "The card elements to include in the `Tab`."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": "Required",
+      "text": "The title of the `Tab`."
+    }
+  ]
+}
+</pre>
+

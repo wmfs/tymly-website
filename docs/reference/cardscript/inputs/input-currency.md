@@ -31,3 +31,81 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript input.
 :::
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Input.Currency",
+  "description": "Lets a user enter a currency value.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Input.Currency\"`.",
+      "enum": [
+        "Input.Currency"
+      ]
+    },
+    "placeholder": {
+      "type": "string",
+      "description": "Description of the input desired. Displayed when no text has been input."
+    },
+    "max": {
+      "type": "number",
+      "description": "Hint of maximum value (may be ignored by some clients)."
+    },
+    "min": {
+      "type": "number",
+      "description": "Hint of minimum value (may be ignored by some clients)."
+    }
+  },
+  "required": [
+    "type",
+    "id"
+  ],
+  "typeSafe": "input-currency",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "id",
+      "type": "string",
+      "required": "Required",
+      "text": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Input.Currency\"`."
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "required": "Optional",
+      "text": "Description of the input desired. Displayed when no text has been input."
+    },
+    {
+      "name": "max",
+      "type": "number",
+      "required": "Optional",
+      "text": "Hint of maximum value (may be ignored by some clients)."
+    },
+    {
+      "name": "min",
+      "type": "number",
+      "required": "Optional",
+      "text": "Hint of minimum value (may be ignored by some clients)."
+    }
+  ]
+}
+</pre>
+

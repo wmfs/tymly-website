@@ -31,3 +31,58 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript container.
 :::
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "ActionSet",
+  "description": "ActionSet allows actions to be displayed within a card.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"ActionSet\"`.",
+      "enum": [
+        "ActionSet"
+      ]
+    },
+    "actions": {
+      "description": "The Actions to show in the card's action bar.",
+      "$ref": "#/definitions/Actions"
+    },
+    "spacing": {
+      "$ref": "#/definitions/SpacingStyle"
+    }
+  },
+  "required": [
+    "type",
+    "actions"
+  ],
+  "typeSafe": "action-set",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"ActionSet\"`."
+    },
+    {
+      "name": "actions",
+      "required": "Required",
+      "text": "The Actions to show in the card's action bar."
+    },
+    {
+      "name": "spacing",
+      "required": "Optional"
+    }
+  ]
+}
+</pre>
+

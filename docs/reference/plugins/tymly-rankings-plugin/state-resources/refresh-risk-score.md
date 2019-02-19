@@ -58,10 +58,21 @@ Regenerates a risk score usin growth curve
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `schema` *{string}*
-* `category` *{string}*
+#### `schema`
+
+The schema to refresh the ranking within.
+
+* **Type:** `string`
+
+----
+
+#### `category`
+
+Identifies the property type to refresh e.g. factory, hospital etc.
+
+* **Type:** `string`
 
 
 

@@ -58,9 +58,13 @@ Deletes document by ID
 
 ## Options
 
-### Required
+### Required properties
 
-* `modelId` *{string}*
+#### `modelId`
+
+This is the id of a model within the current namespace which will be used to upsert the document.
+
+* **Type:** `string`
 
 
 

@@ -31,3 +31,54 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript container.
 :::
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "TabSet",
+  "description": "TabSet allows to display content through various tabs.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"TabSet\"`.",
+      "enum": [
+        "TabSet"
+      ]
+    },
+    "tabs": {
+      "type": "array",
+      "description": "The array of `Tabs` to divide content.",
+      "items": {
+        "$ref": "#/definitions/Tab"
+      }
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "typeSafe": "tab-set",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"TabSet\"`."
+    },
+    {
+      "name": "tabs",
+      "type": "array",
+      "required": "Optional",
+      "text": "The array of `Tabs` to divide content."
+    }
+  ]
+}
+</pre>
+

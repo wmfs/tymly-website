@@ -26,8 +26,63 @@
 sidebar: auto
 ---
 
-# Separator
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/separator.svg')" alt="Relevant Cardscript icon">Separator
 
-::: tip State Resource
-This is a Cardscript element.
+::: tip Cardscript Element
+Displays a horizontal line.
 :::
+
+## Example
+
+``` json
+"FIXME!"
+```
+
+## Required properties
+
+### `type`
+
+Must be `"Separator"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Separator`
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Separator",
+  "description": "Displays a horizontal line.",
+  "version": "1.1",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Separator\"`.",
+      "enum": [
+        "Separator"
+      ]
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "typeSafe": "separator",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Separator\"`."
+    }
+  ]
+}
+</pre>
+

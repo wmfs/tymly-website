@@ -31,3 +31,72 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript container.
 :::
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "ColumnSet",
+  "description": "ColumnSet divides a region into Columns, allowing elements to sit side-by-side.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "columns": {
+      "type": "array",
+      "description": "The array of `Columns` to divide the region into.",
+      "items": {
+        "$ref": "#/definitions/Column"
+      }
+    },
+    "selectAction": {
+      "description": "An Action that will be invoked when the `ColumnSet` is tapped or selected. `Action.ShowCard` is not supported.",
+      "type": "object",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/Action.Submit"
+        },
+        {
+          "$ref": "#/definitions/Action.OpenUrl"
+        }
+      ]
+    },
+    "type": {
+      "type": "string",
+      "description": "Must be `\"ColumnSet\"`.",
+      "enum": [
+        "ColumnSet"
+      ]
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "typeSafe": "column-set",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "columns",
+      "type": "array",
+      "required": "Optional",
+      "text": "The array of `Columns` to divide the region into."
+    },
+    {
+      "name": "selectAction",
+      "type": "object",
+      "required": "Optional",
+      "text": "An Action that will be invoked when the `ColumnSet` is tapped or selected. `Action.ShowCard` is not supported."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"ColumnSet\"`."
+    }
+  ]
+}
+</pre>
+

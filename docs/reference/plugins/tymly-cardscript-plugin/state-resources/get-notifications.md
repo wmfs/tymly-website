@@ -56,10 +56,22 @@ Gets notifications for a user
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `startFrom` *{string}*
-* `limit` *{integer}*
+#### `startFrom`
+
+An optional timestamp denoting the earliest time notifications should be returned from.
+
+* **Type:** `string`
+* **Format:** [`date-time`](https://json-schema.org/understanding-json-schema/reference/string.html#format)
+
+----
+
+#### `limit`
+
+An integer specifying the maximum number of notifications to retrieve.
+
+* **Type:** `integer`
 
 
 

@@ -58,10 +58,21 @@ Sending Mail or SMS via GOV UK Notify Service
 
 ## Options
 
-### Required
+### Required properties
 
-* `templateId` *{string}*
-* `messageType` *{string}*
+#### `templateId`
+
+The ID of the template for the message.
+
+* **Type:** `string`
+
+----
+
+#### `messageType`
+
+The type of message to be sent (sms or mail).
+
+* **Type:** `string`
 
 
 

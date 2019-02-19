@@ -26,8 +26,74 @@
 sidebar: auto
 ---
 
-# MediaSource
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/media-source.svg')" alt="Relevant Cardscript icon">MediaSource
 
-::: tip State Resource
-This is a Cardscript element.
+::: tip Cardscript Element
+Defines a source for a Media element
 :::
+
+## Example
+
+``` json
+"FIXME!"
+```
+
+## Required properties
+
+### `mimeType`
+
+Mime type of associated media (e.g. `"video/mp4"`).
+
+* **Type:** `string`
+
+----
+
+### `url`
+
+URL to media.
+
+* **Type:** `string`
+* **Format:** [`uri`](https://json-schema.org/understanding-json-schema/reference/string.html#format)
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "MediaSource",
+  "description": "Defines a source for a Media element",
+  "version": "1.1",
+  "properties": {
+    "mimeType": {
+      "type": "string",
+      "description": "Mime type of associated media (e.g. `\"video/mp4\"`)."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to media."
+    }
+  },
+  "required": [
+    "mimeType",
+    "url"
+  ],
+  "typeSafe": "media-source",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "mimeType",
+      "type": "string",
+      "required": "Required",
+      "text": "Mime type of associated media (e.g. `\"video/mp4\"`)."
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "required": "Required",
+      "text": "URL to media."
+    }
+  ]
+}
+</pre>
+

@@ -61,12 +61,37 @@ Awaits the input of a human to advance the state-machine
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `uiName` *{string}*
-* `uiType` *{string}*
-* `dataPath` *{string}*
-* `defaults` *{object}*
+#### `uiName`
+
+Name of the UI board or form.
+
+* **Type:** `string`
+
+----
+
+#### `uiType`
+
+Type of UI, either board or form.
+
+* **Type:** `string`
+
+----
+
+#### `dataPath`
+
+Path to data.
+
+* **Type:** `string`
+
+----
+
+#### `defaults`
+
+Default values.
+
+* **Type:** `object`
 
 
 

@@ -58,10 +58,21 @@ Takes a specifically-named directory structure of CSV files and conjures bulk in
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `headerColumnNamePkPrefix` *{string}*
-* `topDownTableOrder` *{array}*
+#### `headerColumnNamePkPrefix`
+
+Used to denote primary key columns when dealing with update/upsert files. Please see the [options](https://github.com/wmfs/tymly/tree/master/supercopy#options) section in [Supercopy](https://github.com/wmfs/tymly/tree/master/supercopy) for more details.
+
+* **Type:** `string`
+
+----
+
+#### `topDownTableOrder`
+
+Used to resolve foreign-key constraint issues - will be deprecated in favour of something more automatic. Please see the [options](https://github.com/wmfs/tymly/tree/master/supercopy#options) section in [Supercopy](https://github.com/wmfs/tymly/tree/master/supercopy) for more details.
+
+* **Type:** `array`
 
 
 

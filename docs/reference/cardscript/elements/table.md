@@ -26,8 +26,151 @@
 sidebar: auto
 ---
 
-# Table
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/table.svg')" alt="Relevant Cardscript icon">Table
 
-::: tip State Resource
-This is a Cardscript element.
+::: tip Cardscript Element
+Displays text, allowing control over font sizes, weight, and color.
 :::
+
+## Example
+
+``` json
+"FIXME!"
+```
+
+## Required properties
+
+### `type`
+
+Must be `"Table"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Table`
+
+----
+
+### `arrayPath`
+
+Points to the array of data to be displayed.
+
+* **Type:** `string`
+
+----
+
+### `columns`
+
+* **Type:** `array`
+
+## Optional properties
+
+### `title`
+
+Title displayed for the `Table`.
+
+* **Type:** `string`
+
+----
+
+### `resultLimit`
+
+Limit the results per page.
+
+* **Type:** `integer`
+* **Default:** `10`
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Table",
+  "description": "Displays text, allowing control over font sizes, weight, and color.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Table\"`.",
+      "enum": [
+        "Table"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "description": "Title displayed for the `Table`."
+    },
+    "arrayPath": {
+      "type": "string",
+      "description": "Points to the array of data to be displayed."
+    },
+    "columns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Title displayed for the column."
+          },
+          "field": {
+            "type": "string",
+            "description": "Points to the data to be displayed in the column."
+          }
+        },
+        "required": [
+          "title",
+          "field"
+        ]
+      }
+    },
+    "resultLimit": {
+      "type": "integer",
+      "description": "Limit the results per page.",
+      "default": 10
+    }
+  },
+  "required": [
+    "type",
+    "arrayPath",
+    "columns"
+  ],
+  "typeSafe": "table",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Table\"`."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": "Optional",
+      "text": "Title displayed for the `Table`."
+    },
+    {
+      "name": "arrayPath",
+      "type": "string",
+      "required": "Required",
+      "text": "Points to the array of data to be displayed."
+    },
+    {
+      "name": "columns",
+      "type": "array",
+      "required": "Required"
+    },
+    {
+      "name": "resultLimit",
+      "type": "integer",
+      "required": "Optional",
+      "text": "Limit the results per page."
+    }
+  ]
+}
+</pre>
+

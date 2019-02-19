@@ -55,9 +55,13 @@ Acknowledges notifications for a user
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `notificationIds` *{array}*
+#### `notificationIds`
+
+Holds the ID's of the notification the user wishes to acknowledge.
+
+* **Type:** `array`
 
 
 

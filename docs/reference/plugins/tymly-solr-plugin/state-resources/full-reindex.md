@@ -58,9 +58,13 @@ Performs a full reindex
 
 ## Options
 
-### Required
+### Required properties
 
-* `core` *{string}*
+#### `core`
+
+The selected core to perform solr delta reindex on.
+
+* **Type:** `string`
 
 
 

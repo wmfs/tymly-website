@@ -31,3 +31,55 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript container.
 :::
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Collapsible",
+  "description": "A container which expands when clicked on to show a card.",
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Collapsible\"`.",
+      "enum": [
+        "Collapsible"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "description": "Text to be displayed as label."
+    },
+    "card": {
+      "$ref": "#/definitions/AdaptiveCard"
+    }
+  },
+  "required": [
+    "type",
+    "title",
+    "card"
+  ],
+  "typeSafe": "collapsible",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Collapsible\"`."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": "Required",
+      "text": "Text to be displayed as label."
+    },
+    {
+      "name": "card",
+      "required": "Required"
+    }
+  ]
+}
+</pre>
+

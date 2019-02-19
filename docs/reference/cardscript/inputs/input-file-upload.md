@@ -31,3 +31,51 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript input.
 :::
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Input.FileUpload",
+  "description": "Lets a user upload a file.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Input.FileUpload\"`.",
+      "enum": [
+        "Input.FileUpload"
+      ]
+    }
+  },
+  "required": [
+    "type",
+    "id"
+  ],
+  "typeSafe": "input-file-upload",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "id",
+      "type": "string",
+      "required": "Required",
+      "text": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Input.FileUpload\"`."
+    }
+  ]
+}
+</pre>
+

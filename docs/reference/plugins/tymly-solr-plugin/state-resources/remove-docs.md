@@ -62,9 +62,13 @@ Remove SOLR Docs
 
 ## Options
 
-### Required
+### Required properties
 
-* `query` *{object}*
+#### `query`
+
+Provides some filters for the query.
+
+* **Type:** `object`
 
 
 

@@ -193,9 +193,13 @@ Flatten XML Files
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `entities` *{object}*
+#### `entities`
+
+Transforms XML to CSV using supplied mapping.
+
+* **Type:** `object`
 
 
 

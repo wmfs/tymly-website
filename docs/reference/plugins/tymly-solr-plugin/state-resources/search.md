@@ -55,16 +55,69 @@ Performs a search
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `query` *{string}*
-* `domain` *{string}*
-* `orderBy` *{string}*
-* `offset` *{integer}*
-* `limit` *{integer}*
-* `lat` *{number}*
-* `long` *{number}*
-* `categoryRestriction` *{array}*
+#### `query`
+
+Query to perform search on.
+
+* **Type:** `string`
+
+----
+
+#### `domain`
+
+Domain.
+
+* **Type:** `string`
+
+----
+
+#### `orderBy`
+
+What to order the results by.
+
+* **Type:** `string`
+
+----
+
+#### `offset`
+
+The offset of the results.
+
+* **Type:** `integer`
+
+----
+
+#### `limit`
+
+The limit of the results.
+
+* **Type:** `integer`
+
+----
+
+#### `lat`
+
+Latitude.
+
+* **Type:** `number`
+
+----
+
+#### `long`
+
+Longitude.
+
+* **Type:** `number`
+
+----
+
+#### `categoryRestriction`
+
+Categories to restrict the search to.
+
+* **Type:** `array`
 
 
 

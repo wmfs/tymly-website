@@ -31,3 +31,93 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript input.
 :::
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Input.ChoiceSet",
+  "description": "Allows a user to input a Choice.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "choices": {
+      "type": "array",
+      "description": "`Choice` options.",
+      "items": {
+        "$ref": "#/definitions/Input.Choice"
+      }
+    },
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    "isMultiSelect": {
+      "type": "boolean",
+      "description": "Allow multiple choices to be selected.",
+      "default": false
+    },
+    "style": {
+      "$ref": "#/definitions/ChoiceInputStyle"
+    },
+    "type": {
+      "description": "Must be `\"Input.ChoiceInput\"`.",
+      "enum": [
+        "Input.ChoiceSet"
+      ],
+      "type": "string"
+    },
+    "value": {
+      "type": "string",
+      "description": "The initial choice (or set of choices) that should be selected. For multi-select, specify a comma-separated string of values."
+    }
+  },
+  "required": [
+    "type",
+    "id",
+    "choices"
+  ],
+  "typeSafe": "input-choice-set",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "choices",
+      "type": "array",
+      "required": "Required",
+      "text": "`Choice` options."
+    },
+    {
+      "name": "id",
+      "type": "string",
+      "required": "Required",
+      "text": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    {
+      "name": "isMultiSelect",
+      "type": "boolean",
+      "required": "Optional",
+      "text": "Allow multiple choices to be selected."
+    },
+    {
+      "name": "style",
+      "required": "Optional"
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Input.ChoiceInput\"`."
+    },
+    {
+      "name": "value",
+      "type": "string",
+      "required": "Optional",
+      "text": "The initial choice (or set of choices) that should be selected. For multi-select, specify a comma-separated string of values."
+    }
+  ]
+}
+</pre>
+

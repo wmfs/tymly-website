@@ -76,14 +76,30 @@ Outputs change-only-update CSV files (or “delta” files) that contain all the
 
 ## Options
 
-### Required
+### Required properties
 
-* `since` *{string}*
+#### `since`
 
-### Optional
+The moment-in-time (e.g. an _epoch_) that the exported CSV file should contain changes since.
 
-* `actionAliases` *{object}*
-* `tables` *{array}*
+* **Type:** `string`
+* **Format:** [`date-time`](https://json-schema.org/understanding-json-schema/reference/string.html#format)
+
+### Optional properties
+
+#### `actionAliases`
+
+Maps the necessary action (`insert`, `update` or `delete`) to a value to include in the outgoing CSV line (see the dynamic `$ACTION` column).
+
+* **Type:** `object`
+
+----
+
+#### `tables`
+
+An array of objects that contain a `table` object... which in turn define how to assemble each CSV line. Please see [pg-delta-file](https://github.com/wmfs/tymly/tree/master/pg-delta-file) for more information.
+
+* **Type:** `array`
 
 
 

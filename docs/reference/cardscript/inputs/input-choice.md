@@ -31,3 +31,54 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript input.
 :::
+
+
+<pre>
+{
+  "type": "Input.Choice",
+  "description": "Describes a choice for use in a ChoiceSet.",
+  "additionalProperties": true,
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "Input.Choice"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "description": "Text to display."
+    },
+    "value": {
+      "type": "string",
+      "description": "The raw value for the choice. **NOTE:** do not use a `,` in the value, since a `ChoiceSet` with `isMultiSelect` set to `true` returns a comma-delimited string of choice values."
+    }
+  },
+  "required": [
+    "title",
+    "value"
+  ],
+  "typeSafe": "input-choice",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Optional"
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": "Required",
+      "text": "Text to display."
+    },
+    {
+      "name": "value",
+      "type": "string",
+      "required": "Required",
+      "text": "The raw value for the choice. **NOTE:** do not use a `,` in the value, since a `ChoiceSet` with `isMultiSelect` set to `true` returns a comma-delimited string of choice values."
+    }
+  ]
+}
+</pre>
+

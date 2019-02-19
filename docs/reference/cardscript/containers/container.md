@@ -31,3 +31,119 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript container.
 :::
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Container",
+  "description": "Containers group items together.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Container\"`.",
+      "enum": [
+        "Container"
+      ]
+    },
+    "color": {
+      "type": "string",
+      "description": "Controls the color of the Container.",
+      "enum": [
+        "default",
+        "dark",
+        "light",
+        "accent",
+        "good",
+        "warning",
+        "attention"
+      ]
+    },
+    "items": {
+      "description": "The card elements to render inside the `Container`.",
+      "$ref": "#/definitions/CardElements"
+    },
+    "selectAction": {
+      "description": "An Action that will be invoked when the `Container` is tapped or selected. `Action.ShowCard` is not supported.",
+      "type": "object",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/Action.Submit"
+        },
+        {
+          "$ref": "#/definitions/Action.OpenUrl"
+        }
+      ]
+    },
+    "style": {
+      "type": "string",
+      "description": "Style hint for `Container`.",
+      "enum": [
+        "default",
+        "emphasis"
+      ]
+    },
+    "verticalContentAlignment": {
+      "type": "string",
+      "description": "Defines how the content should be aligned vertically within the container.",
+      "default": "top",
+      "enum:": [
+        "top",
+        "center",
+        "bottom"
+      ],
+      "version": "1.1"
+    }
+  },
+  "required": [
+    "type",
+    "items"
+  ],
+  "typeSafe": "container",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Container\"`."
+    },
+    {
+      "name": "color",
+      "type": "string",
+      "required": "Optional",
+      "text": "Controls the color of the Container."
+    },
+    {
+      "name": "items",
+      "required": "Required",
+      "text": "The card elements to render inside the `Container`."
+    },
+    {
+      "name": "selectAction",
+      "type": "object",
+      "required": "Optional",
+      "text": "An Action that will be invoked when the `Container` is tapped or selected. `Action.ShowCard` is not supported."
+    },
+    {
+      "name": "style",
+      "type": "string",
+      "required": "Optional",
+      "text": "Style hint for `Container`."
+    },
+    {
+      "name": "verticalContentAlignment",
+      "type": "string",
+      "required": "Optional",
+      "text": "Defines how the content should be aligned vertically within the container."
+    }
+  ]
+}
+</pre>
+

@@ -26,8 +26,63 @@
 sidebar: auto
 ---
 
-# Map
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/map.svg')" alt="Relevant Cardscript icon">Map
 
-::: tip State Resource
-This is a Cardscript element.
+::: tip Cardscript Element
+Displays a map.
 :::
+
+## Example
+
+``` json
+"FIXME!"
+```
+
+## Required properties
+
+### `type`
+
+Must be `"Map"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Map`
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Map",
+  "description": "Displays a map.",
+  "version": "1.1",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Map\"`.",
+      "enum": [
+        "Map"
+      ]
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "typeSafe": "map",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Map\"`."
+    }
+  ]
+}
+</pre>
+

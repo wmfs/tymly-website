@@ -77,9 +77,13 @@ Adds docs
 
 ## Options
 
-### Required
+### Required properties
 
-* `mapping` *{object}*
+#### `mapping`
+
+Maps the data to become the format of a search doc.
+
+* **Type:** `object`
 
 
 

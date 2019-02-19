@@ -185,9 +185,13 @@ Takes an XML file and converts it to CSV
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `entities` *{object}*
+#### `entities`
+
+Identifies which XML tags map to a model.
+
+* **Type:** `object`
 
 
 

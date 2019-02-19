@@ -31,3 +31,81 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript input.
 :::
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Input.Signature",
+  "description": "Lets a user enter a signature.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Input.Signature\"`.",
+      "enum": [
+        "Input.Signature"
+      ]
+    },
+    "agreement": {
+      "type": "string",
+      "description": "Agreement text to be displayed above the signature pad."
+    },
+    "saveText": {
+      "type": "string",
+      "description": "Customise the text of the save button."
+    },
+    "guidance": {
+      "type": "string",
+      "description": "Guidance text to be displayed with the signature button."
+    }
+  },
+  "required": [
+    "type",
+    "id"
+  ],
+  "typeSafe": "input-signature",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "id",
+      "type": "string",
+      "required": "Required",
+      "text": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Input.Signature\"`."
+    },
+    {
+      "name": "agreement",
+      "type": "string",
+      "required": "Optional",
+      "text": "Agreement text to be displayed above the signature pad."
+    },
+    {
+      "name": "saveText",
+      "type": "string",
+      "required": "Optional",
+      "text": "Customise the text of the save button."
+    },
+    {
+      "name": "guidance",
+      "type": "string",
+      "required": "Optional",
+      "text": "Guidance text to be displayed with the signature button."
+    }
+  ]
+}
+</pre>
+

@@ -31,3 +31,95 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript input.
 :::
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Input.Toggle",
+  "description": "Lets a user choose between two options.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    "title": {
+      "type": "string",
+      "description": "Title for the toggle"
+    },
+    "type": {
+      "type": "string",
+      "description": "Input.Toggle",
+      "enum": [
+        "Input.Toggle"
+      ]
+    },
+    "value": {
+      "type": "string",
+      "description": "The current selected value. If the item is selected that \"valueOn\" will be used, otherwise \"valueOff\"",
+      "default": "false"
+    },
+    "valueOff": {
+      "type": "string",
+      "description": "The value when toggle is off",
+      "default": "false"
+    },
+    "valueOn": {
+      "type": "string",
+      "description": "The value when toggle is on",
+      "default": "true"
+    }
+  },
+  "required": [
+    "type",
+    "id",
+    "title"
+  ],
+  "typeSafe": "input-toggle",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "id",
+      "type": "string",
+      "required": "Required",
+      "text": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": "Required",
+      "text": "Title for the toggle"
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Input.Toggle"
+    },
+    {
+      "name": "value",
+      "type": "string",
+      "required": "Optional",
+      "text": "The current selected value. If the item is selected that \"valueOn\" will be used, otherwise \"valueOff\""
+    },
+    {
+      "name": "valueOff",
+      "type": "string",
+      "required": "Optional",
+      "text": "The value when toggle is off"
+    },
+    {
+      "name": "valueOn",
+      "type": "string",
+      "required": "Optional",
+      "text": "The value when toggle is on"
+    }
+  ]
+}
+</pre>
+

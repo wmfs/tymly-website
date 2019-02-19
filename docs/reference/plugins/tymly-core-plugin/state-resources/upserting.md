@@ -60,13 +60,21 @@ Perists a document to storage
 
 ## Options
 
-### Required
+### Required properties
 
-* `modelId` *{string}*
+#### `modelId`
 
-### Optional
+This is the id of a model within the current namespace which will be used to upsert the document.
 
-* `setMissingPropertiesToNull` *{boolean}*
+* **Type:** `string`
+
+### Optional properties
+
+#### `setMissingPropertiesToNull`
+
+Controls whether to null out fields not provided in the input document. Defaults to false.
+
+* **Type:** `boolean`
 
 
 

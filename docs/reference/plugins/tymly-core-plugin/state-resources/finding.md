@@ -55,13 +55,21 @@ Finds documents with where clause from storage
 
 ## Options
 
-### Required
+### Required properties
 
-* `modelId` *{string}*
+#### `modelId`
 
-### Optional
+This is the id of a model within the current namespace from which a single document will be fetched.
 
-* `filter` *{object}*
+* **Type:** `string`
+
+### Optional properties
+
+#### `filter`
+
+Use to find the correct doc to return.
+
+* **Type:** `object`
 
 
 

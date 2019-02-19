@@ -31,3 +31,62 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript container.
 :::
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "ImageSet",
+  "description": "The ImageSet displays a collection of Images similar to a gallery.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "images": {
+      "type": "array",
+      "description": "The array of `Image` elements to show.",
+      "items": {
+        "$ref": "#/definitions/Image"
+      }
+    },
+    "imageSize": {
+      "$ref": "#/definitions/ImageSize"
+    },
+    "type": {
+      "type": "string",
+      "description": "Must be `\"ImageSet\"`.",
+      "enum": [
+        "ImageSet"
+      ]
+    }
+  },
+  "required": [
+    "type",
+    "images"
+  ],
+  "typeSafe": "image-set",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "images",
+      "type": "array",
+      "required": "Required",
+      "text": "The array of `Image` elements to show."
+    },
+    {
+      "name": "imageSize",
+      "required": "Optional"
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"ImageSet\"`."
+    }
+  ]
+}
+</pre>
+

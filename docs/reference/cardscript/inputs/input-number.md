@@ -31,3 +31,91 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript input.
 :::
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Input.Number",
+  "description": "Allows a user to enter a number.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    "max": {
+      "type": "number",
+      "description": "Hint of maximum value (may be ignored by some clients)."
+    },
+    "min": {
+      "type": "number",
+      "description": "Hint of minimum value (may be ignored by some clients)."
+    },
+    "placeholder": {
+      "type": "string",
+      "description": "Description of the input desired. Displayed when no selection has been made."
+    },
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Input.Number\"`.",
+      "enum": [
+        "Input.Number"
+      ]
+    },
+    "value": {
+      "type": "number",
+      "description": "Initial value for this field."
+    }
+  },
+  "required": [
+    "type",
+    "id"
+  ],
+  "typeSafe": "input-number",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "id",
+      "type": "string",
+      "required": "Required",
+      "text": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    {
+      "name": "max",
+      "type": "number",
+      "required": "Optional",
+      "text": "Hint of maximum value (may be ignored by some clients)."
+    },
+    {
+      "name": "min",
+      "type": "number",
+      "required": "Optional",
+      "text": "Hint of minimum value (may be ignored by some clients)."
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "required": "Optional",
+      "text": "Description of the input desired. Displayed when no selection has been made."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Input.Number\"`."
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "required": "Optional",
+      "text": "Initial value for this field."
+    }
+  ]
+}
+</pre>
+

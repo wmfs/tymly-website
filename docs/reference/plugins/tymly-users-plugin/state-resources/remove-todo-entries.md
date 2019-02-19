@@ -55,9 +55,13 @@ Removes todos for a user
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `todoIds` *{array}*
+#### `todoIds`
+
+Holds the ID's of the todos to remove.
+
+* **Type:** `array`
 
 
 

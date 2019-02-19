@@ -49,9 +49,13 @@ Get Board Data
 
 ## Options
 
-### Required
+### Required properties
 
-* `model` *{undefined}*
+#### `model`
+
+The name of the model(s) to get data from, can be a string or array.
+
+* **Type:** `undefined`
 
 
 

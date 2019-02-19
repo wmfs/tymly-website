@@ -26,8 +26,122 @@
 sidebar: auto
 ---
 
-# Media
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/media.svg')" alt="Relevant Cardscript icon">Media
 
-::: tip State Resource
-This is a Cardscript element.
+::: tip Cardscript Element
+Displays a media player for audio or video content.
 :::
+
+## Example
+
+``` json
+"FIXME!"
+```
+
+## Required properties
+
+### `type`
+
+Must be `"Media"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Media`
+
+## Optional properties
+
+### `sources`
+
+Array of media sources to attempt to play.
+
+* **Type:** `array`
+
+----
+
+### `poster`
+
+URL of an image to display before playing.
+
+* **Type:** `string`
+* **Format:** [`uri`](https://json-schema.org/understanding-json-schema/reference/string.html#format)
+
+----
+
+### `altText`
+
+Alternate text describing the audio or video.
+
+* **Type:** `string`
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Media",
+  "description": "Displays a media player for audio or video content.",
+  "version": "1.1",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Media\"`.",
+      "enum": [
+        "Media"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "description": "Array of media sources to attempt to play.",
+      "items": {
+        "$ref": "#/definitions/MediaSource"
+      }
+    },
+    "poster": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of an image to display before playing."
+    },
+    "altText": {
+      "type": "string",
+      "description": "Alternate text describing the audio or video."
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "typeSafe": "media",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Media\"`."
+    },
+    {
+      "name": "sources",
+      "type": "array",
+      "required": "Optional",
+      "text": "Array of media sources to attempt to play."
+    },
+    {
+      "name": "poster",
+      "type": "string",
+      "required": "Optional",
+      "text": "URL of an image to display before playing."
+    },
+    {
+      "name": "altText",
+      "type": "string",
+      "required": "Optional",
+      "text": "Alternate text describing the audio or video."
+    }
+  ]
+}
+</pre>
+

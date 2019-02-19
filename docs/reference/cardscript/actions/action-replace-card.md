@@ -27,47 +27,69 @@ sidebar: auto
 ---
 
 
-# removeTodoEntries
+# Action.ReplaceCard
 
 
 ::: tip State Resource
-This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-cardscript-plugin](/reference/plugins/tymly-cardscript-plugin/)** plugin.
+This is a Cardscript Action.
 :::
 
-## Purpose
 
-Removes todos for a user
-
-## Usage
-
-### Example
-
-``` json
+<pre>
 {
-  "RemoveTodoEntries": {
-    "Type": "Task",
-    "InputPath": "$",
-    "Resource": "module:removeTodoEntries",
-    "Next": "DeltaReindex"
-  }
+  "additionalProperties": true,
+  "description": "When invoked this will replace the current entry in the history with the new route.",
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Action.ReplaceCard\"`."
+    },
+    "title": {
+      "type": "string",
+      "description": "Label for button or link that represents this action."
+    },
+    "stateMachineName": {
+      "type": "string",
+      "description": "The state machine to launch."
+    },
+    "input": {
+      "type": "object",
+      "description": "The input to launch with."
+    }
+  },
+  "required": [
+    "type",
+    "stateMachineName"
+  ],
+  "type": "Action.ReplaceCard",
+  "typeSafe": "action-replace-card",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Action.ReplaceCard\"`."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": "Optional",
+      "text": "Label for button or link that represents this action."
+    },
+    {
+      "name": "stateMachineName",
+      "type": "string",
+      "required": "Required",
+      "text": "The state machine to launch."
+    },
+    {
+      "name": "input",
+      "type": "object",
+      "required": "Optional",
+      "text": "The input to launch with."
+    }
+  ]
 }
-```
+</pre>
 
-
-## Options
-
-### Optional properties
-
-#### `todoIds`
-
-Holds the ID's of the todos to remove.
-
-* **Type:** `array`
-
-
-
-
-
-## Links
-
-* [State Resource class on GitHub]()

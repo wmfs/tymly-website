@@ -56,9 +56,13 @@ Get a list of todo-list entries that need adding/removing from the client store
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `clientTodos` *{string}*
+#### `clientTodos`
+
+An array of all the todo-executions that are currently stored on the client device.
+
+* **Type:** `string`
 
 
 

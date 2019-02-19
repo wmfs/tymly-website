@@ -26,8 +26,94 @@
 sidebar: auto
 ---
 
-# Chip
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/chip.svg')" alt="Relevant Cardscript icon">Chip
 
-::: tip State Resource
-This is a Cardscript element.
+::: tip Cardscript Element
+A chip to display some text.
 :::
+
+## Example
+
+``` json
+"FIXME!"
+```
+
+## Required properties
+
+### `type`
+
+Must be `"Chip"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Chip`
+
+----
+
+### `text`
+
+Text to be displayed in chip.
+
+* **Type:** `string`
+
+## Optional properties
+
+### `color`
+
+Color of the chip.
+
+* **Type:** `string`
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Chip",
+  "description": "A chip to display some text.",
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Chip\"`.",
+      "enum": [
+        "Chip"
+      ]
+    },
+    "text": {
+      "type": "string",
+      "description": "Text to be displayed in chip."
+    },
+    "color": {
+      "type": "string",
+      "description": "Color of the chip"
+    }
+  },
+  "required": [
+    "type",
+    "text"
+  ],
+  "typeSafe": "chip",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Chip\"`."
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "required": "Required",
+      "text": "Text to be displayed in chip."
+    },
+    {
+      "name": "color",
+      "type": "string",
+      "required": "Optional",
+      "text": "Color of the chip"
+    }
+  ]
+}
+</pre>
+

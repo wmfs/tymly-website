@@ -33,3 +33,70 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript Action.
 :::
+
+
+<pre>
+{
+  "type": "Action.Submit",
+  "additionalProperties": true,
+  "description": "Gathers input fields, merges with optional data field, and sends an event to the client. It is up to the client to determine how this data is processed. For example: With BotFramework bots, the client would send an activity through the messaging medium to the bot.",
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Action.Submit\"`."
+    },
+    "title": {
+      "type": "string",
+      "description": "Label for button or link that represents this action."
+    },
+    "iconUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Optional icon to be shown on the action in conjunction with the title",
+      "version": "1.1"
+    },
+    "data": {
+      "type": [
+        "string",
+        "object"
+      ],
+      "description": "Initial data that input fields will be combined with. These are essentially 'hidden' properties."
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "typeSafe": "action-submit",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Action.Submit\"`."
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "required": "Optional",
+      "text": "Label for button or link that represents this action."
+    },
+    {
+      "name": "iconUrl",
+      "type": "string",
+      "required": "Optional",
+      "text": "Optional icon to be shown on the action in conjunction with the title"
+    },
+    {
+      "name": "data",
+      "type": [
+        "string",
+        "object"
+      ],
+      "required": "Optional",
+      "text": "Initial data that input fields will be combined with. These are essentially 'hidden' properties."
+    }
+  ]
+}
+</pre>
+

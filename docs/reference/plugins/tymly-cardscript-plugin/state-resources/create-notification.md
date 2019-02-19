@@ -55,15 +55,63 @@ Creates notification
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `userId` *{string}*
-* `title` *{string}*
-* `description` *{string}*
-* `category` *{string}*
-* `created` *{string}*
-* `acknowledged` *{string}*
-* `launches` *{object}*
+#### `userId`
+
+The ID of the user the notification belongs to.
+
+* **Type:** `string`
+
+----
+
+#### `title`
+
+A short title describing this notification.
+
+* **Type:** `string`
+
+----
+
+#### `description`
+
+A bit more context/information.
+
+* **Type:** `string`
+
+----
+
+#### `category`
+
+The category the notification belongs to.
+
+* **Type:** `string`
+
+----
+
+#### `created`
+
+The datetime the notification was created.
+
+* **Type:** `string`
+* **Format:** [`date-time`](https://json-schema.org/understanding-json-schema/reference/string.html#format)
+
+----
+
+#### `acknowledged`
+
+The datetime the user acknowledged the notification.
+
+* **Type:** `string`
+* **Format:** [`date-time`](https://json-schema.org/understanding-json-schema/reference/string.html#format)
+
+----
+
+#### `launches`
+
+A standard launches object that can be used to view the board.
+
+* **Type:** `object`
 
 
 

@@ -31,3 +31,98 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript container.
 :::
+
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Column",
+  "description": "Defines a container that is part of a ColumnSet.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "items": {
+      "description": "The card elements to include in the `Column`.",
+      "$ref": "#/definitions/CardElements"
+    },
+    "selectAction": {
+      "description": "An Action that will be invoked when the `Column` is tapped or selected. `Action.ShowCard` is not supported.",
+      "type": "object",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/Action.Submit"
+        },
+        {
+          "$ref": "#/definitions/Action.OpenUrl"
+        }
+      ]
+    },
+    "style": {
+      "type": "string",
+      "description": "Style hint for `Column`.",
+      "enum": [
+        "default",
+        "emphasis"
+      ]
+    },
+    "width": {
+      "type": [
+        "string",
+        "number"
+      ],
+      "description": "`\"auto\"`, `\"stretch\"`, or a number representing relative width of the column in the column group."
+    },
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Column\"`.",
+      "enum": [
+        "Column"
+      ]
+    }
+  },
+  "required": [
+    "items"
+  ],
+  "typeSafe": "column",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "items",
+      "required": "Required",
+      "text": "The card elements to include in the `Column`."
+    },
+    {
+      "name": "selectAction",
+      "type": "object",
+      "required": "Optional",
+      "text": "An Action that will be invoked when the `Column` is tapped or selected. `Action.ShowCard` is not supported."
+    },
+    {
+      "name": "style",
+      "type": "string",
+      "required": "Optional",
+      "text": "Style hint for `Column`."
+    },
+    {
+      "name": "width",
+      "type": [
+        "string",
+        "number"
+      ],
+      "required": "Optional",
+      "text": "`\"auto\"`, `\"stretch\"`, or a number representing relative width of the column in the column group."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Optional",
+      "text": "Must be `\"Column\"`."
+    }
+  ]
+}
+</pre>
+

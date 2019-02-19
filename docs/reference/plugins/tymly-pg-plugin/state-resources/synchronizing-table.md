@@ -66,12 +66,37 @@ Takes the contents of one PostgreSQL table, applies a transformation function to
 
 ## Options
 
-### Optional
+### Optional properties
 
-* `transformerFunctionName` *{string}*
-* `source` *{object}*
-* `target` *{object}*
-* `join` *{object}*
+#### `transformerFunctionName`
+
+Identifies which blueprint function should be used to undertake transformation duties. See [pg-telepods](https://github.com/wmfs/tymly/tree/master/pg-telepods) for more information.
+
+* **Type:** `string`
+
+----
+
+#### `source`
+
+Used to define a source table along with any other attributes (such as a hash sum column) for where data is to be sourced from. See [pg-telepods](https://github.com/wmfs/tymly/tree/master/pg-telepods) for more information.
+
+* **Type:** `object`
+
+----
+
+#### `target`
+
+Likewise, defines a target table with similar attributes explaining where data is to sent to. See [pg-telepods](https://github.com/wmfs/tymly/tree/master/pg-telepods) for more information.
+
+* **Type:** `object`
+
+----
+
+#### `join`
+
+A simple object denoting how primary keys on both tables are related - where `key` values are the name of a column on the source table and its `value` is a column on the target table.
+
+* **Type:** `object`
 
 
 

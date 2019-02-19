@@ -31,3 +31,61 @@ sidebar: auto
 ::: tip State Resource
 This is a Cardscript input.
 :::
+
+
+<pre>
+{
+  "additionalProperties": true,
+  "type": "Input.Email",
+  "description": "Lets a user enter an email.",
+  "allOf": [
+    {
+      "$ref": "#/definitions/CardElement"
+    }
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Input.Email\"`.",
+      "enum": [
+        "Input.Email"
+      ]
+    },
+    "placeholder": {
+      "type": "string",
+      "description": "Description of the input desired. Displayed when no text has been input."
+    }
+  },
+  "required": [
+    "type",
+    "id"
+  ],
+  "typeSafe": "input-email",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "id",
+      "type": "string",
+      "required": "Required",
+      "text": "Unique identifier for the value. Used to identify collected input when the Submit action is performed."
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Input.Email\"`."
+    },
+    {
+      "name": "placeholder",
+      "type": "string",
+      "required": "Optional",
+      "text": "Description of the input desired. Displayed when no text has been input."
+    }
+  ]
+}
+</pre>
+
