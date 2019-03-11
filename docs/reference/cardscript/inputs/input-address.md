@@ -26,11 +26,70 @@
 sidebar: auto
 ---
 
-# Input.Address
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/input-address.svg')" alt="Relevant Cardscript icon">Input.Address
 
-::: tip State Resource
-This is a Cardscript input.
+::: tip Cardscript
+Lets a user enter an address.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "AddressBlock",
+      "dataPath": "addressBlock"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `id`
+
+Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+
+* **Type:** `string`
+
+----
+
+### `type`
+
+Must be `"Input.Address"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Input.Address`
+
+## Optional properties
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
+
 
 
 <pre>

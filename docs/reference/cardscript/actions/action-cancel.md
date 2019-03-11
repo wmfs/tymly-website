@@ -26,13 +26,54 @@
 sidebar: auto
 ---
 
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/action-cancel.svg')" alt="Relevant Cardscript icon">Action.Cancel
 
-# Action.Cancel
-
-
-::: tip State Resource
-This is a Cardscript Action.
+::: tip Cardscript
+Allows to cancel out of a form.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [],
+  "actions": [
+    {
+      "type": "Action.Cancel",
+      "title": "Action.Cancel"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `type`
+
+Must be `"Action.Cancel"`.
+
+* **Type:** `string`
+
+## Optional properties
+
+### `title`
+
+Label for button or link that represents this action.
+
+* **Type:** `string`
+
+----
+
+### `iconUrl`
+
+Optional icon to be shown on the action in conjunction with the title.
+
+* **Type:** `string`
+* **Format:** [`uri`](https://json-schema.org/understanding-json-schema/reference/string.html#format)
+
 
 
 <pre>

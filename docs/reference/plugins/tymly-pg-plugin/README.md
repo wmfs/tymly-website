@@ -42,6 +42,7 @@ Replace Tymly&#39;s out-the-box memory storage with PostgreSQL
 ## State Resources
 | Name | Description |
 | ---- | ----------- |
+| [auditTrail](state-resources/audit-trail.html) | No description! :-( |
 | [exportingCsvDeltaFile](state-resources/exporting-csv-delta-file.html) | Outputs change-only-update CSV files (or “delta” files) that contain all the necessary actions required to re-synchronize rows in a cloned table - just a thin wrapper over [pg-delta-file](https://www.npmjs.com/package/pg-delta-file) |
 | [getNextValueFromSequence](state-resources/get-next-value-from-sequence.html) | Gets next value from sequence |
 | [importingCsvFiles](state-resources/importing-csv-files.html) | Takes a specifically-named directory structure of CSV files and conjures bulk insert, update and delete statements and applies them to a PostgreSQL database - just a thin wrapper over [Supercopy](https://github.com/wmfs/tymly/tree/master/supercopy) |

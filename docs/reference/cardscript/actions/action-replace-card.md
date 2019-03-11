@@ -26,13 +26,62 @@
 sidebar: auto
 ---
 
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/action-replace-card.svg')" alt="Relevant Cardscript icon">Action.ReplaceCard
 
-# Action.ReplaceCard
-
-
-::: tip State Resource
-This is a Cardscript Action.
+::: tip Cardscript
+When invoked this will replace the current entry in the history with the new route.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [],
+  "actions": [
+    {
+      "type": "Action.ReplaceCard",
+      "title": "Action.ReplaceCard",
+      "stateMachineName": "pizza_amendOrder_1_0"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `type`
+
+Must be `"Action.ReplaceCard"`.
+
+* **Type:** `string`
+
+----
+
+### `stateMachineName`
+
+The state machine to launch.
+
+* **Type:** `string`
+
+## Optional properties
+
+### `title`
+
+Label for button or link that represents this action.
+
+* **Type:** `string`
+
+----
+
+### `input`
+
+The input to launch with.
+
+* **Type:** `object`
+
 
 
 <pre>

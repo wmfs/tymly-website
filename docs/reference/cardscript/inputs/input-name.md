@@ -26,11 +26,80 @@
 sidebar: auto
 ---
 
-# Input.Name
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/input-name.svg')" alt="Relevant Cardscript icon">Input.Name
 
-::: tip State Resource
-This is a Cardscript input.
+::: tip Cardscript
+Lets a user enter a name.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "id": "name",
+      "type": "Input.Name",
+      "placeholder": "Input.Name",
+      "spacing": "medium"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `id`
+
+Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+
+* **Type:** `string`
+
+----
+
+### `type`
+
+Must be `"Input.Name"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Input.Name`
+
+## Optional properties
+
+### `icon`
+
+Name of an icon to prefix name input with.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
+
 
 
 <pre>
@@ -54,6 +123,10 @@ This is a Cardscript input.
       "enum": [
         "Input.Name"
       ]
+    },
+    "icon": {
+      "type": "string",
+      "description": "Name of an icon to prefix name input with."
     }
   },
   "required": [
@@ -74,6 +147,12 @@ This is a Cardscript input.
       "type": "string",
       "required": "Required",
       "text": "Must be `\"Input.Name\"`."
+    },
+    {
+      "name": "icon",
+      "type": "string",
+      "required": "Optional",
+      "text": "Name of an icon to prefix name input with."
     }
   ]
 }

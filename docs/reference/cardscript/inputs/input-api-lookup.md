@@ -26,11 +26,125 @@
 sidebar: auto
 ---
 
-# Input.ApiLookup
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/input-api-lookup.svg')" alt="Relevant Cardscript icon">Input.ApiLookup
 
-::: tip State Resource
-This is a Cardscript input.
+::: tip Cardscript
+Lets a user look up a value via an API.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "id": "inputApiLookup",
+      "type": "Input.ApiLookup",
+      "selectionType": "none",
+      "endpoint": {
+        "name": "tymly_search_1_0"
+      },
+      "parametersCard": {
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+          {
+            "id": "searchQuery",
+            "type": "Input.Text"
+          },
+          {
+            "id": "sortBy",
+            "type": "Input.ChoiceSet",
+            "value": "MOST_RECENT",
+            "choices": [
+              {
+                "value": "MOST_RECENT",
+                "title": "Most recent"
+              },
+              {
+                "value": "LEAST_RECENT",
+                "title": "Least recent"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `id`
+
+Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+
+* **Type:** `string`
+
+----
+
+### `type`
+
+Must be `"Input.ApiLookup"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Input.ApiLookup`
+
+## Optional properties
+
+### `selectionType`
+
+Whether the use can select a value.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `single`
+  * `multi`
+
+----
+
+### `endpoint`
+
+The endpoint to gather results from.
+
+* **Type:** `object`
+
+----
+
+### `parametersCard`
+
+* **Type:** `undefined`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
+
 
 
 <pre>
@@ -54,6 +168,28 @@ This is a Cardscript input.
       "enum": [
         "Input.ApiLookup"
       ]
+    },
+    "selectionType": {
+      "type": "string",
+      "description": "Whether the use can select a value.",
+      "enum": [
+        "none",
+        "single",
+        "multi"
+      ]
+    },
+    "endpoint": {
+      "type": "object",
+      "description": "The endpoint to gather results from.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the endpoint"
+        }
+      }
+    },
+    "parametersCard": {
+      "$ref": "#/definitions/AdaptiveCard"
     }
   },
   "required": [
@@ -74,6 +210,22 @@ This is a Cardscript input.
       "type": "string",
       "required": "Required",
       "text": "Must be `\"Input.ApiLookup\"`."
+    },
+    {
+      "name": "selectionType",
+      "type": "string",
+      "required": "Optional",
+      "text": "Whether the use can select a value."
+    },
+    {
+      "name": "endpoint",
+      "type": "object",
+      "required": "Optional",
+      "text": "The endpoint to gather results from."
+    },
+    {
+      "name": "parametersCard",
+      "required": "Optional"
     }
   ]
 }

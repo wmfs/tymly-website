@@ -26,11 +26,108 @@
 sidebar: auto
 ---
 
-# ColumnSet
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/column-set.svg')" alt="Relevant Cardscript icon">ColumnSet
 
-::: tip State Resource
-This is a Cardscript container.
+::: tip Cardscript
+ColumnSet divides a region into Columns, allowing elements to sit side-by-side.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "col-1"
+            },
+            {
+              "type": "TextBlock",
+              "text": "col-1"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "col-2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `type`
+
+Must be `"ColumnSet"`.
+
+* **Type:** `string`
+* **Values:**
+  * `ColumnSet`
+
+## Optional properties
+
+### `columns`
+
+The array of `Columns` to divide the region into.
+
+* **Type:** `array`
+
+----
+
+### `selectAction`
+
+An Action that will be invoked when the `ColumnSet` is tapped or selected. `Action.ShowCard` is not supported.
+
+* **Type:** `object`
+
+----
+
+### `id`
+
+A unique identifier associated with the element.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
 
 
 

@@ -28,14 +28,33 @@ sidebar: auto
 
 # <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/fact.svg')" alt="Relevant Cardscript icon">Fact
 
-::: tip Cardscript Element
+::: tip Cardscript
 Describes a Fact in a FactSet as a key/value pair.
 :::
 
 ## Example
 
 ``` json
-"FIXME!"
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "Hello:",
+          "value": "World"
+        },
+        {
+          "title": "HELLO:",
+          "value": "WORLD"
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
 ```
 
 ## Required properties

@@ -26,13 +26,62 @@
 sidebar: auto
 ---
 
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/action-push-card.svg')" alt="Relevant Cardscript icon">Action.PushCard
 
-# Action.PushCard
-
-
-::: tip State Resource
-This is a Cardscript Action.
+::: tip Cardscript
+When invoked this will push the new card on the routing history.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [],
+  "actions": [
+    {
+      "type": "Action.PushCard",
+      "title": "Action.PushCard",
+      "stateMachineName": "pizza_amendOrder_1_0"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `type`
+
+Must be `"Action.PushCard"`.
+
+* **Type:** `string`
+
+----
+
+### `stateMachineName`
+
+The state machine to launch.
+
+* **Type:** `string`
+
+## Optional properties
+
+### `title`
+
+Label for button or link that represents this action.
+
+* **Type:** `string`
+
+----
+
+### `input`
+
+The input to launch with.
+
+* **Type:** `object`
+
 
 
 <pre>

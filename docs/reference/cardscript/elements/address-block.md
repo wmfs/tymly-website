@@ -28,14 +28,24 @@ sidebar: auto
 
 # <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/address-block.svg')" alt="Relevant Cardscript icon">AddressBlock
 
-::: tip Cardscript Element
+::: tip Cardscript
 Displays an address.
 :::
 
 ## Example
 
 ``` json
-"FIXME!"
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "AddressBlock",
+      "dataPath": "addressBlock"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
 ```
 
 ## Required properties
@@ -82,6 +92,38 @@ The string of character(s) which the address is delimited by.
 
 * **Type:** `string`
 * **Default:** `","`
+
+----
+
+### `id`
+
+A unique identifier associated with the element.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
 
 
 

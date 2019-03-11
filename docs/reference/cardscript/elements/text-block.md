@@ -28,14 +28,24 @@ sidebar: auto
 
 # <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/text-block.svg')" alt="Relevant Cardscript icon">TextBlock
 
-::: tip Cardscript Element
+::: tip Cardscript
 Displays text, allowing control over font sizes, weight, and color.
 :::
 
 ## Example
 
 ``` json
-"FIXME!"
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "This is a text block"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
 ```
 
 ## Required properties
@@ -125,6 +135,38 @@ Controls the weight of `TextBlock` elements.
 ### `wrap`
 
 If `true`, allow text to wrap. Otherwise, text is clipped.
+
+* **Type:** `boolean`
+
+----
+
+### `id`
+
+A unique identifier associated with the element.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
 
 * **Type:** `boolean`
 

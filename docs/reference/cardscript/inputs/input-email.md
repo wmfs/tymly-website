@@ -26,11 +26,88 @@
 sidebar: auto
 ---
 
-# Input.Email
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/input-email.svg')" alt="Relevant Cardscript icon">Input.Email
 
-::: tip State Resource
-This is a Cardscript input.
+::: tip Cardscript
+Lets a user enter an email.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "id": "email",
+      "type": "Input.Email",
+      "placeholder": "Input.Email",
+      "spacing": "medium"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `id`
+
+Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+
+* **Type:** `string`
+
+----
+
+### `type`
+
+Must be `"Input.Email"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Input.Email`
+
+## Optional properties
+
+### `icon`
+
+Name of an icon to prefix email input with.
+
+* **Type:** `string`
+
+----
+
+### `placeholder`
+
+Description of the input desired. Displayed when no text has been input.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
+
 
 
 <pre>
@@ -55,6 +132,10 @@ This is a Cardscript input.
         "Input.Email"
       ]
     },
+    "icon": {
+      "type": "string",
+      "description": "Name of an icon to prefix email input with."
+    },
     "placeholder": {
       "type": "string",
       "description": "Description of the input desired. Displayed when no text has been input."
@@ -78,6 +159,12 @@ This is a Cardscript input.
       "type": "string",
       "required": "Required",
       "text": "Must be `\"Input.Email\"`."
+    },
+    {
+      "name": "icon",
+      "type": "string",
+      "required": "Optional",
+      "text": "Name of an icon to prefix email input with."
     },
     {
       "name": "placeholder",

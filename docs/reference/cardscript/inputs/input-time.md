@@ -26,11 +26,104 @@
 sidebar: auto
 ---
 
-# Input.Time
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/input-time.svg')" alt="Relevant Cardscript icon">Input.Time
 
-::: tip State Resource
-This is a Cardscript input.
+::: tip Cardscript
+Lets a user select a time.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "id": "time",
+      "type": "Input.Time",
+      "placeholder": "Input.Time",
+      "spacing": "medium"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `id`
+
+Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+
+* **Type:** `string`
+
+----
+
+### `type`
+
+Must be `"Input.Time"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Input.Time`
+
+## Optional properties
+
+### `max`
+
+Hint of maximum value (may be ignored by some clients).
+
+* **Type:** `string`
+
+----
+
+### `min`
+
+Hint of minimum value (may be ignored by some clients).
+
+* **Type:** `string`
+
+----
+
+### `placeholder`
+
+Description of the input desired. Displayed when no time has been selected.
+
+* **Type:** `string`
+
+----
+
+### `value`
+
+The initial value for this field expressed in ISO-8601 format.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
+
 
 
 <pre>

@@ -26,11 +26,91 @@
 sidebar: auto
 ---
 
-# ActionSet
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/action-set.svg')" alt="Relevant Cardscript icon">ActionSet
 
-::: tip State Resource
-This is a Cardscript container.
+::: tip Cardscript
+ActionSet allows actions to be displayed within a card.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "ActionSet",
+      "spacing": "large",
+      "actions": [
+        {
+          "type": "Action.OpenUrl",
+          "title": "Action.OpenUrl",
+          "url": "https://github.com/wmfs/cardscript"
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Action.Submit",
+          "data": {
+            "x": "y"
+          }
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `type`
+
+Must be `"ActionSet"`.
+
+* **Type:** `string`
+* **Values:**
+  * `ActionSet`
+
+----
+
+### `actions`
+
+The Actions to show in the card's action bar.
+
+* **Type:** `undefined`
+
+## Optional properties
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `id`
+
+A unique identifier associated with the element.
+
+* **Type:** `string`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
 
 
 

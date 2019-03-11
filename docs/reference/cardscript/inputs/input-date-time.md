@@ -26,11 +26,80 @@
 sidebar: auto
 ---
 
-# Input.DateTime
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/input-date-time.svg')" alt="Relevant Cardscript icon">Input.DateTime
 
-::: tip State Resource
-This is a Cardscript input.
+::: tip Cardscript
+Lets a user enter a telephone number.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "id": "date",
+      "type": "Input.DateTime",
+      "placeholder": "Input.DateTime",
+      "spacing": "medium"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `id`
+
+Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+
+* **Type:** `string`
+
+----
+
+### `type`
+
+Must be `"Input.DateTime"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Input.DateTime`
+
+## Optional properties
+
+### `placeholder`
+
+Description of the input desired. Displayed when no text has been input.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
+
 
 
 <pre>

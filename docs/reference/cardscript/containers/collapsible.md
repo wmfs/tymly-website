@@ -26,11 +26,60 @@
 sidebar: auto
 ---
 
-# Collapsible
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/collapsible.svg')" alt="Relevant Cardscript icon">Collapsible
 
-::: tip State Resource
-This is a Cardscript container.
+::: tip Cardscript
+A container which expands when clicked on to show a card.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Collapsible",
+      "title": "Click me!",
+      "card": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "TextBlock",
+            "text": "Hello!"
+          }
+        ]
+      }
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `type`
+
+Must be `"Collapsible"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Collapsible`
+
+----
+
+### `title`
+
+Text to be displayed as label.
+
+* **Type:** `string`
+
+----
+
+### `card`
+
+* **Type:** `undefined`
 
 
 

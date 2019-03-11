@@ -28,14 +28,28 @@ sidebar: auto
 
 # <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/phase-banner.svg')" alt="Relevant Cardscript icon">PhaseBanner
 
-::: tip Cardscript Element
+::: tip Cardscript
 Displays a banner highlighting a phase.
 :::
 
 ## Example
 
 ``` json
-"FIXME!"
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "PhaseBanner",
+      "phase": "alpha"
+    },
+    {
+      "type": "PhaseBanner",
+      "phase": "beta"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
 ```
 
 ## Required properties
@@ -58,6 +72,38 @@ The phase which the service is in.
 * **Values:**
   * `alpha`
   * `beta`
+
+----
+
+### `id`
+
+A unique identifier associated with the element.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
 
 
 

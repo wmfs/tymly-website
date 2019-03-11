@@ -28,14 +28,19 @@ sidebar: auto
 
 # <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/adaptive-card.svg')" alt="Relevant Cardscript icon">AdaptiveCard
 
-::: tip Cardscript Element
+::: tip Cardscript
 Root element in an Adaptive Card.
 :::
 
 ## Example
 
 ``` json
-"FIXME!"
+{
+  "type": "AdaptiveCard",
+  "body": [],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
 ```
 
 ## Required properties

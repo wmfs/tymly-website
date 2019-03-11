@@ -28,14 +28,26 @@ sidebar: auto
 
 # <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/image.svg')" alt="Relevant Cardscript icon">Image
 
-::: tip Cardscript Element
+::: tip Cardscript
 Displays an image.
 :::
 
 ## Example
 
 ``` json
-"FIXME!"
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Image",
+      "url": "https://tymly.io/wp-content/uploads/2017/11/logo-tymly-main-colour.png",
+      "size": "large",
+      "horizontalAlignment": "left"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
 ```
 
 ## Required properties
@@ -90,6 +102,38 @@ An Action that will be invoked when the `Image` is tapped or selected. `Action.S
 ### `style`
 
 * **Type:** `undefined`
+
+----
+
+### `id`
+
+A unique identifier associated with the element.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
 
 
 

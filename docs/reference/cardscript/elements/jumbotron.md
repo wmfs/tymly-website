@@ -28,14 +28,27 @@ sidebar: auto
 
 # <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/jumbotron.svg')" alt="Relevant Cardscript icon">Jumbotron
 
-::: tip Cardscript Element
+::: tip Cardscript
 An element typically placed at the top of a card to describe its purpose.
 :::
 
 ## Example
 
 ``` json
-"FIXME!"
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Jumbotron",
+      "backgroundImage": "wmfs/pizza.jpg",
+      "title": "Title",
+      "subtitle": "Subtitle",
+      "wash": "black"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
 ```
 
 ## Required properties

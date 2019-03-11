@@ -26,11 +26,128 @@
 sidebar: auto
 ---
 
-# Container
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/container.svg')" alt="Relevant Cardscript icon">Container
 
-::: tip State Resource
-This is a Cardscript container.
+::: tip Cardscript
+Containers group items together.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "color": "accent",
+      "spacing": "large",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Accent!"
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `type`
+
+Must be `"Container"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Container`
+
+----
+
+### `items`
+
+The card elements to render inside the `Container`.
+
+* **Type:** `undefined`
+
+## Optional properties
+
+### `color`
+
+Controls the color of the Container.
+
+* **Type:** `string`
+* **Values:**
+  * `default`
+  * `dark`
+  * `light`
+  * `accent`
+  * `good`
+  * `warning`
+  * `attention`
+
+----
+
+### `selectAction`
+
+An Action that will be invoked when the `Container` is tapped or selected. `Action.ShowCard` is not supported.
+
+* **Type:** `object`
+
+----
+
+### `style`
+
+Style hint for `Container`.
+
+* **Type:** `string`
+* **Values:**
+  * `default`
+  * `emphasis`
+
+----
+
+### `verticalContentAlignment`
+
+Defines how the content should be aligned vertically within the container.
+
+* **Type:** `string`
+* **Default:** `"top"`
+
+----
+
+### `id`
+
+A unique identifier associated with the element.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
 
 
 

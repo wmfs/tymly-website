@@ -26,11 +26,117 @@
 sidebar: auto
 ---
 
-# Input.ChoiceSet
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/input-choice-set.svg')" alt="Relevant Cardscript icon">Input.ChoiceSet
 
-::: tip State Resource
-This is a Cardscript input.
+::: tip Cardscript
+Allows a user to input a Choice.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Input.ChoiceSet",
+      "id": "choice",
+      "spacing": "medium",
+      "value": "CHOICE_1",
+      "choices": [
+        {
+          "title": "Choice 1",
+          "value": "CHOICE_1"
+        },
+        {
+          "title": "Choice 2",
+          "value": "CHOICE_2"
+        },
+        {
+          "title": "Choice 3",
+          "value": "CHOICE_3"
+        }
+      ],
+      "style": "expanded"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `choices`
+
+`Choice` options.
+
+* **Type:** `array`
+
+----
+
+### `id`
+
+Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+
+* **Type:** `string`
+
+----
+
+### `type`
+
+Must be `"Input.ChoiceInput"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Input.ChoiceSet`
+
+## Optional properties
+
+### `isMultiSelect`
+
+Allow multiple choices to be selected.
+
+* **Type:** `boolean`
+
+----
+
+### `style`
+
+* **Type:** `undefined`
+
+----
+
+### `value`
+
+The initial choice (or set of choices) that should be selected. For multi-select, specify a comma-separated string of values.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
+
 
 
 <pre>

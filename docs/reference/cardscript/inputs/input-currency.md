@@ -26,11 +26,96 @@
 sidebar: auto
 ---
 
-# Input.Currency
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/input-currency.svg')" alt="Relevant Cardscript icon">Input.Currency
 
-::: tip State Resource
-This is a Cardscript input.
+::: tip Cardscript
+Lets a user enter a currency value.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "id": "currency",
+      "type": "Input.Currency",
+      "placeholder": "Input.Currency",
+      "spacing": "medium"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `id`
+
+Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+
+* **Type:** `string`
+
+----
+
+### `type`
+
+Must be `"Input.Currency"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Input.Currency`
+
+## Optional properties
+
+### `placeholder`
+
+Description of the input desired. Displayed when no text has been input.
+
+* **Type:** `string`
+
+----
+
+### `max`
+
+Hint of maximum value (may be ignored by some clients).
+
+* **Type:** `number`
+
+----
+
+### `min`
+
+Hint of minimum value (may be ignored by some clients).
+
+* **Type:** `number`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
+
 
 
 <pre>

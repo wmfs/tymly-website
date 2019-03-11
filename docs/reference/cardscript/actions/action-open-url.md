@@ -26,13 +26,64 @@
 sidebar: auto
 ---
 
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/action-open-url.svg')" alt="Relevant Cardscript icon">Action.OpenUrl
 
-# Action.OpenUrl
-
-
-::: tip State Resource
-This is a Cardscript Action.
+::: tip Cardscript
+When invoked, show the given url either by launching it in an external web browser or showing in-situ with embedded web browser.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Action.OpenUrl",
+      "url": "https://github.com/wmfs/cardscript"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `type`
+
+Must be `"Action.OpenUrl"`.
+
+* **Type:** `string`
+
+----
+
+### `url`
+
+The URL to open.
+
+* **Type:** `string`
+* **Format:** [`uri`](https://json-schema.org/understanding-json-schema/reference/string.html#format)
+
+## Optional properties
+
+### `title`
+
+Label for button or link that represents this action.
+
+* **Type:** `string`
+
+----
+
+### `iconUrl`
+
+Optional icon to be shown on the action in conjunction with the title.
+
+* **Type:** `string`
+* **Format:** [`uri`](https://json-schema.org/understanding-json-schema/reference/string.html#format)
+
 
 
 <pre>

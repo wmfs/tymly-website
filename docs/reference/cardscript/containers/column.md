@@ -26,11 +26,127 @@
 sidebar: auto
 ---
 
-# Column
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/column.svg')" alt="Relevant Cardscript icon">Column
 
-::: tip State Resource
-This is a Cardscript container.
+::: tip Cardscript
+Defines a container that is part of a ColumnSet.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "col-1"
+            },
+            {
+              "type": "TextBlock",
+              "text": "col-1"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "col-2"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `items`
+
+The card elements to include in the `Column`.
+
+* **Type:** `undefined`
+
+## Optional properties
+
+### `selectAction`
+
+An Action that will be invoked when the `Column` is tapped or selected. `Action.ShowCard` is not supported.
+
+* **Type:** `object`
+
+----
+
+### `style`
+
+Style hint for `Column`.
+
+* **Type:** `string`
+* **Values:**
+  * `default`
+  * `emphasis`
+
+----
+
+### `width`
+
+`"auto"`, `"stretch"`, or a number representing relative width of the column in the column group.
+
+* **Type:** `string,number`
+
+----
+
+### `type`
+
+Must be `"Column"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Column`
+
+----
+
+### `id`
+
+A unique identifier associated with the element.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
 
 
 

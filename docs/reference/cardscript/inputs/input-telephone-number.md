@@ -26,11 +26,91 @@
 sidebar: auto
 ---
 
-# Input.TelephoneNumber
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/input-telephone-number.svg')" alt="Relevant Cardscript icon">Input.TelephoneNumber
 
-::: tip State Resource
-This is a Cardscript input.
+::: tip Cardscript
+Lets a user enter a telephone number.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "id": "inputTelephoneNumber",
+      "type": "Input.TelephoneNumber",
+      "placeholder": "Input.TelephoneNumber",
+      "spacing": "medium"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `id`
+
+Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+
+* **Type:** `string`
+
+----
+
+### `type`
+
+Must be `"Input.TelephoneNumber"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Input.TelephoneNumber`
+
+## Optional properties
+
+### `connectionType`
+
+What type of phone is this number related to?.
+
+* **Type:** `string`
+* **Values:**
+  * `mobile`
+  * `landline`
+
+----
+
+### `icon`
+
+Name of an icon to prefix telephone-number input with.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
+
 
 
 <pre>
@@ -54,6 +134,18 @@ This is a Cardscript input.
       "enum": [
         "Input.TelephoneNumber"
       ]
+    },
+    "connectionType": {
+      "type": "string",
+      "description": "What type of phone is this number related to?.",
+      "enum": [
+        "mobile",
+        "landline"
+      ]
+    },
+    "icon": {
+      "type": "string",
+      "description": "Name of an icon to prefix telephone-number input with."
     }
   },
   "required": [
@@ -74,6 +166,18 @@ This is a Cardscript input.
       "type": "string",
       "required": "Required",
       "text": "Must be `\"Input.TelephoneNumber\"`."
+    },
+    {
+      "name": "connectionType",
+      "type": "string",
+      "required": "Optional",
+      "text": "What type of phone is this number related to?."
+    },
+    {
+      "name": "icon",
+      "type": "string",
+      "required": "Optional",
+      "text": "Name of an icon to prefix telephone-number input with."
     }
   ]
 }

@@ -26,11 +26,123 @@
 sidebar: auto
 ---
 
-# Input.Slider
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/input-slider.svg')" alt="Relevant Cardscript icon">Input.Slider
 
-::: tip State Resource
-This is a Cardscript input.
+::: tip Cardscript
+Lets a user enter value with a slider.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "id": "inputSlider",
+      "title": "Input.Slider",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Input.Slider",
+          "size": "large",
+          "spacing": "large",
+          "separator": true
+        },
+        {
+          "id": "slider",
+          "type": "Input.Slider",
+          "spacing": "medium",
+          "min": -20,
+          "max": 20,
+          "step": 4,
+          "value": 3
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `id`
+
+Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+
+* **Type:** `string`
+
+----
+
+### `type`
+
+Must be `"Input.Slider"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Input.Slider`
+
+## Optional properties
+
+### `min`
+
+Minimum value of the model.
+
+* **Type:** `number`
+* **Default:** `1`
+
+----
+
+### `max`
+
+Maximum value of the model.
+
+* **Type:** `number`
+* **Default:** `5`
+
+----
+
+### `step`
+
+Step amount between values.
+
+* **Type:** `number`
+
+----
+
+### `value`
+
+The initial value for this field.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
+
 
 
 <pre>

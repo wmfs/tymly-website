@@ -26,11 +26,107 @@
 sidebar: auto
 ---
 
-# Input.Toggle
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/input-toggle.svg')" alt="Relevant Cardscript icon">Input.Toggle
 
-::: tip State Resource
-This is a Cardscript input.
+::: tip Cardscript
+Lets a user choose between two options.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "id": "toggle",
+      "type": "Input.Toggle",
+      "spacing": "medium",
+      "title": "Input.Toggle"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `id`
+
+Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+
+* **Type:** `string`
+
+----
+
+### `title`
+
+Title for the toggle.
+
+* **Type:** `string`
+
+----
+
+### `type`
+
+Input.Toggle.
+
+* **Type:** `string`
+* **Values:**
+  * `Input.Toggle`
+
+## Optional properties
+
+### `value`
+
+The current selected value. If the item is selected that "valueOn" will be used, otherwise "valueOff".
+
+* **Type:** `string`
+* **Default:** `"false"`
+
+----
+
+### `valueOff`
+
+The value when toggle is off.
+
+* **Type:** `string`
+* **Default:** `"false"`
+
+----
+
+### `valueOn`
+
+The value when toggle is on.
+
+* **Type:** `string`
+* **Default:** `"true"`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
+
 
 
 <pre>

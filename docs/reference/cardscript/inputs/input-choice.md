@@ -26,11 +26,77 @@
 sidebar: auto
 ---
 
-# Input.Choice
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/input-choice.svg')" alt="Relevant Cardscript icon">Input.Choice
 
-::: tip State Resource
-This is a Cardscript input.
+::: tip Cardscript
+Describes a choice for use in a ChoiceSet.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Input.ChoiceSet",
+      "id": "choice",
+      "spacing": "medium",
+      "value": "CHOICE_1",
+      "choices": [
+        {
+          "title": "Choice 1",
+          "value": "CHOICE_1"
+        },
+        {
+          "title": "Choice 2",
+          "value": "CHOICE_2"
+        },
+        {
+          "title": "Choice 3",
+          "value": "CHOICE_3"
+        }
+      ],
+      "style": "expanded"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `title`
+
+Text to display.
+
+* **Type:** `string`
+
+----
+
+### `value`
+
+The raw value for the choice. **NOTE:** do not use a `,` in the value, since a `ChoiceSet` with `isMultiSelect` set to `true` returns a comma-delimited string of choice values.
+
+* **Type:** `string`
+
+## Optional properties
+
+### `type`
+
+* **Type:** `string`
+* **Values:**
+  * `Input.Choice`
+
+----
+
+### `icon`
+
+Name of an icon to display for the ChoiceSet as a whole, not an individual value.
+
+* **Type:** `string`
+
 
 
 <pre>
@@ -48,6 +114,10 @@ This is a Cardscript input.
     "title": {
       "type": "string",
       "description": "Text to display."
+    },
+    "icon": {
+      "type": "string",
+      "description": "Name of an icon to display for the ChoiceSet as a whole, not an individual value."
     },
     "value": {
       "type": "string",
@@ -71,6 +141,12 @@ This is a Cardscript input.
       "type": "string",
       "required": "Required",
       "text": "Text to display."
+    },
+    {
+      "name": "icon",
+      "type": "string",
+      "required": "Optional",
+      "text": "Name of an icon to display for the ChoiceSet as a whole, not an individual value."
     },
     {
       "name": "value",

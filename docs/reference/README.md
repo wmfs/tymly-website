@@ -91,6 +91,7 @@ sidebar: auto
 | [addDocs](plugins/tymly-solr-plugin/state-resources/add-docs.html) | Adds docs |
 | [applySettings](plugins/tymly-cardscript-plugin/state-resources/apply-settings.html) | Applies settings for a user |
 | [applySettings](plugins/tymly-users-plugin/state-resources/apply-settings.html) | Applies settings for a user |
+| [auditTrail](plugins/tymly-pg-plugin/state-resources/audit-trail.html) | No description! :-( |
 | [availableResources](plugins/tymly-core-plugin/state-resources/available-resources.html) | Returns a list of currently available resources |
 | [availableStateMachines](plugins/tymly-core-plugin/state-resources/available-state-machines.html) | Returns a list of currently available state machines |
 | [awaitingHumanInput](plugins/tymly-cardscript-plugin/state-resources/awaiting-human-input.html) | Awaits the input of a human to advance the state-machine |

@@ -28,14 +28,33 @@ sidebar: auto
 
 # <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/fact-set.svg')" alt="Relevant Cardscript icon">FactSet
 
-::: tip Cardscript Element
+::: tip Cardscript
 The FactSet element displays a series of facts (i.e. name/value pairs) in a tabular form.
 :::
 
 ## Example
 
 ``` json
-"FIXME!"
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "FactSet",
+      "facts": [
+        {
+          "title": "Hello:",
+          "value": "World"
+        },
+        {
+          "title": "HELLO:",
+          "value": "WORLD"
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
 ```
 
 ## Required properties
@@ -55,6 +74,38 @@ Must be `"FactSet"`.
 * **Type:** `string`
 * **Values:**
   * `FactSet`
+
+## Optional properties
+
+### `id`
+
+A unique identifier associated with the element.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
 
 
 

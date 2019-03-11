@@ -26,11 +26,94 @@
 sidebar: auto
 ---
 
-# ImageSet
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/image-set.svg')" alt="Relevant Cardscript icon">ImageSet
 
-::: tip State Resource
-This is a Cardscript container.
+::: tip Cardscript
+The ImageSet displays a collection of Images similar to a gallery.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "ImageSet",
+      "images": [
+        {
+          "type": "Image",
+          "url": "https://tymly.io/wp-content/uploads/2017/11/logo-tymly-main-colour.png",
+          "size": "medium"
+        },
+        {
+          "type": "Image",
+          "url": "https://tymly.io/wp-content/uploads/2017/11/logo-tymly-main-colour.png",
+          "size": "medium"
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `images`
+
+The array of `Image` elements to show.
+
+* **Type:** `array`
+
+----
+
+### `type`
+
+Must be `"ImageSet"`.
+
+* **Type:** `string`
+* **Values:**
+  * `ImageSet`
+
+## Optional properties
+
+### `imageSize`
+
+* **Type:** `undefined`
+
+----
+
+### `id`
+
+A unique identifier associated with the element.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
 
 
 

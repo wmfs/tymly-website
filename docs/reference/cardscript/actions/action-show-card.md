@@ -26,13 +26,75 @@
 sidebar: auto
 ---
 
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/action-show-card.svg')" alt="Relevant Cardscript icon">Action.ShowCard
 
-# Action.ShowCard
-
-
-::: tip State Resource
-This is a Cardscript Action.
+::: tip Cardscript
+Defines an AdaptiveCard which is shown to the user when the button or link is clicked.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [],
+  "actions": [
+    {
+      "type": "Action.ShowCard",
+      "title": "Action.ShowCard",
+      "card": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "TextBlock",
+            "text": "What do you think?"
+          },
+          {
+            "id": "opinion",
+            "type": "Input.Text",
+            "spacing": "large",
+            "default": "Amazing!"
+          }
+        ]
+      }
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `type`
+
+Must be `"Action.ShowCard"`.
+
+* **Type:** `string`
+
+----
+
+### `card`
+
+* **Type:** `undefined`
+
+## Optional properties
+
+### `title`
+
+Label for button or link that represents this action.
+
+* **Type:** `string`
+
+----
+
+### `iconUrl`
+
+Optional icon to be shown on the action in conjunction with the title.
+
+* **Type:** `string`
+* **Format:** [`uri`](https://json-schema.org/understanding-json-schema/reference/string.html#format)
+
 
 
 <pre>

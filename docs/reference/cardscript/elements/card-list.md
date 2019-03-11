@@ -28,14 +28,55 @@ sidebar: auto
 
 # <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/card-list.svg')" alt="Relevant Cardscript icon">CardList
 
-::: tip Cardscript Element
+::: tip Cardscript
 A container which opens a modal when clicked on to show a card.
 :::
 
 ## Example
 
 ``` json
-"FIXME!"
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "id": "cardList",
+      "title": "CardList",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "editable: true",
+          "size": "small",
+          "spacing": "medium"
+        },
+        {
+          "id": "cardList",
+          "type": "CardList",
+          "editable": true,
+          "instanceTitleTemplate": "You thought: '{{item.opinion}}'.",
+          "addButtonLabel": "Click me!",
+          "card": {
+            "type": "AdaptiveCard",
+            "body": [
+              {
+                "type": "TextBlock",
+                "text": "What do you think?"
+              },
+              {
+                "id": "opinion",
+                "type": "Input.Text",
+                "spacing": "large",
+                "value": "Amazing!"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
 ```
 
 ## Required properties

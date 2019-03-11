@@ -28,14 +28,30 @@ sidebar: auto
 
 # <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/media-source.svg')" alt="Relevant Cardscript icon">MediaSource
 
-::: tip Cardscript Element
+::: tip Cardscript
 Defines a source for a Media element
 :::
 
 ## Example
 
 ``` json
-"FIXME!"
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Media",
+      "poster": "https://adaptivecards.io/content/poster-video.png",
+      "sources": [
+        {
+          "mimeType": "video/mp4",
+          "url": "https://adaptivecardsblob.blob.core.windows.net/assets/AdaptiveCardsOverviewVideo.mp4"
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
 ```
 
 ## Required properties

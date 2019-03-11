@@ -28,17 +28,44 @@ sidebar: auto
 
 # <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/table.svg')" alt="Relevant Cardscript icon">Table
 
-::: tip Cardscript Element
+::: tip Cardscript
 Displays text, allowing control over font sizes, weight, and color.
 :::
 
 ## Example
 
 ``` json
-"FIXME!"
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "id": "table",
+      "type": "Table",
+      "title": "This is a table",
+      "arrayPath": "cardList",
+      "columns": [
+        {
+          "title": "Title",
+          "field": "field"
+        }
+      ],
+      "resultLimit": 5
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
 ```
 
 ## Required properties
+
+### `id`
+
+A unique identifier associated with the element.
+
+* **Type:** `string`
+
+----
 
 ### `type`
 
@@ -79,6 +106,30 @@ Limit the results per page.
 * **Type:** `integer`
 * **Default:** `10`
 
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
+
 
 
 <pre>
@@ -92,6 +143,10 @@ Limit the results per page.
     }
   ],
   "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique identifier associated with the element."
+    },
     "type": {
       "type": "string",
       "description": "Must be `\"Table\"`.",
@@ -134,6 +189,7 @@ Limit the results per page.
     }
   },
   "required": [
+    "id",
     "type",
     "arrayPath",
     "columns"
@@ -141,6 +197,12 @@ Limit the results per page.
   "typeSafe": "table",
   "example": "FIXME!",
   "propertySummary": [
+    {
+      "name": "id",
+      "type": "string",
+      "required": "Required",
+      "text": "A unique identifier associated with the element."
+    },
     {
       "name": "type",
       "type": "string",

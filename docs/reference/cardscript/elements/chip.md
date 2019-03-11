@@ -28,14 +28,25 @@ sidebar: auto
 
 # <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/chip.svg')" alt="Relevant Cardscript icon">Chip
 
-::: tip Cardscript Element
+::: tip Cardscript
 A chip to display some text.
 :::
 
 ## Example
 
 ``` json
-"FIXME!"
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Chip",
+      "text": "This is a chip!",
+      "spacing": "small"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
 ```
 
 ## Required properties

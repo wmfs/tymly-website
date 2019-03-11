@@ -26,11 +26,99 @@
 sidebar: auto
 ---
 
-# TabSet
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/tab-set.svg')" alt="Relevant Cardscript icon">TabSet
 
-::: tip State Resource
-This is a Cardscript container.
+::: tip Cardscript
+TabSet allows to display content through various tabs.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TabSet",
+      "spacing": "large",
+      "tabs": [
+        {
+          "type": "Tab",
+          "title": "Tab 1",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Tab 1 Content"
+            }
+          ]
+        },
+        {
+          "type": "Tab",
+          "title": "Tab 2",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Tab 2 Content"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `type`
+
+Must be `"TabSet"`.
+
+* **Type:** `string`
+* **Values:**
+  * `TabSet`
+
+## Optional properties
+
+### `tabs`
+
+The array of `Tabs` to divide content.
+
+* **Type:** `array`
+
+----
+
+### `id`
+
+A unique identifier associated with the element.
+
+* **Type:** `string`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
 
 
 

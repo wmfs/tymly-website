@@ -26,11 +26,109 @@
 sidebar: auto
 ---
 
-# Input.Gender
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/input-gender.svg')" alt="Relevant Cardscript icon">Input.Gender
 
-::: tip State Resource
-This is a Cardscript input.
+::: tip Cardscript
+Lets a user enter a gender.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "id": "inputGender",
+      "type": "Input.Gender",
+      "preferNotToSay": true,
+      "preferToSelfDescribe": true,
+      "includeTransgender": true
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `id`
+
+Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+
+* **Type:** `string`
+
+----
+
+### `type`
+
+Must be `"Input.Gender"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Input.Gender`
+
+## Optional properties
+
+### `term`
+
+Whether the gender or sex should be asked.
+
+* **Type:** `string`
+* **Default:** `"gender"`
+* **Values:**
+  * `sex`
+  * `gender`
+
+----
+
+### `preferNotToSay`
+
+Includes Prefer not to say gender in list.
+
+* **Type:** `boolean`
+
+----
+
+### `preferToSelfDescribe`
+
+Includes Prefer not to self describe gender in list.
+
+* **Type:** `boolean`
+
+----
+
+### `includeTransgender`
+
+Includes transgender in list.
+
+* **Type:** `boolean`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
+
 
 
 <pre>

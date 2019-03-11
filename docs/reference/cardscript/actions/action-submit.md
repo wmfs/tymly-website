@@ -26,13 +26,65 @@
 sidebar: auto
 ---
 
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/action-submit.svg')" alt="Relevant Cardscript icon">Action.Submit
 
-# Action.Submit
-
-
-::: tip State Resource
-This is a Cardscript Action.
+::: tip Cardscript
+Gathers input fields, merges with optional data field, and sends an event to the client. It is up to the client to determine how this data is processed. For example: With BotFramework bots, the client would send an activity through the messaging medium to the bot.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Action.Submit",
+      "data": {
+        "x": "y"
+      }
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `type`
+
+Must be `"Action.Submit"`.
+
+* **Type:** `string`
+
+## Optional properties
+
+### `title`
+
+Label for button or link that represents this action.
+
+* **Type:** `string`
+
+----
+
+### `iconUrl`
+
+Optional icon to be shown on the action in conjunction with the title.
+
+* **Type:** `string`
+* **Format:** [`uri`](https://json-schema.org/understanding-json-schema/reference/string.html#format)
+
+----
+
+### `data`
+
+Initial data that input fields will be combined with. These are essentially 'hidden' properties.
+
+* **Type:** `string,object`
+
 
 
 <pre>

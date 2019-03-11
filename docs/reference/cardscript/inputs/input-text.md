@@ -26,11 +26,147 @@
 sidebar: auto
 ---
 
-# Input.Text
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/input-text.svg')" alt="Relevant Cardscript icon">Input.Text
 
-::: tip State Resource
-This is a Cardscript input.
+::: tip Cardscript
+Lets a user enter text.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "id": "inputText",
+      "title": "Input.Text",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Basic Input.Text",
+          "size": "large",
+          "spacing": "large",
+          "separator": true
+        },
+        {
+          "id": "text",
+          "type": "Input.Text",
+          "placeholder": "Input.Text",
+          "spacing": "medium"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Full Input.Text Editor",
+          "size": "large",
+          "spacing": "large",
+          "separator": true
+        },
+        {
+          "id": "textEditor",
+          "type": "Input.Text",
+          "placeholder": "Input.Text",
+          "spacing": "medium",
+          "editor": true,
+          "value": "editor: true"
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `id`
+
+Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+
+* **Type:** `string`
+
+----
+
+### `type`
+
+Must be `"Input.Text"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Input.Text`
+
+## Optional properties
+
+### `isMultiline`
+
+If `true`, allow multiple lines of input.
+
+* **Type:** `boolean`
+
+----
+
+### `maxLength`
+
+Hint of maximum length characters to collect (may be ignored by some clients).
+
+* **Type:** `number`
+
+----
+
+### `placeholder`
+
+Description of the input desired. Displayed when no text has been input.
+
+* **Type:** `string`
+
+----
+
+### `style`
+
+* **Type:** `undefined`
+
+----
+
+### `value`
+
+The initial value for this field.
+
+* **Type:** `string`
+
+----
+
+### `editor`
+
+Whether the field should be a WYSIWYG (“what you see is what you get”) editor, if false then plain text field.
+
+* **Type:** `boolean`
+
+----
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
+
 
 
 <pre>

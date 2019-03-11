@@ -26,11 +26,84 @@
 sidebar: auto
 ---
 
-# Input.FileUpload
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/input-file-upload.svg')" alt="Relevant Cardscript icon">Input.FileUpload
 
-::: tip State Resource
-This is a Cardscript input.
+::: tip Cardscript
+Lets a user upload a file.
 :::
+
+## Example
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Container",
+      "id": "inputFileUpload",
+      "title": "Input.FileUpload",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Input.FileUpload",
+          "size": "large",
+          "spacing": "large",
+          "separator": true
+        },
+        {
+          "type": "Input.FileUpload",
+          "spacing": "medium"
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
+```
+
+## Required properties
+
+### `id`
+
+Unique identifier for the value. Used to identify collected input when the Submit action is performed.
+
+* **Type:** `string`
+
+----
+
+### `type`
+
+Must be `"Input.FileUpload"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Input.FileUpload`
+
+## Optional properties
+
+### `spacing`
+
+Controls the amount of spacing between this element and the preceding element.
+
+* **Type:** `string`
+* **Values:**
+  * `none`
+  * `small`
+  * `default`
+  * `medium`
+  * `large`
+  * `extraLarge`
+  * `padding`
+
+----
+
+### `separator`
+
+When `true`, draw a separating line at the top of the element.
+
+* **Type:** `boolean`
+
 
 
 <pre>
