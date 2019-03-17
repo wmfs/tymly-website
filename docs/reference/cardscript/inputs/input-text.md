@@ -125,7 +125,15 @@ Description of the input desired. Displayed when no text has been input.
 
 ### `style`
 
-* **Type:** `undefined`
+Style hint for `Input.Text`.
+
+* **Type:** `string`
+* **Default:** `"text"`
+* **Values:**
+  * `text`
+  * `tel`
+  * `url`
+  * `email`
 
 ----
 
@@ -169,7 +177,11 @@ When `true`, draw a separating line at the top of the element.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "Input.Text",
@@ -272,5 +284,4 @@ When `true`, draw a separating line at the top of the element.
     }
   ]
 }
-</pre>
-
+```

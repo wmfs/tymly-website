@@ -103,7 +103,13 @@ Allow multiple choices to be selected.
 
 ### `style`
 
-* **Type:** `undefined`
+Style hint for `Input.ChoiceSet`.
+
+* **Type:** `string`
+* **Default:** `"compact"`
+* **Values:**
+  * `compact`
+  * `expanded`
 
 ----
 
@@ -137,9 +143,29 @@ When `true`, draw a separating line at the top of the element.
 
 * **Type:** `boolean`
 
+----
+
+### `icon`
+
+Name of an icon to display alongside this element.
+
+* **Type:** `string`
+
+----
+
+### `title`
+
+Strong text to clearly identify the intent of the element.
+
+* **Type:** `string`
 
 
-<pre>
+
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "Input.ChoiceSet",
@@ -147,6 +173,9 @@ When `true`, draw a separating line at the top of the element.
   "allOf": [
     {
       "$ref": "#/definitions/CardElement"
+    },
+    {
+      "$ref": "#/definitions/CardscriptField"
     }
   ],
   "properties": {
@@ -225,5 +254,4 @@ When `true`, draw a separating line at the top of the element.
     }
   ]
 }
-</pre>
-
+```

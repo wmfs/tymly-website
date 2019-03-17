@@ -119,7 +119,9 @@ The endpoint to gather results from.
 
 ### `parametersCard`
 
-* **Type:** `undefined`
+Root element in an Adaptive Card.
+
+* **Type:** `object`
 
 ----
 
@@ -147,7 +149,11 @@ When `true`, draw a separating line at the top of the element.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "Input.ApiLookup",
@@ -229,5 +235,4 @@ When `true`, draw a separating line at the top of the element.
     }
   ]
 }
-</pre>
-
+```

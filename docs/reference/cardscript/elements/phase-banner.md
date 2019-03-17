@@ -107,7 +107,11 @@ When `true`, draw a separating line at the top of the element.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "PhaseBanner",
@@ -155,5 +159,4 @@ When `true`, draw a separating line at the top of the element.
     }
   ]
 }
-</pre>
-
+```

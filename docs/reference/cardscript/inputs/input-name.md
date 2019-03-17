@@ -102,7 +102,11 @@ When `true`, draw a separating line at the top of the element.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "Input.Name",
@@ -156,5 +160,4 @@ When `true`, draw a separating line at the top of the element.
     }
   ]
 }
-</pre>
-
+```

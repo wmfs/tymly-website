@@ -77,7 +77,11 @@ Color of the chip.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "Chip",
@@ -126,5 +130,4 @@ Color of the chip.
     }
   ]
 }
-</pre>
-
+```

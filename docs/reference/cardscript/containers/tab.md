@@ -72,11 +72,19 @@ Defines a container that is part of a TabSet.
 
 ## Required properties
 
+### `type`
+
+Must be `"Tab"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Tab`
+
+----
+
 ### `items`
 
-The card elements to include in the `Tab`.
-
-* **Type:** `undefined`
+* **Type:** `array`
 
 ----
 
@@ -87,16 +95,6 @@ The title of the `Tab`.
 * **Type:** `string`
 
 ## Optional properties
-
-### `type`
-
-Must be `"Tab"`.
-
-* **Type:** `string`
-* **Values:**
-  * `Tab`
-
-----
 
 ### `id`
 
@@ -130,7 +128,11 @@ When `true`, draw a separating line at the top of the element.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "Tab",
@@ -183,5 +185,4 @@ When `true`, draw a separating line at the top of the element.
     }
   ]
 }
-</pre>
-
+```

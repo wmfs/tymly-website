@@ -79,11 +79,17 @@ Text to be displayed as label.
 
 ### `card`
 
-* **Type:** `undefined`
+Root element in an Adaptive Card.
+
+* **Type:** `object`
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "Collapsible",
@@ -130,5 +136,4 @@ Text to be displayed as label.
     }
   ]
 }
-</pre>
-
+```

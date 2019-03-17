@@ -75,9 +75,17 @@ Defines a container that is part of a ColumnSet.
 
 ### `items`
 
-The card elements to include in the `Column`.
+* **Type:** `array`
 
-* **Type:** `undefined`
+----
+
+### `type`
+
+Must be `"Column"`.
+
+* **Type:** `string`
+* **Values:**
+  * `Column`
 
 ## Optional properties
 
@@ -105,16 +113,6 @@ Style hint for `Column`.
 `"auto"`, `"stretch"`, or a number representing relative width of the column in the column group.
 
 * **Type:** `string,number`
-
-----
-
-### `type`
-
-Must be `"Column"`.
-
-* **Type:** `string`
-* **Values:**
-  * `Column`
 
 ----
 
@@ -150,7 +148,11 @@ When `true`, draw a separating line at the top of the element.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "Column",
@@ -240,5 +242,4 @@ When `true`, draw a separating line at the top of the element.
     }
   ]
 }
-</pre>
-
+```

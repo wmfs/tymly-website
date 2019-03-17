@@ -84,7 +84,11 @@ The input to launch with.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "description": "When invoked this will replace the current entry in the history with the new route.",
@@ -140,5 +144,4 @@ The input to launch with.
     }
   ]
 }
-</pre>
-
+```

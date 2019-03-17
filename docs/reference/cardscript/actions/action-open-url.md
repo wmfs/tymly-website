@@ -86,7 +86,11 @@ Optional icon to be shown on the action in conjunction with the title.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "description": "When invoked, show the given url either by launching it in an external web browser or showing in-situ with embedded web browser.",
@@ -145,5 +149,4 @@ Optional icon to be shown on the action in conjunction with the title.
     }
   ]
 }
-</pre>
-
+```

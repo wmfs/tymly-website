@@ -78,14 +78,6 @@ Name of an icon to prefix email input with.
 
 ----
 
-### `placeholder`
-
-Description of the input desired. Displayed when no text has been input.
-
-* **Type:** `string`
-
-----
-
 ### `spacing`
 
 Controls the amount of spacing between this element and the preceding element.
@@ -108,9 +100,21 @@ When `true`, draw a separating line at the top of the element.
 
 * **Type:** `boolean`
 
+----
+
+### `title`
+
+Strong text to clearly identify the intent of the element.
+
+* **Type:** `string`
 
 
-<pre>
+
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "Input.Email",
@@ -118,6 +122,9 @@ When `true`, draw a separating line at the top of the element.
   "allOf": [
     {
       "$ref": "#/definitions/CardElement"
+    },
+    {
+      "$ref": "#/definitions/CardscriptField"
     }
   ],
   "properties": {
@@ -135,10 +142,6 @@ When `true`, draw a separating line at the top of the element.
     "icon": {
       "type": "string",
       "description": "Name of an icon to prefix email input with."
-    },
-    "placeholder": {
-      "type": "string",
-      "description": "Description of the input desired. Displayed when no text has been input."
     }
   },
   "required": [
@@ -165,14 +168,7 @@ When `true`, draw a separating line at the top of the element.
       "type": "string",
       "required": "Optional",
       "text": "Name of an icon to prefix email input with."
-    },
-    {
-      "name": "placeholder",
-      "type": "string",
-      "required": "Optional",
-      "text": "Description of the input desired. Displayed when no text has been input."
     }
   ]
 }
-</pre>
-
+```

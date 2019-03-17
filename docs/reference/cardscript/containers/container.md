@@ -69,9 +69,7 @@ Must be `"Container"`.
 
 ### `items`
 
-The card elements to render inside the `Container`.
-
-* **Type:** `undefined`
+* **Type:** `array`
 
 ## Optional properties
 
@@ -151,7 +149,11 @@ When `true`, draw a separating line at the top of the element.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "Container",
@@ -262,5 +264,4 @@ When `true`, draw a separating line at the top of the element.
     }
   ]
 }
-</pre>
-
+```

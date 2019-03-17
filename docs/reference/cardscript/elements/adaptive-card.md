@@ -57,17 +57,13 @@ Must be `"AdaptiveCard"`.
 
 ### `actions`
 
-The Actions to show in the card's action bar.
-
-* **Type:** `undefined`
+* **Type:** `array`
 
 ----
 
 ### `body`
 
-The card elements to show in the primary card region.
-
-* **Type:** `undefined`
+* **Type:** `array`
 
 ----
 
@@ -79,7 +75,11 @@ An Action that will be invoked when the card is tapped or selected. `Action.Show
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "AdaptiveCard",
@@ -143,5 +143,4 @@ An Action that will be invoked when the card is tapped or selected. `Action.Show
     }
   ]
 }
-</pre>
-
+```

@@ -76,7 +76,9 @@ Must be `"Action.ShowCard"`.
 
 ### `card`
 
-* **Type:** `undefined`
+Root element in an Adaptive Card.
+
+* **Type:** `object`
 
 ## Optional properties
 
@@ -97,7 +99,11 @@ Optional icon to be shown on the action in conjunction with the title.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "type": "Action.ShowCard",
   "additionalProperties": true,
@@ -152,5 +158,4 @@ Optional icon to be shown on the action in conjunction with the title.
     }
   ]
 }
-</pre>
-
+```

@@ -81,7 +81,14 @@ Alternate text describing the image.
 
 ### `horizontalAlignment`
 
-* **Type:** `undefined`
+Controls how elements are horizontally positioned within their container.
+
+* **Type:** `string`
+* **Default:** `"left"`
+* **Values:**
+  * `left`
+  * `center`
+  * `right`
 
 ----
 
@@ -95,13 +102,27 @@ An Action that will be invoked when the `Image` is tapped or selected. `Action.S
 
 ### `size`
 
-* **Type:** `undefined`
+Controls the approximate size of the image. The physical dimensions will vary per host. Specify `"auto"` for true image dimension, or `"stretch"` to force it to fill the container.
+
+* **Type:** `string`
+* **Default:** `"auto"`
+* **Values:**
+  * `auto`
+  * `stretch`
+  * `small`
+  * `medium`
+  * `large`
 
 ----
 
 ### `style`
 
-* **Type:** `undefined`
+Controls how this `Image` is displayed.
+
+* **Type:** `string`
+* **Values:**
+  * `default`
+  * `person`
 
 ----
 
@@ -137,7 +158,11 @@ When `true`, draw a separating line at the top of the element.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "Image",
@@ -231,5 +256,4 @@ When `true`, draw a separating line at the top of the element.
     }
   ]
 }
-</pre>
-
+```

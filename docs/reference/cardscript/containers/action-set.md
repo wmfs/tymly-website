@@ -76,9 +76,7 @@ Must be `"ActionSet"`.
 
 ### `actions`
 
-The Actions to show in the card's action bar.
-
-* **Type:** `undefined`
+* **Type:** `array`
 
 ## Optional properties
 
@@ -114,7 +112,11 @@ When `true`, draw a separating line at the top of the element.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "ActionSet",
@@ -164,5 +166,4 @@ When `true`, draw a separating line at the top of the element.
     }
   ]
 }
-</pre>
-
+```

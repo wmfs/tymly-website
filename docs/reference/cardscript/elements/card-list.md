@@ -101,7 +101,9 @@ Must be `"CardList"`.
 
 ### `card`
 
-* **Type:** `undefined`
+Root element in an Adaptive Card.
+
+* **Type:** `object`
 
 ## Optional properties
 
@@ -137,7 +139,11 @@ The CardList element can either act as a modal to display a block of Card Elemen
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "CardList",
@@ -226,5 +232,4 @@ The CardList element can either act as a modal to display a block of Card Elemen
     }
   ]
 }
-</pre>
-
+```

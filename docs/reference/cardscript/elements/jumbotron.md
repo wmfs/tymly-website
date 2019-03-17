@@ -98,7 +98,11 @@ Relative URL to image to be displayed as background.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "Jumbotron",
@@ -171,5 +175,4 @@ Relative URL to image to be displayed as background.
     }
   ]
 }
-</pre>
-
+```

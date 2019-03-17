@@ -76,7 +76,11 @@ Optional icon to be shown on the action in conjunction with the title.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "type": "Action.Save",
   "additionalProperties": true,
@@ -123,5 +127,4 @@ Optional icon to be shown on the action in conjunction with the title.
     }
   ]
 }
-</pre>
-
+```

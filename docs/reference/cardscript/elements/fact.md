@@ -83,7 +83,11 @@ The value of the fact.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "Fact",
@@ -130,5 +134,4 @@ The value of the fact.
     }
   ]
 }
-</pre>
-
+```

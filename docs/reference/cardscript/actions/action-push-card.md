@@ -84,7 +84,11 @@ The input to launch with.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "description": "When invoked this will push the new card on the routing history.",
@@ -140,5 +144,4 @@ The input to launch with.
     }
   ]
 }
-</pre>
-
+```

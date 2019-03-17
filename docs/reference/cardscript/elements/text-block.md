@@ -86,7 +86,14 @@ Controls the color of `TextBlock` elements.
 
 ### `horizontalAlignment`
 
-* **Type:** `undefined`
+Controls how elements are horizontally positioned within their container.
+
+* **Type:** `string`
+* **Default:** `"left"`
+* **Values:**
+  * `left`
+  * `center`
+  * `right`
 
 ----
 
@@ -172,7 +179,11 @@ When `true`, draw a separating line at the top of the element.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "TextBlock",
@@ -306,5 +317,4 @@ When `true`, draw a separating line at the top of the element.
     }
   ]
 }
-</pre>
-
+```

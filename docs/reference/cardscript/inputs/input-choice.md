@@ -93,13 +93,17 @@ The raw value for the choice. **NOTE:** do not use a `,` in the value, since a `
 
 ### `icon`
 
-Name of an icon to display for the ChoiceSet as a whole, not an individual value.
+Name of an icon to display for the choice.
 
 * **Type:** `string`
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "type": "Input.Choice",
   "description": "Describes a choice for use in a ChoiceSet.",
@@ -117,7 +121,7 @@ Name of an icon to display for the ChoiceSet as a whole, not an individual value
     },
     "icon": {
       "type": "string",
-      "description": "Name of an icon to display for the ChoiceSet as a whole, not an individual value."
+      "description": "Name of an icon to display for the choice."
     },
     "value": {
       "type": "string",
@@ -146,7 +150,7 @@ Name of an icon to display for the ChoiceSet as a whole, not an individual value
       "name": "icon",
       "type": "string",
       "required": "Optional",
-      "text": "Name of an icon to display for the ChoiceSet as a whole, not an individual value."
+      "text": "Name of an icon to display for the choice."
     },
     {
       "name": "value",
@@ -156,5 +160,4 @@ Name of an icon to display for the ChoiceSet as a whole, not an individual value
     }
   ]
 }
-</pre>
-
+```

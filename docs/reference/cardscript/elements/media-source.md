@@ -73,7 +73,11 @@ URL to media.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "MediaSource",
@@ -111,5 +115,4 @@ URL to media.
     }
   ]
 }
-</pre>
-
+```

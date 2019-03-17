@@ -87,7 +87,11 @@ Initial data that input fields will be combined with. These are essentially 'hid
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "type": "Action.Submit",
   "additionalProperties": true,
@@ -150,5 +154,4 @@ Initial data that input fields will be combined with. These are essentially 'hid
     }
   ]
 }
-</pre>
-
+```

@@ -81,7 +81,16 @@ Must be `"ImageSet"`.
 
 ### `imageSize`
 
-* **Type:** `undefined`
+Controls the approximate size of the image. The physical dimensions will vary per host. Specify `"auto"` for true image dimension, or `"stretch"` to force it to fill the container.
+
+* **Type:** `string`
+* **Default:** `"auto"`
+* **Values:**
+  * `auto`
+  * `stretch`
+  * `small`
+  * `medium`
+  * `large`
 
 ----
 
@@ -117,7 +126,11 @@ When `true`, draw a separating line at the top of the element.
 
 
 
-<pre>
+<hr>
+
+## JSON Schema
+
+``` json
 {
   "additionalProperties": true,
   "type": "ImageSet",
@@ -171,5 +184,4 @@ When `true`, draw a separating line at the top of the element.
     }
   ]
 }
-</pre>
-
+```
