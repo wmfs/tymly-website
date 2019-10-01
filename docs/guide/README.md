@@ -208,7 +208,7 @@ As can be seen [here](https://github.com/wmfs/addressbase-premium-blueprint/blob
 * Though not particularly relevant for Tymly Pizza (bespoke pizzas would ordinarily be created by users using admin forms), for the purposes of illustration let's seed the `pizza` model with some usual suspects:
 
 ``` bash
-tymly add seed-data --model pizza
+tymly add-seed-data --model pizza
 ```
 
 A new file will be created:
