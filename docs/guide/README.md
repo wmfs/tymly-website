@@ -91,7 +91,7 @@ Let's make a new blueprint for a new pizza-ordering digital service...
 From inside a throwaway directory somewhere, run the following command:
 
 ``` bash
-tymly new-blueprint
+tymly new-blueprint <blueprint-name>
 ```
 
 You'll be prompted for a few details regarding your new digital service. For the purposes of this example specify the **name** `tymly-pizza-blueprint`.
@@ -104,7 +104,9 @@ cd tymly-pizza-blueprint
 
 __Here's a quick summary of the files that just got created for your new blueprint:__
 
-`TODO: Screenshot this`
+<img style="max-width:30rem;margin-top:2rem;margin-bottom:2rem;" :src="$withBase('/blueprint-contents.PNG')" alt="Blueprint Contents">
+
+
 
 See the [Reference](/reference/) section for more detailed `blueprint.json` documentation.
 
@@ -140,12 +142,13 @@ At this point it's perhaps worth noting that, thanks to its [plugin](#plugins) a
 | `pizza`    | Will be used to define the details of pizzas available on the menu. |
 | `order`    | For capturing all the things a customer wants to eat. |
 
-**From within the `/tymly-pizza-template` directory, run the following commands:**
+**From within the `/tymly-pizza-template` directory, run the following command:**
 
 ``` bash
-tymly add-model --name pizza
-tymly add-model --name order
+tymly add-model
 ```
+
+This will prompt you for a model name. Let's make one model for named 'pizza' and one model named 'order'.
 
 Now we have a few more files to play with:
 
@@ -189,6 +192,8 @@ Although the scaffolded content of these files is ordinarily a great launchpad, 
 This mostly standard JSON Schema stuff, with a few Tymly extensions.
 
 ### Seed data
+
+# :construction: Seed Data is currently under construction, the below WILL NOT WORK! :construction:
 
 As above, Tymly models are just a description of the data that can be expected to be thrown at it sometime later.
 In certain circumstances it might be useful to "seed" a model with some default data.
@@ -246,7 +251,7 @@ The additional elements and features that Cardscript brings-to-the-party adhere 
 * **As an aside, those familiar with the [GDS Design System](https://design-system.service.gov.uk/) may also recognise a subset of Cardscript's additional elements (e.g. the [addresses pattern](https://design-system.service.gov.uk/patterns/addresses/)).**
 
 
-`TODO: Put a list of Cardscript elements here`
+A full list of Cardscript components can be found, and messed with, [here!](https://wmfs.github.io/cardscript/)
 
 Using the [open source SDK for Cardscript](https://github.com/wmfs/cardscript), those pizza examples can easily be rendered as web forms and dashboards inside a browser or PWA. Excitingly, there's nothing stopping those exact-same definitions from being used to generate a fancy voice interface either. For ultimate developer-stereotype-reinforcement, how about ordering pizza via a Cardscript-powered CLI application?
 
@@ -257,7 +262,7 @@ Using the [open source SDK for Cardscript](https://github.com/wmfs/cardscript), 
 Let's scaffold a simple admin form for creating and updating pizza info. Again, from within `/tymly-pizza-blueprint`:
 
 ``` bash
-tymly add editable --model pizza
+tymly add-editable --model pizza
 ```
 
 **Boom!** :boom: Now we've a few more files, amongst them is:
@@ -280,10 +285,13 @@ All the auto-configured elements have been inferred from the JSON Schema associa
 
 And of course, because of all the open standards flying around, try pasting the exact same JSON into Microsoft's [Adaptive Cards Designer](https://acdesignerbeta.azurewebsites.net/) too.
 
+# :construction: Creatables are currently under construction, the below WILL NOT WORK! :construction:
+
+
 While we're at it, let's conjure the beginnings of an order form for our customers to order pizza with:
 
 ``` bash
-tymly add creatable --model order
+tymly add-creatable --model order
 ```
 
 A new `order-creation-form.json` file will appear, try it out in those two online playpens.
@@ -345,8 +353,8 @@ You'll recall in a previous steps, we ran the following commands:
 
 ``` bash
 // No need to run these again!
-tymly add editable --model pizza
-tymly add creatable --model order
+tymly add-editable --model pizza
+tymly add-creatable --model order
 ```
 
 We know already that these commands produced some [Card Template](#card-templates) files, but they also scaffolded State Machines to embed the UI within a wider data-collection process too:
@@ -364,10 +372,13 @@ The content of `create-order.json` is reproduced below:
 
 Here we can see a state machine has been conjured in ASL for handling the process of collecting orders from a user, via a form.
 
+# :construction: Queryables are currently under construction, the below WILL NOT WORK! :construction:
+
+
 * Let's also make the menu of pizzas publicly queryable so that apps can present the details of different pizzas to prospective customers:
 
 ``` bash
-tymly add queryable --model pizza --roles $everyone
+tymly add-queryable --model pizza --roles $everyone
 ```
 
 Another state machine will appear:
@@ -474,6 +485,9 @@ To reduce ongoing User Management burden, the `shift-manager` role can simply be
 
 ### Role templates
 
+# :construction: Role templates are currently under construction, the below WILL NOT WORK! :construction:
+
+
 **As part of the User Research work that leads to the configuration of a Tymly Blueprint, many roles (and the scope of their interaction) within a digital service will be captured.**
 
 Such considered analysis is often gold-dust, and certainly worth holding onto and making the most of.
@@ -487,8 +501,8 @@ Please note Tymly offers total control over how users, roles, memberships and pe
 To keep things simple in this guide, let's ignore all that good refactoring above, and just add a couple of really basic **Role Templates** to our Tymly Pizza blueprint:
 
 ``` bash
-tymly add role-template --name manager
-tymly add role-template --name customer
+tymly add-role-template --name manager
+tymly add-role-template --name customer
 ```
 
 **Which gives us a couple of new files:**
