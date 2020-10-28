@@ -27,16 +27,16 @@ sidebar: auto
 ---
 
 
-# ensureCloudStorageFolder
+# getNearestStation
 
 
 ::: tip State Resource
-This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-sharepoint-plugin](/reference/plugins/tymly-sharepoint-plugin/)** plugin.
+This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-wmfs-plugin](/reference/plugins/tymly-wmfs-plugin/)** plugin.
 :::
 
 ## Purpose
 
-Ensures the existence of a cloud storage folder
+Gets nearest station for an x/y point
 
 ## Usage
 
@@ -44,17 +44,33 @@ Ensures the existence of a cloud storage folder
 
 ``` json
 {
-  "EnsureCloudStorageFolder": {
+  "GetNearestStation": {
     "Type": "Task",
-    "Resource": "module:ensureCloudStorageFolder",
-    "ResourceConfig": {
-      "folderPath": "Shared Documents/General/uploads/ridge_uploads/${boardKeys.uprn}"
-    },
-    "ResultPath": "$.sharepointMeta",
-    "Next": "GetSharepointContents"
+    "Resource": "module:getNearestStation",
+    "InputPath": "$.coordinates"
   }
 }
 ```
+
+
+## Options
+
+### Required properties
+
+#### `x`
+
+X coordinate.
+
+* **Type:** `number`
+
+----
+
+#### `y`
+
+Y coordinate.
+
+* **Type:** `number`
+
 
 
 

@@ -36,7 +36,7 @@ This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-
 
 ## Purpose
 
-Run another state machine
+Run another state machine and wait for it to complete. The output of this state-resource is the output from the spawned state machine.
 
 ## Usage
 

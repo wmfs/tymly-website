@@ -69,7 +69,7 @@ Plugin which handles interactions to do with a user for Tymly framework
 | Directory | Description |
 | --------- | ----------- |
 | `/boards` | One JSON file per Boards |
-| `/cardTemplates` | One JSON file per Card |
+| `/card-templates` | One JSON file per Card |
 | `/forms` | One JSON file per Form (currently need to be in [Schemaform](http://schemaform.io/) format) |
 
 

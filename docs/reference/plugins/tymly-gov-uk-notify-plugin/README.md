@@ -49,4 +49,17 @@ Allows sending notifications via sms or email using the GOV UK Notify service wi
 
 
 
+## Blueprint directories
+| Directory | Description |
+| --------- | ----------- |
+| `/message-templates` | One JSON file per message template |
+
+
+
+
+## Services
+| Name | Description |
+| ---- | ----------- |
+| [notify](services/notify.html) | Provides functions for interacting with Gov UK Notify service |
+
 

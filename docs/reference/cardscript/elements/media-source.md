@@ -56,6 +56,17 @@ Defines a source for a Media element
 
 ## Required properties
 
+### `type`
+
+Whether the media is audio or video.
+
+* **Type:** `string`
+* **Values:**
+  * `video`
+  * `audio`
+
+----
+
 ### `mimeType`
 
 Mime type of associated media (e.g. `"video/mp4"`).
@@ -84,6 +95,14 @@ URL to media.
   "description": "Defines a source for a Media element",
   "version": "1.1",
   "properties": {
+    "type": {
+      "type": "string",
+      "description": "Whether the media is audio or video.",
+      "enum": [
+        "video",
+        "audio"
+      ]
+    },
     "mimeType": {
       "type": "string",
       "description": "Mime type of associated media (e.g. `\"video/mp4\"`)."
@@ -95,12 +114,19 @@ URL to media.
     }
   },
   "required": [
+    "type",
     "mimeType",
     "url"
   ],
   "typeSafe": "media-source",
   "example": "FIXME!",
   "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Whether the media is audio or video."
+    },
     {
       "name": "mimeType",
       "type": "string",

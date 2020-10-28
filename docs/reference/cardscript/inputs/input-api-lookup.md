@@ -95,18 +95,6 @@ Must be `"Input.ApiLookup"`.
 * **Values:**
   * `Input.ApiLookup`
 
-## Optional properties
-
-### `selectionType`
-
-Whether the use can select a value.
-
-* **Type:** `string`
-* **Values:**
-  * `none`
-  * `single`
-  * `multi`
-
 ----
 
 ### `endpoint`
@@ -117,7 +105,49 @@ The endpoint to gather results from.
 
 ----
 
+### `ctxPaths`
+
+Specify paths to data.
+
+* **Type:** `object`
+
+## Optional properties
+
+### `showPagination`
+
+Whether or not to show pagination for the results.
+
+* **Type:** `boolean`
+
+----
+
+### `resultsPerPage`
+
+Amount of results to show per page.
+
+* **Type:** `integer`
+* **Default:** `15`
+
+----
+
+### `buttonText`
+
+Text to display for the button to launch the api lookup.
+
+* **Type:** `string`
+* **Default:** `"Go"`
+
+----
+
 ### `parametersCard`
+
+Root element in an Adaptive Card.
+
+* **Type:** `object`
+
+----
+
+### `resultsCard`
 
 Root element in an Adaptive Card.
 
@@ -175,14 +205,20 @@ When `true`, draw a separating line at the top of the element.
         "Input.ApiLookup"
       ]
     },
-    "selectionType": {
+    "showPagination": {
+      "type": "boolean",
+      "description": "Whether or not to show pagination for the results",
+      "default": false
+    },
+    "resultsPerPage": {
+      "type": "integer",
+      "description": "Amount of results to show per page",
+      "default": 15
+    },
+    "buttonText": {
       "type": "string",
-      "description": "Whether the use can select a value.",
-      "enum": [
-        "none",
-        "single",
-        "multi"
-      ]
+      "description": "Text to display for the button to launch the api lookup",
+      "default": "Go"
     },
     "endpoint": {
       "type": "object",
@@ -192,15 +228,41 @@ When `true`, draw a separating line at the top of the element.
           "type": "string",
           "description": "Name of the endpoint"
         }
-      }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "ctxPaths": {
+      "type": "object",
+      "description": "Specify paths to data",
+      "properties": {
+        "results": {
+          "type": "string",
+          "description": "Path to the results of the api lookup"
+        },
+        "totalHits": {
+          "type": "string",
+          "description": "Path to the value of the total hits from the results of the api lookup"
+        }
+      },
+      "required": [
+        "results",
+        "totalHits"
+      ]
     },
     "parametersCard": {
+      "$ref": "#/definitions/AdaptiveCard"
+    },
+    "resultsCard": {
       "$ref": "#/definitions/AdaptiveCard"
     }
   },
   "required": [
     "type",
-    "id"
+    "id",
+    "endpoint",
+    "ctxPaths"
   ],
   "typeSafe": "input-api-lookup",
   "example": "FIXME!",
@@ -218,19 +280,41 @@ When `true`, draw a separating line at the top of the element.
       "text": "Must be `\"Input.ApiLookup\"`."
     },
     {
-      "name": "selectionType",
+      "name": "showPagination",
+      "type": "boolean",
+      "required": "Optional",
+      "text": "Whether or not to show pagination for the results"
+    },
+    {
+      "name": "resultsPerPage",
+      "type": "integer",
+      "required": "Optional",
+      "text": "Amount of results to show per page"
+    },
+    {
+      "name": "buttonText",
       "type": "string",
       "required": "Optional",
-      "text": "Whether the use can select a value."
+      "text": "Text to display for the button to launch the api lookup"
     },
     {
       "name": "endpoint",
       "type": "object",
-      "required": "Optional",
+      "required": "Required",
       "text": "The endpoint to gather results from."
     },
     {
+      "name": "ctxPaths",
+      "type": "object",
+      "required": "Required",
+      "text": "Specify paths to data"
+    },
+    {
       "name": "parametersCard",
+      "required": "Optional"
+    },
+    {
+      "name": "resultsCard",
       "required": "Optional"
     }
   ]

@@ -39,6 +39,7 @@ TabSet allows to display content through various tabs.
   "type": "AdaptiveCard",
   "body": [
     {
+      "id": "tabSet",
       "type": "TabSet",
       "spacing": "large",
       "tabs": [
@@ -80,14 +81,6 @@ Must be `"TabSet"`.
 * **Values:**
   * `TabSet`
 
-## Optional properties
-
-### `tabs`
-
-The array of `Tabs` to divide content.
-
-* **Type:** `array`
-
 ----
 
 ### `id`
@@ -95,6 +88,14 @@ The array of `Tabs` to divide content.
 A unique identifier associated with the element.
 
 * **Type:** `string`
+
+## Optional properties
+
+### `tabs`
+
+The array of `Tabs` to divide content.
+
+* **Type:** `array`
 
 ----
 
@@ -144,6 +145,10 @@ When `true`, draw a separating line at the top of the element.
         "TabSet"
       ]
     },
+    "id": {
+      "type": "string",
+      "description": "A unique identifier associated with the element."
+    },
     "tabs": {
       "type": "array",
       "description": "The array of `Tabs` to divide content.",
@@ -153,7 +158,7 @@ When `true`, draw a separating line at the top of the element.
     }
   },
   "required": [
-    "type"
+    "id"
   ],
   "typeSafe": "tab-set",
   "example": "FIXME!",
@@ -161,8 +166,14 @@ When `true`, draw a separating line at the top of the element.
     {
       "name": "type",
       "type": "string",
-      "required": "Required",
+      "required": "Optional",
       "text": "Must be `\"TabSet\"`."
+    },
+    {
+      "name": "id",
+      "type": "string",
+      "required": "Required",
+      "text": "A unique identifier associated with the element."
     },
     {
       "name": "tabs",

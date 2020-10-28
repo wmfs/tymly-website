@@ -48,5 +48,6 @@ Exposes the Tymly framework via GraphQL.
 | ---- | ----------- |
 | [jwtAuth](services/jwt-auth.html) | No description! :-( |
 | [server](services/server.html) | No description! :-( |
+| [stateboxApi](services/statebox-api.html) | Exposes the core Tymly abilities (start, get, update and cancel) over a JWT-secured REST API using GraphQL |
 
 

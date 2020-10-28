@@ -44,6 +44,7 @@ Plugin which provides role-based authentication
 | ---- | ----------- |
 | [createRole](state-resources/create-role.html) | Creates an RBAC role |
 | [grantPermission](state-resources/grant-permission.html) | Grants permission to a user |
+| [grantRoleMembership](state-resources/grant-role-membership.html) | Grants role membership |
 | [listRoles](state-resources/list-roles.html) | Lists roles |
 | [permissionsTree](state-resources/permissions-tree.html) | Returns a permission tree |
 | [refreshPermissions](state-resources/refresh-permissions.html) | Refreshes a users permissions |

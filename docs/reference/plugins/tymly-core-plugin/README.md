@@ -44,8 +44,10 @@ Provides low-level functions for Tymly
 | ---- | ----------- |
 | [availableResources](state-resources/available-resources.html) | Returns a list of currently available resources |
 | [availableStateMachines](state-resources/available-state-machines.html) | Returns a list of currently available state machines |
+| [awaitingExternalInput](state-resources/awaiting-external-input.html) | Awaits for an external input to advance the state-machine |
 | [clearConfiguredRegistryKey](state-resources/clear-configured-registry-key.html) | Clears a registry specific value |
 | [clearRegistryKey](state-resources/clear-registry-key.html) | Clears a registry key value |
+| [configSetting](state-resources/config-setting.html) | Reads a config setting |
 | [deletingById](state-resources/deleting-by-id.html) | Deletes document by ID |
 | [finding](state-resources/finding.html) | Finds documents with where clause from storage |
 | [findingById](state-resources/finding-by-id.html) | Fetches a single document by its primary key values from storage and adds to a Tymly context |
@@ -53,9 +55,12 @@ Provides low-level functions for Tymly
 | [generateUuid](state-resources/generate-uuid.html) | Generate UUID (Long or short!) |
 | [getConfiguredRegistryKey](state-resources/get-configured-registry-key.html) | Gets a specific registry key value |
 | [getRegistryKey](state-resources/get-registry-key.html) | Gets a registry key value |
+| [launchStateMachine](state-resources/launch-state-machine.html) | Launches another state machine, but does not wait for it to complete. The output of this state-resource is the execution description of the launched state machine. The description of the parent state machine is given as input to the launched state machine so it can, for example, send heart beats back. |
 | [logging](state-resources/logging.html) | Logs to the console via a template |
 | [runFunction](state-resources/run-function.html) | Run function from a blueprint |
-| [runStateMachine](state-resources/run-state-machine.html) | Run another state machine |
+| [runStateMachine](state-resources/run-state-machine.html) | Run another state machine and wait for it to complete. The output of this state-resource is the output from the spawned state machine. |
+| [sendTaskHeartbeat](state-resources/send-task-heartbeat.html) | Sends Task Heartbeat to another execution. |
+| [sendTaskSuccess](state-resources/send-task-success.html) | Sends Task Success to another execution. |
 | [setConfiguredRegistryKey](state-resources/set-configured-registry-key.html) | Sets a registry specific value |
 | [setContextData](state-resources/set-context-data.html) | Sets the context data |
 | [setRegistryKey](state-resources/set-registry-key.html) | Sets an arbitrary registry key value |

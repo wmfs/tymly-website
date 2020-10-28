@@ -54,6 +54,42 @@ Allows a user to watch a board
 ```
 
 
+## Options
+
+### Optional properties
+
+#### `stateMachineName`
+
+The name of the state-machine which conjured the currently rendered board.
+
+* **Type:** `string`
+
+----
+
+#### `title`
+
+The title identifying this board-instance - would be available on any rendered board.
+
+* **Type:** `string`
+
+----
+
+#### `description`
+
+Some summary content - most likely available on the rendered board or search result etc. Could even be user-editable to help better recognise the reason the board was watched in the first place.
+
+* **Type:** `string`
+
+----
+
+#### `key`
+
+A key/value pair object describing the primary key of the currently displayed board - perhaps derived from the launches object which caused the board to be rendered.
+
+* **Type:** `object`
+
+
+
 
 
 ## Links

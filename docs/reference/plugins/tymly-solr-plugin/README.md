@@ -45,8 +45,9 @@ Plugin which handles interaction with Apache Solr for Tymly framework
 | [addDocs](state-resources/add-docs.html) | Adds docs |
 | [deltaReindex](state-resources/delta-reindex.html) | Performs a delta reindex |
 | [fullReindex](state-resources/full-reindex.html) | Performs a full reindex |
-| [removeDocs](state-resources/remove-docs.html) | Remove SOLR Docs |
+| [removeDocsByQuery](state-resources/remove-docs-by-query.html) | Remove SOLR Docs |
 | [search](state-resources/search.html) | Performs a search |
+| [updateDocsBySearchDoc](state-resources/update-docs-by-search-doc.html) | Update SOLR Docs |
 
 
 

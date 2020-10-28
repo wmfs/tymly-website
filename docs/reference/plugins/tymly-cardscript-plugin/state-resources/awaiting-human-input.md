@@ -73,9 +73,17 @@ Name of the UI board or form.
 
 #### `uiType`
 
-Type of UI, either board or form.
+Type of UI, either board, form, or progress.
 
 * **Type:** `string`
+
+----
+
+#### `uiRefresh`
+
+If the uiType is progress, the suggest refresh time in seconds.
+
+* **Type:** `integer`
 
 ----
 

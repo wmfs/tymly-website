@@ -27,48 +27,24 @@ sidebar: auto
 ---
 
 
-# getBoardData
+# addNote
 
 
 ::: tip State Resource
-This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-cardscript-plugin](/reference/plugins/tymly-cardscript-plugin/)** plugin.
+This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-notes-plugin](/reference/plugins/tymly-notes-plugin/)** plugin.
 :::
 
 ## Purpose
 
-Get Board Data
+No description! :-(
 
 ## Usage
 
 ### Example
 
 ``` json
-{
-  "GetBoardData": {
-    "Type": "Task",
-    "Resource": "module:getBoardData",
-    "ResourceConfig": {
-      "model": [
-        "human",
-        "animal"
-      ]
-    },
-    "End": true
-  }
-}
+
 ```
-
-
-## Options
-
-### Required properties
-
-#### `model`
-
-The name of the model(s) to get data from, can be a string or array.
-
-* **Type:** `undefined`
-
 
 
 

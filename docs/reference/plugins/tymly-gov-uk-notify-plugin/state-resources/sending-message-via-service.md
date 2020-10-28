@@ -58,7 +58,7 @@ Sending Mail or SMS via GOV UK Notify Service
 
 ## Options
 
-### Required properties
+### Optional properties
 
 #### `templateId`
 

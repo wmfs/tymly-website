@@ -144,6 +144,7 @@ Controls the weight of `TextBlock` elements.
 If `true`, allow text to wrap. Otherwise, text is clipped.
 
 * **Type:** `boolean`
+* **Default:** `true`
 
 ----
 
@@ -253,7 +254,7 @@ When `true`, draw a separating line at the top of the element.
     "wrap": {
       "type": "boolean",
       "description": "If `true`, allow text to wrap. Otherwise, text is clipped.",
-      "default": false
+      "default": true
     }
   },
   "required": [

@@ -78,6 +78,22 @@ Description of the input desired. Displayed when no text has been input.
 
 ----
 
+### `clearable`
+
+Whether the user can clear the data.
+
+* **Type:** `boolean`
+
+----
+
+### `withSeconds`
+
+Whether to display and allow the user to enter seconds.
+
+* **Type:** `boolean`
+
+----
+
 ### `spacing`
 
 Controls the amount of spacing between this element and the preceding element.
@@ -131,6 +147,15 @@ When `true`, draw a separating line at the top of the element.
     "placeholder": {
       "type": "string",
       "description": "Description of the input desired. Displayed when no text has been input."
+    },
+    "clearable": {
+      "type": "boolean",
+      "description": "Whether the user can clear the data."
+    },
+    "withSeconds": {
+      "type": "boolean",
+      "description": "Whether to display and allow the user to enter seconds",
+      "default": false
     }
   },
   "required": [
@@ -157,6 +182,18 @@ When `true`, draw a separating line at the top of the element.
       "type": "string",
       "required": "Optional",
       "text": "Description of the input desired. Displayed when no text has been input."
+    },
+    {
+      "name": "clearable",
+      "type": "boolean",
+      "required": "Optional",
+      "text": "Whether the user can clear the data."
+    },
+    {
+      "name": "withSeconds",
+      "type": "boolean",
+      "required": "Optional",
+      "text": "Whether to display and allow the user to enter seconds"
     }
   ]
 }

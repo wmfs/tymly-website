@@ -43,6 +43,7 @@ A REST API client for Tymly
 | Name | Description |
 | ---- | ----------- |
 | [getDataFromRestApi](state-resources/get-data-from-rest-api.html) | Gets data from a rest API |
+| [postDataToRestApi](state-resources/post-data-to-rest-api.html) | Posts data to a rest API |
 
 
 

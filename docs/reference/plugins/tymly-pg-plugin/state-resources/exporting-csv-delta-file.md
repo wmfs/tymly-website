@@ -76,7 +76,7 @@ Outputs change-only-update CSV files (or “delta” files) that contain all the
 
 ## Options
 
-### Required properties
+### Optional properties
 
 #### `since`
 
@@ -85,7 +85,7 @@ The moment-in-time (e.g. an _epoch_) that the exported CSV file should contain c
 * **Type:** `string`
 * **Format:** [`date-time`](https://json-schema.org/understanding-json-schema/reference/string.html#format)
 
-### Optional properties
+----
 
 #### `actionAliases`
 

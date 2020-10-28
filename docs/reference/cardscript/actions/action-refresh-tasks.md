@@ -26,54 +26,55 @@
 sidebar: auto
 ---
 
+# <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/action-refresh-tasks.svg')" alt="Relevant Cardscript icon">Action.RefreshTasks
 
-# removeDocs
-
-
-::: tip State Resource
-This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-solr-plugin](/reference/plugins/tymly-solr-plugin/)** plugin.
+::: tip Cardscript
+When invoked this will refresh the users tasks.
 :::
 
-## Purpose
+## Example
 
-Remove SOLR Docs
+``` json
+"No example! :-("
+```
 
-## Usage
+## Required properties
 
-### Example
+### `type`
+
+Must be `"Action.RefreshTasks"`.
+
+* **Type:** `string`
+
+
+
+<hr>
+
+## JSON Schema
 
 ``` json
 {
-  "RemoveDocs": {
-    "Type": "Task",
-    "Resource": "module:removeDocs",
-    "InputPath": "$",
-    "ResourceConfig": {
-      "query": {
-        "category": "iip",
-        "activeEvent": true
-      }
-    },
-    "Next": "GetIncidentsInProgress"
-  }
+  "additionalProperties": true,
+  "description": "When invoked this will refresh the users tasks.",
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Must be `\"Action.RefreshTasks\"`"
+    }
+  },
+  "required": [
+    "type"
+  ],
+  "type": "Action.RefreshTasks",
+  "typeSafe": "action-refresh-tasks",
+  "example": "FIXME!",
+  "propertySummary": [
+    {
+      "name": "type",
+      "type": "string",
+      "required": "Required",
+      "text": "Must be `\"Action.RefreshTasks\"`"
+    }
+  ]
 }
 ```
-
-
-## Options
-
-### Required properties
-
-#### `query`
-
-Provides some filters for the query.
-
-* **Type:** `object`
-
-
-
-
-
-## Links
-
-* [State Resource class on GitHub]()

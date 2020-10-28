@@ -129,14 +129,6 @@ A handlebars-like template for conjuring a subtitle per instance.
 
 * **Type:** `string`
 
-----
-
-### `editable`
-
-The CardList element can either act as a modal to display a block of Card Elements or as a form which can be completed and pushed to an array.
-
-* **Type:** `boolean`
-
 
 
 <hr>
@@ -174,11 +166,6 @@ The CardList element can either act as a modal to display a block of Card Elemen
     "instanceSubtitleTemplate": {
       "type": "string",
       "description": "A handlebars-like template for conjuring a subtitle per instance."
-    },
-    "editable": {
-      "type": "boolean",
-      "description": "The CardList element can either act as a modal to display a block of Card Elements or as a form which can be completed and pushed to an array.",
-      "default": false
     }
   },
   "required": [
@@ -223,12 +210,6 @@ The CardList element can either act as a modal to display a block of Card Elemen
       "type": "string",
       "required": "Optional",
       "text": "A handlebars-like template for conjuring a subtitle per instance."
-    },
-    {
-      "name": "editable",
-      "type": "boolean",
-      "required": "Optional",
-      "text": "The CardList element can either act as a modal to display a block of Card Elements or as a form which can be completed and pushed to an array."
     }
   ]
 }

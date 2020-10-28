@@ -96,6 +96,26 @@ Controls the amount of spacing between this element and the preceding element.
 
 ----
 
+### `actionStyle`
+
+How to display the action set.
+
+* **Type:** `string`
+* **Default:** `"list"`
+* **Values:**
+  * `list`
+  * `dropdown`
+
+----
+
+### `label`
+
+Text displayed as label if ActionSet is in dropdown style.
+
+* **Type:** `string`
+
+----
+
 ### `id`
 
 A unique identifier associated with the element.
@@ -140,6 +160,19 @@ When `true`, draw a separating line at the top of the element.
     },
     "spacing": {
       "$ref": "#/definitions/SpacingStyle"
+    },
+    "actionStyle": {
+      "type": "string",
+      "description": "How to display the action set.",
+      "enum": [
+        "list",
+        "dropdown"
+      ],
+      "default": "list"
+    },
+    "label": {
+      "type": "string",
+      "description": "Text displayed as label if ActionSet is in dropdown style."
     }
   },
   "required": [
@@ -163,6 +196,18 @@ When `true`, draw a separating line at the top of the element.
     {
       "name": "spacing",
       "required": "Optional"
+    },
+    {
+      "name": "actionStyle",
+      "type": "string",
+      "required": "Optional",
+      "text": "How to display the action set."
+    },
+    {
+      "name": "label",
+      "type": "string",
+      "required": "Optional",
+      "text": "Text displayed as label if ActionSet is in dropdown style."
     }
   ]
 }

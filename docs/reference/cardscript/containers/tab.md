@@ -39,6 +39,7 @@ Defines a container that is part of a TabSet.
   "type": "AdaptiveCard",
   "body": [
     {
+      "id": "tabSet",
       "type": "TabSet",
       "spacing": "large",
       "tabs": [

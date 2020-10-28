@@ -27,38 +27,42 @@ sidebar: auto
 ---
 
 
-# getCloudStorageContents
+# tymly-fastify-plugin
 
-
-::: tip State Resource
-This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-sharepoint-plugin](/reference/plugins/tymly-sharepoint-plugin/)** plugin.
+::: tip Description
+Exposes the Tymly framework via a Fastify web app.
 :::
-
-## Purpose
-
-Returns the contents of a cloud storage folder
-
-## Usage
-
-### Example
-
-``` json
-{
-  "GetCloudStorageContents": {
-    "Type": "Task",
-    "Resource": "module:getCloudStorageContents",
-    "ResourceConfig": {
-      "folderPath": "Shared Documents/General/uploads/ridge_uploads/${boardKeys.uprn}"
-    },
-    "ResultPath": "$.sharepoint",
-    "Next": "CreateSearchInput"
-  }
-}
-```
-
-
-
 
 ## Links
 
-* [State Resource class on GitHub]()
+* [Github repository](https://github.com/wmfs/tymly-fastify-plugin#readme)
+* [NPM package](https://www.npmjs.com/package/@wmfs/tymly-fastify-plugin)
+
+
+## State Resources
+| Name | Description |
+| ---- | ----------- |
+| [fileDownloading](state-resources/file-downloading.html) | No description! :-( |
+
+
+
+
+
+## Blueprint directories
+| Directory | Description |
+| --------- | ----------- |
+| `/images` | A place to put images that can be served-up in Forms and similar |
+
+
+
+
+## Services
+| Name | Description |
+| ---- | ----------- |
+| [fileDownloading](services/file-downloading.html) | No description! :-( |
+| [fileUploading](services/file-uploading.html) | No description! :-( |
+| [jwtAuth](services/jwt-auth.html) | Provides JWT-based authentication capabilities |
+| [server](services/server.html) | Provides a CORS-enabled Fastify server. Includes serving of static assets as supplied via Blueprints |
+| [stateboxApi](services/statebox-api.html) | Exposes the core Tymly abilities (start, get, update and cancel) over a JWT-secured REST API |
+
+

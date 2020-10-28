@@ -43,6 +43,7 @@ Provides auth0 authentication functionality to the Tymly framework
 | Name | Description |
 | ---- | ----------- |
 | [addAuth0Mapping](state-resources/add-auth0-mapping.html) | Allows addition of an Auth0 Mapping |
+| [getAllAuth0UserById](state-resources/get-all-auth0-user-by-id.html) | Gets all user data from auth0 by provided user id |
 | [listAuth0Mappings](state-resources/list-auth0-mappings.html) | Allows listing of Auth0 Mappings |
 | [removeAuth0Mapping](state-resources/remove-auth0-mapping.html) | Allows deletion of an Auth0 Mapping |
 

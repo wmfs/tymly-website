@@ -44,10 +44,10 @@ Plugin which handles interactions to do with Cardscript
 | ---- | ----------- |
 | [acknowledgeNotifications](state-resources/acknowledge-notifications.html) | Acknowledges notifications for a user |
 | [applySettings](state-resources/apply-settings.html) | Applies settings for a user |
+| [archiveExecution](state-resources/archive-execution.html) | Archive a completed execution. It&#39;s status is prefixed with ARCHIVED-. Primarily used to removed long-running tasks from the list of completed executions. |
 | [awaitingHumanInput](state-resources/awaiting-human-input.html) | Awaits the input of a human to advance the state-machine |
 | [createNotification](state-resources/create-notification.html) | Creates notification |
 | [createTodoEntry](state-resources/create-todo-entry.html) | Creates ToDo Entry |
-| [getBoardData](state-resources/get-board-data.html) | Get Board Data |
 | [getFavouriteStartableNames](state-resources/get-favourite-startable-names.html) | Gets favourite startable names for a user |
 | [getNotifications](state-resources/get-notifications.html) | Gets notifications for a user |
 | [getSettings](state-resources/get-settings.html) | Gets settings for a user |
@@ -56,6 +56,7 @@ Plugin which handles interactions to do with Cardscript
 | [getUserHistory](state-resources/get-user-history.html) | Get the history of state machines the user has accessed. |
 | [getUserRemit](state-resources/get-user-remit.html) | Gets the user remit |
 | [getWatchedBoards](state-resources/get-watched-boards.html) | Gets all watched boards for a user |
+| [listLongRunningTasks](state-resources/list-long-running-tasks.html) | No description! :-( |
 | [removeTodoEntries](state-resources/remove-todo-entries.html) | Removes todos for a user |
 | [setFavouriteStartableNames](state-resources/set-favourite-startable-names.html) | Sets favourite startable names for a user |
 | [unwatchBoard](state-resources/unwatch-board.html) | Allows a user to unwatch a board |
@@ -68,9 +69,7 @@ Plugin which handles interactions to do with Cardscript
 ## Blueprint directories
 | Directory | Description |
 | --------- | ----------- |
-| `/boards` | One JSON file per Boards |
-| `/cardTemplates` | One JSON file per Card |
-| `/forms` | One JSON file per Form (currently need to be in [Schemaform](http://schemaform.io/) format) |
+| `/card-templates` | One JSON file per Card |
 
 
 
@@ -78,8 +77,6 @@ Plugin which handles interactions to do with Cardscript
 ## Services
 | Name | Description |
 | ---- | ----------- |
-| [boards](services/boards.html) | Exposes UI configuration |
 | [cards](services/cards.html) | Exposes UI configuration |
-| [forms](services/forms.html) | Exposes UI configuration (as supplied via blueprints in [Schema Form](http://schemaform.io/) format) |
 
 

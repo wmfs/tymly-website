@@ -27,6 +27,38 @@ sidebar: auto
 ---
 
 
-# forms
+# postDataToRestApi
 
-* Boo
+
+::: tip State Resource
+This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-rest-client-plugin](/reference/plugins/tymly-rest-client-plugin/)** plugin.
+:::
+
+## Purpose
+
+Posts data to a rest API
+
+## Usage
+
+### Example
+
+``` json
+{
+  "PostDataToRestApi": {
+    "Type": "Task",
+    "Resource": "module:postDataToRestApi",
+    "InputPath": "$.postDataToRestApi"
+  }
+}
+```
+
+
+## Options
+
+
+
+
+
+## Links
+
+* [State Resource class on GitHub]()

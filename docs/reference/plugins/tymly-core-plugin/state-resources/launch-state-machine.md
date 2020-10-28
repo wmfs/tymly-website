@@ -27,6 +27,37 @@ sidebar: auto
 ---
 
 
-# boards
+# launchStateMachine
 
-* Boo
+
+::: tip State Resource
+This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-core-plugin](/reference/plugins/tymly-core-plugin/)** plugin.
+:::
+
+## Purpose
+
+Launches another state machine, but does not wait for it to complete. The output of this state-resource is the execution description of the launched state machine. The description of the parent state machine is given as input to the launched state machine so it can, for example, send heart beats back.
+
+## Usage
+
+### Example
+
+``` json
+{
+  "RunStateMachine": {
+    "Type": "Task",
+    "Resource": "module:runStateMachine",
+    "ResourceConfig": {
+      "stateMachine": "vision3_synchronizeVision3Gazetteer_1_0"
+    },
+    "Next": "SynchronizeStreets"
+  }
+}
+```
+
+
+
+
+## Links
+
+* [State Resource class on GitHub]()

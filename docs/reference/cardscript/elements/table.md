@@ -29,7 +29,7 @@ sidebar: auto
 # <img class="header-prefix-icon" :src="$withBase('/cardscript-assets/icons/24dp/table.svg')" alt="Relevant Cardscript icon">Table
 
 ::: tip Cardscript
-Displays text, allowing control over font sizes, weight, and color.
+Displays information in table format.
 :::
 
 ## Example
@@ -42,7 +42,7 @@ Displays text, allowing control over font sizes, weight, and color.
       "id": "table",
       "type": "Table",
       "title": "This is a table",
-      "arrayPath": "cardList",
+      "arrayPath": "data.cardList",
       "columns": [
         {
           "title": "Title",
@@ -99,12 +99,42 @@ Title displayed for the `Table`.
 
 ----
 
+### `rowKey`
+
+The property that uniquely identifies the row.
+
+* **Type:** `string`
+
+----
+
 ### `resultLimit`
 
 Limit the results per page.
 
 * **Type:** `integer`
 * **Default:** `10`
+
+----
+
+### `showLaunches`
+
+Whether or not to show a menu of actions.
+
+* **Type:** `boolean`
+* **Default:** `"false"`
+
+----
+
+### `selectionType`
+
+Whether the use can select a value.
+
+* **Type:** `string`
+* **Default:** `"none"`
+* **Values:**
+  * `none`
+  * `single`
+  * `multi`
 
 ----
 
@@ -140,7 +170,7 @@ When `true`, draw a separating line at the top of the element.
 {
   "additionalProperties": true,
   "type": "Table",
-  "description": "Displays text, allowing control over font sizes, weight, and color.",
+  "description": "Displays information in table format.",
   "allOf": [
     {
       "$ref": "#/definitions/CardElement"
@@ -166,6 +196,10 @@ When `true`, draw a separating line at the top of the element.
       "type": "string",
       "description": "Points to the array of data to be displayed."
     },
+    "rowKey": {
+      "type": "string",
+      "description": "The property that uniquely identifies the row."
+    },
     "columns": {
       "type": "array",
       "items": {
@@ -190,6 +224,21 @@ When `true`, draw a separating line at the top of the element.
       "type": "integer",
       "description": "Limit the results per page.",
       "default": 10
+    },
+    "showLaunches": {
+      "type": "boolean",
+      "description": "Whether or not to show a menu of actions.",
+      "default": "false"
+    },
+    "selectionType": {
+      "type": "string",
+      "description": "Whether the use can select a value.",
+      "enum": [
+        "none",
+        "single",
+        "multi"
+      ],
+      "default": "none"
     }
   },
   "required": [
@@ -226,6 +275,12 @@ When `true`, draw a separating line at the top of the element.
       "text": "Points to the array of data to be displayed."
     },
     {
+      "name": "rowKey",
+      "type": "string",
+      "required": "Optional",
+      "text": "The property that uniquely identifies the row."
+    },
+    {
       "name": "columns",
       "type": "array",
       "required": "Required"
@@ -235,6 +290,18 @@ When `true`, draw a separating line at the top of the element.
       "type": "integer",
       "required": "Optional",
       "text": "Limit the results per page."
+    },
+    {
+      "name": "showLaunches",
+      "type": "boolean",
+      "required": "Optional",
+      "text": "Whether or not to show a menu of actions."
+    },
+    {
+      "name": "selectionType",
+      "type": "string",
+      "required": "Optional",
+      "text": "Whether the use can select a value."
     }
   ]
 }

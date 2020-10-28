@@ -102,6 +102,14 @@ The initial value for this field expressed in ISO-8601 format.
 
 ----
 
+### `clearable`
+
+Whether the user can clear the data.
+
+* **Type:** `boolean`
+
+----
+
 ### `spacing`
 
 Controls the amount of spacing between this element and the preceding element.
@@ -167,6 +175,10 @@ When `true`, draw a separating line at the top of the element.
     "value": {
       "type": "string",
       "description": "The initial value for this field expressed in ISO-8601 format."
+    },
+    "clearable": {
+      "type": "boolean",
+      "description": "Whether the user can clear the data."
     }
   },
   "required": [
@@ -211,6 +223,12 @@ When `true`, draw a separating line at the top of the element.
       "type": "string",
       "required": "Optional",
       "text": "The initial value for this field expressed in ISO-8601 format."
+    },
+    {
+      "name": "clearable",
+      "type": "boolean",
+      "required": "Optional",
+      "text": "Whether the user can clear the data."
     }
   ]
 }
