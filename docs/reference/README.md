@@ -294,8 +294,7 @@ sidebar: auto
 | [cards](plugins/tymly-cardscript-plugin/services/cards.html) | Exposes UI configuration |
 | [cards](plugins/tymly-users-plugin/services/cards.html) | Exposes UI configuration |
 | [categories](plugins/tymly-core-plugin/services/categories.html) | Provides a generic mechanism to help tag/classify search results, tasks, forms etc. |
-| [cloudstorage](plugins/tymly-cloudstorage-plugin/services/cloudstorage.html) | Defines the cloudstorage service interface and provides state-resources around the service. 
-    Specific cloudstorage implementations provided by additional Tymly plugins. |
+| [cloudstorage](plugins/tymly-cloudstorage-plugin/services/cloudstorage.html) | Defines the cloudstorage service interface and provides state-resources around the service. Specific cloudstorage implementations provided by additional Tymly plugins. |
 | [crypto](plugins/tymly-crypto-plugin/services/crypto.html) | Crypto Service |
 | [dataWarehouseStorage](plugins/tymly-relay-plugin/services/data-warehouse-storage.html) | No description! :-( |
 | [diaries](plugins/tymly-diaries-plugin/services/diaries.html) | Diary Service |

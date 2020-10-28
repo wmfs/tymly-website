@@ -55,7 +55,6 @@ Defines the cloudstorage service interface and provides state-resources around t
 ## Services
 | Name | Description |
 | ---- | ----------- |
-| [cloudstorage](services/cloudstorage.html) | Defines the cloudstorage service interface and provides state-resources around the service. 
-    Specific cloudstorage implementations provided by additional Tymly plugins. |
+| [cloudstorage](services/cloudstorage.html) | Defines the cloudstorage service interface and provides state-resources around the service. Specific cloudstorage implementations provided by additional Tymly plugins. |
 
 
