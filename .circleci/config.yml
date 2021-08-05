@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run:
           name: npm install
-          command: npm install
+          command: sudo npm install -g lerna && npm install
       - run:
           name: pull Tymly monorepo
           command: git clone https://github.com/wmfs/tymly.git
@@ -19,6 +19,7 @@ jobs:
           name: sync Tymly monorepo
           command: |
             cd tymly
+            npm install
             TYMLY_GITHUB_USER=$GIT_AUTHOR_NAME TYMLY_GITHUB_TOKEN=$GH_TOKEN npm run sync
   release:
     docker:
