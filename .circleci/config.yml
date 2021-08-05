@@ -53,10 +53,3 @@ workflows:
           context:
             - docker-hub-creds
             - build-env-vars
-      - release:
-          context:
-            - docker-hub-creds
-            - build-env-vars
-          filters:
-            branches:
-              only: master
