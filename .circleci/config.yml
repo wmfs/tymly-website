@@ -31,9 +31,8 @@ jobs:
             cd tymly/packages/tymly-doc-generator
             TYMLY_MONOREPO_PATH=/home/circleci/repo/tymly TYMLY_DOCS_OUTPUT_PATH=/home/circleci/repo npm run generate
       - run:
-          name: push docs
-          command: |
-            npm run docs:build
+          name: deploy docs
+          command: chmod +x scripts/deploy
   release:
     docker:
       - image: cimg/node:lts
