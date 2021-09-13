@@ -9,4 +9,4 @@ echo "Deploying"
 git init
 git add -A
 git commit -m "deploy"
-git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git exactlyaron/ch4719:gh-pages
+git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git master:gh-pages
