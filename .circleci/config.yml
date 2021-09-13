@@ -61,6 +61,13 @@ jobs:
 workflows:
   version: 2
   generate and release:
+    triggers:
+      - schedule:
+          cron: "0 1 * * *"
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - generate docs:
           context:
