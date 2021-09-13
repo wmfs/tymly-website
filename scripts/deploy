@@ -4,7 +4,7 @@ git config --global user.name "$GIT_COMMITTER_NAME"
 git config --global user.email "$GIT_COMMITTER_EMAIL"
 echo "Building"
 npm run docs:build
-cd ../docs/.vuepress/dist
+cd docs/.vuepress/dist
 echo "Deploying"
 git init
 git add -A
