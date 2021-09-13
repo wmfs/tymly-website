@@ -66,6 +66,7 @@ workflows:
           context:
             - docker-hub-creds
             - build-env-vars
-          branches:
-            ignore:
-              - gh-pages
+          filters: 
+            branches:
+              ignore:
+                - gh-pages
