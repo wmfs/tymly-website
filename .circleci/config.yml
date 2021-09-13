@@ -24,7 +24,7 @@ jobs:
             TYMLY_GITHUB_USER=$GIT_AUTHOR_NAME TYMLY_GITHUB_TOKEN=$GH_TOKEN npm run sync
       - run:
           name: bootstrap Tymly monorepo
-          command: npm run bootstrap
+          command: cd tymly && npm run bootstrap
   release:
     docker:
       - image: cimg/node:lts
