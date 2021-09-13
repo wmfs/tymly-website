@@ -24,7 +24,7 @@ jobs:
             TYMLY_GITHUB_USER=$GIT_AUTHOR_NAME TYMLY_GITHUB_TOKEN=$GH_TOKEN npm run sync
       - run:
           name: bootstrap Tymly monorepo
-          command: cd tymly && npm run bootstrap
+          command: npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN && cd tymly && npm run bootstrap
       - run:
           name: generate docs
           command: |
