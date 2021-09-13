@@ -20,7 +20,7 @@
     "vuepress": "0.14.8"
   },
   "devDependencies": {
-    "@wmfs/tymly-doc-generator": "1.1.0"
+    "@wmfs/tymly-doc-generator": "1.2.0"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
