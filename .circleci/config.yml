@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 orbs:
   slack: circleci/slack@3.4.2
 jobs:
@@ -50,7 +50,7 @@ workflows:
   generate and release:
     triggers:
       - schedule:
-          cron: "03 8 * * *"
+          cron: "13 9 * * *"
           filters:
             branches:
               only:
