@@ -47,7 +47,17 @@ jobs:
           failure_message: "Ow! Tymly Website failed check the logs! :skull:"
 workflows:
   version: 2
-  generate and release:
+  manual:
+    jobs:
+      - generate docs:
+          context:
+            - docker-hub-creds
+            - build-env-vars
+          filters: 
+            branches:
+              only:
+                - master
+  nightly:
     triggers:
       - schedule:
           cron: "0 1 * * *"
@@ -62,5 +72,5 @@ workflows:
             - build-env-vars
           filters: 
             branches:
-              ignore:
-                - gh-pages
+              only:
+                - master
