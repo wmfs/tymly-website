@@ -50,11 +50,11 @@ workflows:
   generate and release:
     triggers:
       - schedule:
-          cron: "15 8 * * *"
+          cron: "0 1 * * *"
           filters:
             branches:
               only:
-                - exactlyaron/ch4719
+                - master
     jobs:
       - generate docs:
           context:
