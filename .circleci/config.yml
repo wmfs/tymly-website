@@ -33,31 +33,6 @@ jobs:
       - run:
           name: deploy docs
           command: chmod +x scripts/deploy && ./scripts/deploy
-  release:
-    docker:
-      - image: cimg/node:lts
-        auth:
-          username: $DOCKERHUB_USERNAME
-          password: $DOCKERHUB_PASSWORD
-        environment:
-          TZ: "Europe/London"
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-deps-{{ checksum "package.json" }}
-            - v1-deps-
-      - run:
-          name: install
-          command: npm install
-      - save_cache:
-          key: v1-deps-{{ checksum "package.json" }}
-          paths:
-            - node_modules
-      - run:
-          name: release
-          command: npx semantic-release
 workflows:
   version: 2
   generate and release:
