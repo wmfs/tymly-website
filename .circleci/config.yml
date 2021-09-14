@@ -26,7 +26,11 @@ jobs:
             TYMLY_GITHUB_USER=$GIT_AUTHOR_NAME TYMLY_GITHUB_TOKEN=$GH_TOKEN npm run sync public-only
       - run:
           name: bootstrap Tymly monorepo
-          command: cd tymly && npm run bootstrap
+          command: |
+            cd tymly
+            lerna clean --yes
+            lerna bootstrap -- --production
+            lerna link --force-local
       - run:
           name: generate docs
           command: |
@@ -60,7 +64,7 @@ workflows:
   nightly:
     triggers:
       - schedule:
-          cron: "34 9 * * *"
+          cron: "49 9 * * *"
           filters:
             branches:
               only:
