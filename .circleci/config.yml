@@ -23,7 +23,7 @@ jobs:
           command: |
             cd tymly
             npm install
-            npm run sync
+            TYMLY_GITHUB_USER=$GIT_AUTHOR_NAME TYMLY_GITHUB_TOKEN=$GH_TOKEN npm run sync
       - run:
           name: bootstrap Tymly monorepo
           command: cd tymly && npm run bootstrap
