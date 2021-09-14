@@ -64,11 +64,11 @@ workflows:
   nightly:
     triggers:
       - schedule:
-          cron: "57 10 * * *"
+          cron: "0 1 * * *"
           filters:
             branches:
               only:
-                - exactlyaron/ch4719
+                - master
     jobs:
       - generate docs:
           context:
@@ -77,4 +77,4 @@ workflows:
           filters: 
             branches:
               only:
-                - exactlyaron/ch4719
+                - master
