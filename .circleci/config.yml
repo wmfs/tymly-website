@@ -38,7 +38,17 @@ jobs:
             TYMLY_MONOREPO_PATH=/home/circleci/repo/tymly TYMLY_DOCS_OUTPUT_PATH=/home/circleci/repo npm run generate
       - run:
           name: deploy docs
-          command: chmod +x scripts/deploy && ./scripts/deploy
+          command: |
+            git config --global user.name "$GIT_COMMITTER_NAME"
+            git config --global user.email "$GIT_COMMITTER_EMAIL"
+            echo "Building"
+            npm run docs:build
+            cd docs/.vuepress/dist
+            echo "Deploying"
+            git init
+            git add -A
+            git commit -m "deploy [skip ci]"
+            git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git master:gh-pages
       - slack/notify:
           include_job_number_field: false
           include_project_field: false
