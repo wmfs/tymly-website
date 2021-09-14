@@ -13,8 +13,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: install lerna
-          command: sudo npm install -g lerna
+          name: npm install
+          command: sudo npm install -g lerna && npm install
       - run:
           name: pull Tymly monorepo
           command: git clone https://github.com/wmfs/tymly.git
