@@ -1,4 +1,6 @@
 version: 2
+orbs:
+  slack: circleci/slack@3.4.2
 jobs:
   generate docs:
     docker:
@@ -33,12 +35,22 @@ jobs:
       - run:
           name: deploy docs
           command: chmod +x scripts/deploy && ./scripts/deploy
+      - slack/notify:
+          include_job_number_field: false
+          include_project_field: false
+          color: '#C9F0E9'
+          message: "Look at that! Tymly Website has been built. :tada:"
+      - slack/status:
+          include_job_number_field: false
+          include_project_field: false
+          fail_only: true
+          failure_message: "Ow! Tymly Website failed check the logs! :skull:"
 workflows:
   version: 2
   generate and release:
     triggers:
       - schedule:
-          cron: "33 7 * * *"
+          cron: "43 7 * * *"
           filters:
             branches:
               only:
