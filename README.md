@@ -28,7 +28,7 @@ $ npm run docs:build
 Windows:
 
 ``` bash
-"scripts/manual-deploy.bat"
+"scripts/deploy.bat"
 ```
 
 ## <a name="license"></a>License
