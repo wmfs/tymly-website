@@ -23,7 +23,7 @@ jobs:
           command: |
             cd tymly
             npm install
-            TYMLY_GITHUB_USER=$GIT_AUTHOR_NAME TYMLY_GITHUB_TOKEN=$GH_TOKEN npm run sync
+            TYMLY_GITHUB_USER=$GIT_AUTHOR_NAME TYMLY_GITHUB_TOKEN=$GH_TOKEN npm run sync public-only
       - run:
           name: bootstrap Tymly monorepo
           command: cd tymly && npm run bootstrap
@@ -60,7 +60,7 @@ workflows:
   nightly:
     triggers:
       - schedule:
-          cron: "38 8 * * *"
+          cron: "34 9 * * *"
           filters:
             branches:
               only:
