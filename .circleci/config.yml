@@ -50,7 +50,7 @@ workflows:
   generate and release:
     triggers:
       - schedule:
-          cron: "13 9 * * *"
+          cron: "15 8 * * *"
           filters:
             branches:
               only:
