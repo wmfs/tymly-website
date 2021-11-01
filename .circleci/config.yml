@@ -8,6 +8,8 @@ jobs:
         auth:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
+    environment:
+      DEBUG: *
     resource_class: xlarge     
     working_directory: ~/repo
     steps:
