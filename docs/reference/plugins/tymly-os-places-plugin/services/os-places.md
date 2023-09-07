@@ -29,4 +29,32 @@ sidebar: auto
 
 # osPlaces
 
-* Boo
+::: tip Description
+No description! :-(
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| OsPlacesService | ClassDeclaration |
+| OsPlacesService#boot | MethodDefinition |
+| OsPlacesService#searchAddress | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+Boot after property not found
+
+

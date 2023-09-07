@@ -29,4 +29,37 @@ sidebar: auto
 
 # registry
 
-* Boo
+::: tip Description
+Provides a mechanism for states to refer to site-specific values
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| RegistryService | ClassDeclaration |
+| RegistryService#boot | MethodDefinition |
+| RegistryService#ensureBlueprintKeys | MethodDefinition |
+| RegistryService#refresh | MethodDefinition |
+| RegistryService#has | MethodDefinition |
+| RegistryService#get | MethodDefinition |
+| RegistryService#set | MethodDefinition |
+| RegistryService#clear | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+statebox
+
+
+
+
+## Boot After
+
+storage, caches
+
+

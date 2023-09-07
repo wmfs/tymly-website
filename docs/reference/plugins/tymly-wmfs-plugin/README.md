@@ -42,7 +42,10 @@ Provides WMFS functions to the Tymly framework
 ## State Resources
 | Name | Description |
 | ---- | ----------- |
+| [decodeMaskingNumber](state-resources/decode-masking-number.html) | No description! :-( |
+| [encodeUprn](state-resources/encode-uprn.html) | No description! :-( |
 | [getNearestStation](state-resources/get-nearest-station.html) | Gets nearest station for an x/y point |
+| [getWatchChoicesByStation](state-resources/get-watch-choices-by-station.html) | No description! :-( |
 
 
 

@@ -29,4 +29,31 @@ sidebar: auto
 
 # stateboxApi
 
-* Boo
+::: tip Description
+Exposes the core Tymly abilities (start, get, update and cancel) over a JWT-secured REST API
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| StateboxApiService | ClassDeclaration |
+| StateboxApiService#boot | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+jwtAuth, statebox
+
+

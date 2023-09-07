@@ -29,4 +29,55 @@ sidebar: auto
 
 # statebox
 
-* Boo
+::: tip Description
+Runs state machines defined in Amazon States Language
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| StateboxService | ClassDeclaration |
+| StateboxService#boot | MethodDefinition |
+| StateboxService#findStateMachineByName | MethodDefinition |
+| StateboxService#findStates | MethodDefinition |
+| StateboxService#findStateMachines | MethodDefinition |
+| StateboxService#listStateMachines | MethodDefinition |
+| StateboxService#listStateResources | MethodDefinition |
+| StateboxService#startExecution | MethodDefinition |
+| StateboxService#stopExecution | MethodDefinition |
+| StateboxService#listExecutions | MethodDefinition |
+| StateboxService#describeExecution | MethodDefinition |
+| StateboxService#sendTaskSuccess | MethodDefinition |
+| StateboxService#sendTaskHeartbeat | MethodDefinition |
+| StateboxService#sendTaskLastHeartbeat | MethodDefinition |
+| StateboxService#sendTaskFailure | MethodDefinition |
+| StateboxService#sendTaskRevivification | MethodDefinition |
+| StateboxService#waitUntilStoppedRunning | MethodDefinition |
+| StateboxService#updateIfAuthorised | MethodDefinition |
+| StateboxService#reviveIfAuthorised | MethodDefinition |
+| StateboxService#describeAndProcessIfAuthorised | MethodDefinition |
+| StateboxService#processIfAuthorised | MethodDefinition |
+| StateboxService#checkIfStateMachineExists | MethodDefinition |
+| StateboxService#authorisationCheck | MethodDefinition |
+| StateboxService#doAuthorisationCheck | MethodDefinition |
+| StateboxService#lookupUserEmail | MethodDefinition |
+| StateboxService#bindCurrentUser | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+storage, temp, categories, registry
+
+

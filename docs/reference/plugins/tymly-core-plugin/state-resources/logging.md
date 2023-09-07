@@ -48,6 +48,7 @@ Logs to the console via a template
     "Type": "Task",
     "Resource": "module:logging",
     "ResourceConfig": {
+      "level": "info",
       "template": "Purge site!"
     },
     "End": true

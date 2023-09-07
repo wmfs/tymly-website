@@ -29,4 +29,34 @@ sidebar: auto
 
 # wmfs
 
-* Boo
+::: tip Description
+Service provides functions to get WMFS information from the database
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| WmfsService | ClassDeclaration |
+| WmfsService#boot | MethodDefinition |
+| WmfsService#getNearestStation | MethodDefinition |
+| WmfsService#encodeUPRN | MethodDefinition |
+| WmfsService#decodeMaskingNumber | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+Boot after property not found
+
+

@@ -29,4 +29,53 @@ sidebar: auto
 
 # jwtAuth
 
-* Boo
+::: tip Description
+Provides JWT-based authentication capabilities
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| AuthService | ClassDeclaration |
+| AuthService#boot | MethodDefinition |
+| AuthService#generateToken | MethodDefinition |
+| AuthService#extractUserIdFromRequest | MethodDefinition |
+
+
+
+
+## Schema
+
+### Required properties
+
+#### `secret`
+
+Used to sign/validate JSON Web Tokens (JWT).
+
+* **Type:** `string`
+
+----
+
+#### `audience`
+
+The audience of a token is the intended recipient of the token - typically, the base address of the resource being accessed.
+
+* **Type:** `string`
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+server
+
+

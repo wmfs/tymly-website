@@ -48,22 +48,28 @@ Provides low-level functions for Tymly
 | [clearConfiguredRegistryKey](state-resources/clear-configured-registry-key.html) | Clears a registry specific value |
 | [clearRegistryKey](state-resources/clear-registry-key.html) | Clears a registry key value |
 | [configSetting](state-resources/config-setting.html) | Reads a config setting |
+| [deleteCacheItem](state-resources/delete-cache-item.html) | Delete item from cache within Tymly |
 | [deletingById](state-resources/deleting-by-id.html) | Deletes document by ID |
 | [finding](state-resources/finding.html) | Finds documents with where clause from storage |
 | [findingById](state-resources/finding-by-id.html) | Fetches a single document by its primary key values from storage and adds to a Tymly context |
+| [findingCount](state-resources/finding-count.html) | Counts documents with where clause from storage |
 | [findingOne](state-resources/finding-one.html) | Finds one document from storage |
 | [generateUuid](state-resources/generate-uuid.html) | Generate UUID (Long or short!) |
+| [getCacheItem](state-resources/get-cache-item.html) | Get item from cache within Tymly |
 | [getConfiguredRegistryKey](state-resources/get-configured-registry-key.html) | Gets a specific registry key value |
 | [getRegistryKey](state-resources/get-registry-key.html) | Gets a registry key value |
 | [launchStateMachine](state-resources/launch-state-machine.html) | Launches another state machine, but does not wait for it to complete. The output of this state-resource is the execution description of the launched state machine. The description of the parent state machine is given as input to the launched state machine so it can, for example, send heart beats back. |
 | [logging](state-resources/logging.html) | Logs to the console via a template |
+| [resetCache](state-resources/reset-cache.html) | Reset cache within Tymly |
 | [runFunction](state-resources/run-function.html) | Run function from a blueprint |
 | [runStateMachine](state-resources/run-state-machine.html) | Run another state machine and wait for it to complete. The output of this state-resource is the output from the spawned state machine. |
 | [sendTaskHeartbeat](state-resources/send-task-heartbeat.html) | Sends Task Heartbeat to another execution. |
 | [sendTaskSuccess](state-resources/send-task-success.html) | Sends Task Success to another execution. |
+| [setClientMetaData](state-resources/set-client-meta-data.html) | No description! :-( |
 | [setConfiguredRegistryKey](state-resources/set-configured-registry-key.html) | Sets a registry specific value |
 | [setContextData](state-resources/set-context-data.html) | Sets the context data |
 | [setRegistryKey](state-resources/set-registry-key.html) | Sets an arbitrary registry key value |
+| [storageSearch](state-resources/storage-search.html) | Paginated search across documents from storage |
 | [timestamp](state-resources/timestamp.html) | Generates a timestamp |
 | [upserting](state-resources/upserting.html) | Perists a document to storage |
 
@@ -91,6 +97,7 @@ Provides low-level functions for Tymly
 | [categories](services/categories.html) | Provides a generic mechanism to help tag/classify search results, tasks, forms etc. |
 | [functions](services/functions.html) | Adds ability to run custom logic as defined in a blueprint |
 | [inventory](services/inventory.html) | Collates component information by scanning plugins. The results can then be used by tooling and documentation-generators |
+| [logger](services/logger.html) | Tymly Logger Service |
 | [registry](services/registry.html) | Provides a mechanism for states to refer to site-specific values |
 | [statebox](services/statebox.html) | Runs state machines defined in Amazon States Language |
 | [storage](services/storage.html) | This is the default in-memory storage service that ships with Tymly. Useful for testing and not much else. |

@@ -29,4 +29,41 @@ sidebar: auto
 
 # solr
 
-* Boo
+::: tip Description
+Adds Solr support
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| SolrService | ClassDeclaration |
+| SolrService#boot | MethodDefinition |
+| SolrService#searchDocs | MethodDefinition |
+| SolrService._solrConnection | MethodDefinition |
+| SolrService.constructModelsArray | MethodDefinition |
+| SolrService.constructSearchDocsArray | MethodDefinition |
+| SolrService.constructSolrSchemaFieldsArray | MethodDefinition |
+| SolrService#buildSelectStatement | MethodDefinition |
+| SolrService#buildCreateViewStatement | MethodDefinition |
+| SolrService#executeSolrFullReindex | MethodDefinition |
+| SolrService#executeSolrDeltaReindex | MethodDefinition |
+| SolrService#_executeReindex | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+storage
+
+

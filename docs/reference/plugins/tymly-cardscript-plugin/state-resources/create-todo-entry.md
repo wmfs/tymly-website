@@ -36,7 +36,7 @@ This is a [State Resource](/guide/#state-resources) as provided by the **[tymly-
 
 ## Purpose
 
-Creates ToDo Entry
+Creates a new todo entry.  Note that after creating the todo, the ResultPath object will have a property called idProperties, which will have a sub-property called id - which will hold the id of the newly created todo.
 
 ## Usage
 
@@ -46,10 +46,24 @@ Creates ToDo Entry
 {
   "CreateTodoEntry": {
     "Type": "Task",
-    "InputPath": "$.todo",
     "Resource": "module:createTodoEntry",
-    "ResultPath": "$.todoId",
-    "Next": "GetTodoLaunches"
+    "Parameters": {
+      "todoTitle": "Book Dance Classes",
+      "description": "Book a Dance Class for an individual",
+      "stateMachineTitle": "Book Dance Classes",
+      "stateMachineCategory": "dance",
+      "launches": [
+        {
+          "title": "Book",
+          "stateMachineName": "dance_bookClass_1_0",
+          "input": {
+            "id.$": "$.id"
+          }
+        }
+      ]
+    },
+    "ResultPath": "$.todo",
+    "Next": "NextState"
   }
 }
 ```
@@ -57,13 +71,45 @@ Creates ToDo Entry
 
 ## Options
 
-### Optional properties
+### Required properties
 
 #### `todoTitle`
 
-Title of the to do entry.
+The text of the clickable link on the todo.
 
 * **Type:** `string`
+
+----
+
+#### `description`
+
+The text displayed under the clickable link on the todo.
+
+* **Type:** `string`
+
+----
+
+#### `stateMachineTitle`
+
+This will be stored in the database to identify an execution - this will typically be the same as todoTitle.
+
+* **Type:** `string`
+
+----
+
+#### `stateMachineCategory`
+
+The blueprint namespace (see the namespace property in your blueprint.json file).
+
+* **Type:** `string`
+
+### Optional properties
+
+#### `id`
+
+An optional property allowing you to specify the id of the todo.  Note that this property wouldn't typically be specified and would be set automatically.
+
+* **Type:** `uuid`
 
 
 

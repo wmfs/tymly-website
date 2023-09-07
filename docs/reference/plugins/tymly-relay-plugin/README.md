@@ -42,6 +42,12 @@ Exposes the routes connecting to the data warehouse via the Tymly server.
 ## State Resources
 | Name | Description |
 | ---- | ----------- |
+| [getActivityAssistantData](state-resources/get-activity-assistant-data.html) | No description! :-( |
+| [getEcrewData](state-resources/get-ecrew-data.html) | No description! :-( |
+| [getEmployeeByNumber](state-resources/get-employee-by-number.html) | No description! :-( |
+| [getEmployeeData](state-resources/get-employee-data.html) | No description! :-( |
+| [getEmployeeNameByNumber](state-resources/get-employee-name-by-number.html) | No description! :-( |
+| [getEmployeeNumberByEmail](state-resources/get-employee-number-by-email.html) | No description! :-( |
 | [getIncidentData](state-resources/get-incident-data.html) | No description! :-( |
 
 

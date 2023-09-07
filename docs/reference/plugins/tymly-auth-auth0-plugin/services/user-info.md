@@ -29,4 +29,47 @@ sidebar: auto
 
 # userInfo
 
-* Boo
+::: tip Description
+Auth0 Service
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| Auth0Service | ClassDeclaration |
+| Auth0Service#boot | MethodDefinition |
+| Auth0Service#searchUsers | MethodDefinition |
+| Auth0Service#allFromUserId | MethodDefinition |
+| Auth0Service#emailFromUserId | MethodDefinition |
+| Auth0Service#rolesFromUserId | MethodDefinition |
+| Auth0Service#_fieldFromUserId | MethodDefinition |
+| Auth0Service#userIdFromEmail | MethodDefinition |
+| Auth0Service#_processUserInfo | MethodDefinition |
+| Auth0Service#_findUserInfo | MethodDefinition |
+| Auth0Service#userIdFromEmailCache | MethodDefinition |
+| Auth0Service#emailFromUserIdCache | MethodDefinition |
+| Auth0Service#rolesFromUserIdCache | MethodDefinition |
+| Auth0Service#_addToCache | MethodDefinition |
+| Auth0Service#_groupsToRoles | MethodDefinition |
+| Auth0Service#_get | MethodDefinition |
+| Auth0Service#_buildRequest | MethodDefinition |
+| Auth0Service#_managementAPIAccessToken | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+rbac
+
+
+
+
+## Boot After
+
+caches, timestamp, auth0GroupMapping
+
+

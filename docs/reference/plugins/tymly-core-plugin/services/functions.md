@@ -29,4 +29,33 @@ sidebar: auto
 
 # functions
 
-* Boo
+::: tip Description
+Adds ability to run custom logic as defined in a blueprint
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| FunctionsService | ClassDeclaration |
+| FunctionsService#boot | MethodDefinition |
+| FunctionsService#getFunction | MethodDefinition |
+| FunctionsService.getFunctionParameters | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+statebox
+
+
+
+
+## Boot After
+
+Boot after property not found
+
+

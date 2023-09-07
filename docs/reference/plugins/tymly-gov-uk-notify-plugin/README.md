@@ -42,7 +42,16 @@ Allows sending notifications via sms or email using the GOV UK Notify service wi
 ## State Resources
 | Name | Description |
 | ---- | ----------- |
+| [calculateMessageRates](state-resources/calculate-message-rates.html) | No description! :-( |
+| [createCustomMessageTemplate](state-resources/create-custom-message-template.html) | No description! :-( |
+| [deleteCustomMessageTemplate](state-resources/delete-custom-message-template.html) | No description! :-( |
+| [editCustomMessageTemplate](state-resources/edit-custom-message-template.html) | No description! :-( |
+| [emitNotifyEvents](state-resources/emit-notify-events.html) | Handle events via GOV UK Notify Service |
+| [findCustomMessageTemplate](state-resources/find-custom-message-template.html) | No description! :-( |
 | [getMessageStatusViaService](state-resources/get-message-status-via-service.html) | Get the status of a message sent via GOV UK Notify Service |
+| [listCustomTemplateRecipients](state-resources/list-custom-template-recipients.html) | No description! :-( |
+| [listMessageTemplates](state-resources/list-message-templates.html) | No description! :-( |
+| [sendingCustomMessageViaService](state-resources/sending-custom-message-via-service.html) | No description! :-( |
 | [sendingMessageViaService](state-resources/sending-message-via-service.html) | Sending Mail or SMS via GOV UK Notify Service |
 
 

@@ -46,6 +46,7 @@ Provides auth0 authentication functionality to the Tymly framework
 | [getAllAuth0UserById](state-resources/get-all-auth0-user-by-id.html) | Gets all user data from auth0 by provided user id |
 | [listAuth0Mappings](state-resources/list-auth0-mappings.html) | Allows listing of Auth0 Mappings |
 | [removeAuth0Mapping](state-resources/remove-auth0-mapping.html) | Allows deletion of an Auth0 Mapping |
+| [userIdFromEmail](state-resources/user-id-from-email.html) | Converts email to Auth0 user ID |
 
 
 

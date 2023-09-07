@@ -29,4 +29,35 @@ sidebar: auto
 
 # sharepoint
 
-* Boo
+::: tip Description
+Adds Sharepoint support
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| SharepointService | ClassDeclaration |
+| SharepointService#boot | MethodDefinition |
+| SharepointService#ensureFolderPath | MethodDefinition |
+| SharepointService#listFolderContentsFromPath | MethodDefinition |
+| SharepointService#deleteFile | MethodDefinition |
+| SharepointService#copyFileToRemotePath | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+cloudstorage
+
+

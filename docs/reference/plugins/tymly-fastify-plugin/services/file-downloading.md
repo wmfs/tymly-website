@@ -29,4 +29,34 @@ sidebar: auto
 
 # fileDownloading
 
-* Boo
+::: tip Description
+No description! :-(
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| FileDownloadingService | ClassDeclaration |
+| FileDownloadingService#boot | MethodDefinition |
+| FileDownloadingService#addDownloadFile | MethodDefinition |
+| FileDownloadingService#serveFile | MethodDefinition |
+| FileDownloadingService#fileCleanUp | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+server
+
+

@@ -48,6 +48,7 @@ Plugin which provides role-based authentication
 | [listRoles](state-resources/list-roles.html) | Lists roles |
 | [permissionsTree](state-resources/permissions-tree.html) | Returns a permission tree |
 | [refreshPermissions](state-resources/refresh-permissions.html) | Refreshes a users permissions |
+| [removeRoleMembership](state-resources/remove-role-membership.html) | Removes role membership |
 
 
 

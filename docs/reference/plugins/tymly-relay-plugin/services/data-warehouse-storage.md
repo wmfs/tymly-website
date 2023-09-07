@@ -29,4 +29,36 @@ sidebar: auto
 
 # dataWarehouseStorage
 
-* Boo
+::: tip Description
+No description! :-(
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| DateWarehouseStorageService | ClassDeclaration |
+| DateWarehouseStorageService#boot | MethodDefinition |
+| DateWarehouseStorageService#getActivityAssistantData | MethodDefinition |
+| DateWarehouseStorageService#getEmployeeData | MethodDefinition |
+| DateWarehouseStorageService#getEmployeeNumberByEmail | MethodDefinition |
+| DateWarehouseStorageService#getEmployeeNameByNumber | MethodDefinition |
+| DateWarehouseStorageService#getEmployeeByNumber | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+incidentsApi
+
+
+
+
+## Boot After
+
+Boot after property not found
+
+

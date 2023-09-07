@@ -29,4 +29,47 @@ sidebar: auto
 
 # storage
 
-* Boo
+::: tip Description
+Replaces the default in-memory storage solution with a Postgresql-backed alternative
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| PostgresqlStorageService | ClassDeclaration |
+| PostgresqlStorageService#boot | MethodDefinition |
+| PostgresqlStorageService#shutdown | MethodDefinition |
+| PostgresqlStorageService._connectionString | MethodDefinition |
+| PostgresqlStorageService#_pushModelSchemas | MethodDefinition |
+| PostgresqlStorageService#_pushModelSchema | MethodDefinition |
+| PostgresqlStorageService#_installExtension | MethodDefinition |
+| PostgresqlStorageService#_generateSequences | MethodDefinition |
+| PostgresqlStorageService#_createModels | MethodDefinition |
+| PostgresqlStorageService#addModel | MethodDefinition |
+| PostgresqlStorageService#_insertMultipleSeedData | MethodDefinition |
+| PostgresqlStorageService#_insertModelSeedData | MethodDefinition |
+| PostgresqlStorageService#_runScripts | MethodDefinition |
+| PostgresqlStorageService#currentUser | MethodDefinition |
+| PostgresqlStorageService#setCurrentUser | MethodDefinition |
+| PostgresqlStorageService#createdByField | MethodDefinition |
+| PostgresqlStorageService#modifiedByField | MethodDefinition |
+| PostgresqlStorageService#modifiedField | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+Boot after property not found
+
+

@@ -29,4 +29,37 @@ sidebar: auto
 
 # storage
 
-* Boo
+::: tip Description
+This is the default in-memory storage service that ships with Tymly. Useful for testing and not much else.
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| MemoryStorageService | ClassDeclaration |
+| MemoryStorageService#boot | MethodDefinition |
+| MemoryStorageService#currentUser | MethodDefinition |
+| MemoryStorageService#setCurrentUser | MethodDefinition |
+| MemoryStorageService#_createModels | MethodDefinition |
+| MemoryStorageService#addModel | MethodDefinition |
+| MemoryStorageService#_insertMultipleSeedData | MethodDefinition |
+| MemoryStorageService#_insertSeedData | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+caches
+
+

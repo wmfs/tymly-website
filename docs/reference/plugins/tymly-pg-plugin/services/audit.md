@@ -29,4 +29,35 @@ sidebar: auto
 
 # audit
 
-* Boo
+::: tip Description
+PG Audit Service
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| AuditService | ClassDeclaration |
+| AuditService#boot | MethodDefinition |
+| AuditService#updateTriggers | MethodDefinition |
+| AuditService#installTrigger | MethodDefinition |
+| AuditService#loadLogs | MethodDefinition |
+| AuditService#formatLogs | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+storage, statebox
+
+

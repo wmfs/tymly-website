@@ -29,4 +29,37 @@ sidebar: auto
 
 # notify
 
-* Boo
+::: tip Description
+Provides functions for interacting with Gov UK Notify service
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| NotifyService | ClassDeclaration |
+| NotifyService#boot | MethodDefinition |
+| NotifyService#emitNotifyEvents | MethodDefinition |
+| NotifyService#listMessageTemplates | MethodDefinition |
+| NotifyService#createCustomMessageTemplate | MethodDefinition |
+| NotifyService#editCustomMessageTemplate | MethodDefinition |
+| NotifyService#deleteCustomMessageTemplate | MethodDefinition |
+| NotifyService#listCustomTemplateRecipients | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+statebox
+
+
+
+
+## Boot After
+
+registry
+
+
