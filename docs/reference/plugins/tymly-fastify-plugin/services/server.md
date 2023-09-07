@@ -29,4 +29,45 @@ sidebar: auto
 
 # server
 
-* Boo
+::: tip Description
+Provides a CORS-enabled Fastify server. Includes serving of static assets as supplied via Blueprints
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| FastifyServerService | ClassDeclaration |
+| FastifyServerService#boot | MethodDefinition |
+| FastifyServerService#listen | MethodDefinition |
+| FastifyServerService#shutdown | MethodDefinition |
+
+
+
+
+## Schema
+
+### Optional properties
+
+#### `staticRootDir`
+
+A path pointing to a directory where static blueprint assets will be copied and served.
+
+* **Type:** `string`
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+temp
+
+

@@ -29,4 +29,34 @@ sidebar: auto
 
 # timestamp
 
-* Boo
+::: tip Description
+Tymly Time Service!
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| TimestampService | ClassDeclaration |
+| TimestampService.defaultProvider | MethodDefinition |
+| TimestampService#boot | MethodDefinition |
+| TimestampService#now | MethodDefinition |
+| TimestampService#today | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+statebox
+
+
+
+
+## Boot After
+
+Boot after property not found
+
+

@@ -29,4 +29,32 @@ sidebar: auto
 
 # cards
 
-* Boo
+::: tip Description
+Exposes UI configuration
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| CardsService | ClassDeclaration |
+| CardsService#boot | MethodDefinition |
+| CardsService#cards | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+tymly, rbac
+
+
+
+
+## Boot After
+
+Boot after property not found
+
+

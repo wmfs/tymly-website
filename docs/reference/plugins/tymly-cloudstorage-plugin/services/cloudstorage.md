@@ -29,4 +29,39 @@ sidebar: auto
 
 # cloudstorage
 
-* Boo
+::: tip Description
+Defines the cloudstorage service interface and provides state-resources around the service. Specific cloudstorage implementations provided by additional Tymly plugins.
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| CloudstorageService | ClassDeclaration |
+| CloudstorageService#boot | MethodDefinition |
+| CloudstorageService#defaultProvider | MethodDefinition |
+| CloudstorageService#provider | MethodDefinition |
+| CloudstorageService#registerProvider | MethodDefinition |
+| CloudstorageService#ensureFolderPath | MethodDefinition |
+| CloudstorageService#listFolderContentsFromPath | MethodDefinition |
+| CloudstorageService#deleteFile | MethodDefinition |
+| CloudstorageService#copyFileToRemotePath | MethodDefinition |
+| CloudstorageService#copyFileToLocalPath | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+Boot after property not found
+
+

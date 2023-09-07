@@ -29,4 +29,37 @@ sidebar: auto
 
 # categories
 
-* Boo
+::: tip Description
+Provides a generic mechanism to help tag/classify search results, tasks, forms etc.
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| CategoryService | ClassDeclaration |
+| CategoryService#boot | MethodDefinition |
+| CategoryService#categories | MethodDefinition |
+| CategoryService#names | MethodDefinition |
+| CategoryService#ensureCategories | MethodDefinition |
+| CategoryService#ensureCategory | MethodDefinition |
+| CategoryService#saveCategory | MethodDefinition |
+| CategoryService#refresh | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+storage
+
+

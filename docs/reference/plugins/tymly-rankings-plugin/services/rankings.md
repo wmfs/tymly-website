@@ -29,4 +29,34 @@ sidebar: auto
 
 # rankings
 
-* Boo
+::: tip Description
+Adds a ranking engine
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| RankingService | ClassDeclaration |
+| RankingService#boot | MethodDefinition |
+| RankingService#getStats | MethodDefinition |
+| RankingService#findRange | MethodDefinition |
+| RankingService#findDistribution | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+registry, storage
+
+

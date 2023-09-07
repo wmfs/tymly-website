@@ -29,4 +29,29 @@ sidebar: auto
 
 # rbac
 
-* Boo
+::: tip Description
+Provides Rbac-based authorization capabilities
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+
+
+
+
+
+
+## Boot Before
+
+statebox
+
+
+
+
+## Boot After
+
+caches, storage
+
+

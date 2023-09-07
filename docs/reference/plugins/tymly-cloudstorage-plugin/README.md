@@ -44,6 +44,7 @@ Defines the cloudstorage service interface and provides state-resources around t
 | ---- | ----------- |
 | [copyFileToLocalFolder](state-resources/copy-file-to-local-folder.html) | Copies a remote file into a folder on the local file system |
 | [copyFileToRemoteFolder](state-resources/copy-file-to-remote-folder.html) | Copies a local file into a folder in remote storage |
+| [deletingCloudStorageFile](state-resources/deleting-cloud-storage-file.html) | Deletes a cloud storage file |
 | [ensureCloudStorageFolder](state-resources/ensure-cloud-storage-folder.html) | Ensures the existence of a cloud storage folder |
 | [getCloudStorageContents](state-resources/get-cloud-storage-contents.html) | Returns the contents of a cloud storage folder |
 

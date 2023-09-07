@@ -29,4 +29,44 @@ sidebar: auto
 
 # temp
 
-* Boo
+::: tip Description
+Helps configure and manage a temporary folder for Tymly to use
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| TempService | ClassDeclaration |
+| TempService#boot | MethodDefinition |
+| TempService#makeTempDir | MethodDefinition |
+
+
+
+
+## Schema
+
+### Optional properties
+
+#### `tempDir`
+
+A path pointing to a directory to use as an alternative to the system-allocated temp dir.
+
+* **Type:** `string`
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+Boot after property not found
+
+

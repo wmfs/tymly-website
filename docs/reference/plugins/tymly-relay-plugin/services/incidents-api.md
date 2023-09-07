@@ -29,4 +29,31 @@ sidebar: auto
 
 # incidentsApi
 
-* Boo
+::: tip Description
+No description! :-(
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| IncidentsApiService | ClassDeclaration |
+| IncidentsApiService#boot | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+jwtAuth, statebox, caches
+
+

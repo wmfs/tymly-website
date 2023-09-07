@@ -29,4 +29,31 @@ sidebar: auto
 
 # eventsApi
 
-* Boo
+::: tip Description
+No description! :-(
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| EventsApiService | ClassDeclaration |
+| EventsApiService#boot | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+jwtAuth, statebox
+
+

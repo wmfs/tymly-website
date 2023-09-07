@@ -29,4 +29,38 @@ sidebar: auto
 
 # caches
 
-* Boo
+::: tip Description
+Adds [lru-cache](https://www.npmjs.com/package/lru-cache)-based caching to Tymly. Note defaults will be used if no `caches` configuration is provided.
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| CacheService | ClassDeclaration |
+| CacheService#boot | MethodDefinition |
+| CacheService#defaultIfNotInConfig | MethodDefinition |
+| CacheService#set | MethodDefinition |
+| CacheService#keys | MethodDefinition |
+| CacheService#get | MethodDefinition |
+| CacheService#has | MethodDefinition |
+| CacheService#delete | MethodDefinition |
+| CacheService#clear | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+Boot after property not found
+
+

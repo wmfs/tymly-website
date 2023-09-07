@@ -29,4 +29,34 @@ sidebar: auto
 
 # blueprintDocs
 
-* Boo
+::: tip Description
+Allows tracking of documents created via blueprints, so they don&#39;t get reverted when Tymly restarts
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| BlueprintDocsService | ClassDeclaration |
+| BlueprintDocsService#boot | MethodDefinition |
+| BlueprintDocsService#isKnownDocument | MethodDefinition |
+| BlueprintDocsService#registerDocument | MethodDefinition |
+| BlueprintDocsService#getDomainDocIds | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+statebox
+
+
+
+
+## Boot After
+
+storage
+
+

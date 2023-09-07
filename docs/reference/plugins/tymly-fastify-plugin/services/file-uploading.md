@@ -29,4 +29,35 @@ sidebar: auto
 
 # fileUploading
 
-* Boo
+::: tip Description
+No description! :-(
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| FileUploadingService | ClassDeclaration |
+| FileUploadingService#boot | MethodDefinition |
+| FileUploadingService#upload | MethodDefinition |
+| FileUploadingService#handler | MethodDefinition |
+| FileUploadingService#onEnd | MethodDefinition |
+| FileUploadingService#postUploadStateMachine | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+jwtAuth, statebox
+
+

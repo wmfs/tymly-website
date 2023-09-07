@@ -29,4 +29,31 @@ sidebar: auto
 
 # diaries
 
-* Boo
+::: tip Description
+Diary Service
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| DiaryService | ClassDeclaration |
+| DiaryService#boot | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+Boot after property not found
+
+

@@ -47,7 +47,8 @@ Plugin which handles interactions to do with Cardscript
 | [archiveExecution](state-resources/archive-execution.html) | Archive a completed execution. It&#39;s status is prefixed with ARCHIVED-. Primarily used to removed long-running tasks from the list of completed executions. |
 | [awaitingHumanInput](state-resources/awaiting-human-input.html) | Awaits the input of a human to advance the state-machine |
 | [createNotification](state-resources/create-notification.html) | Creates notification |
-| [createTodoEntry](state-resources/create-todo-entry.html) | Creates ToDo Entry |
+| [createTodoEntry](state-resources/create-todo-entry.html) | Creates a new todo entry.  Note that after creating the todo, the ResultPath object will have a property called idProperties, which will have a sub-property called id - which will hold the id of the newly created todo. |
+| [extractInputDateGdsTheme](state-resources/extract-input-date-gds-theme.html) | Extracts Input.Date value for GDS theme |
 | [getFavouriteStartableNames](state-resources/get-favourite-startable-names.html) | Gets favourite startable names for a user |
 | [getNotifications](state-resources/get-notifications.html) | Gets notifications for a user |
 | [getSettings](state-resources/get-settings.html) | Gets settings for a user |
@@ -57,6 +58,7 @@ Plugin which handles interactions to do with Cardscript
 | [getUserRemit](state-resources/get-user-remit.html) | Gets the user remit |
 | [getWatchedBoards](state-resources/get-watched-boards.html) | Gets all watched boards for a user |
 | [listLongRunningTasks](state-resources/list-long-running-tasks.html) | No description! :-( |
+| [reassignTodoEntries](state-resources/reassign-todo-entries.html) | Reassign ToDo Entries |
 | [removeTodoEntries](state-resources/remove-todo-entries.html) | Removes todos for a user |
 | [setFavouriteStartableNames](state-resources/set-favourite-startable-names.html) | Sets favourite startable names for a user |
 | [unwatchBoard](state-resources/unwatch-board.html) | Allows a user to unwatch a board |
@@ -78,5 +80,6 @@ Plugin which handles interactions to do with Cardscript
 | Name | Description |
 | ---- | ----------- |
 | [cards](services/cards.html) | Exposes UI configuration |
+| [tasks](services/tasks.html) | Collects information on long-running tasks |
 
 

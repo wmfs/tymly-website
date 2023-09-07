@@ -29,4 +29,37 @@ sidebar: auto
 
 # auth0GroupMapping
 
-* Boo
+::: tip Description
+No description! :-(
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| Auth0GroupMapping | ClassDeclaration |
+| Auth0GroupMapping#boot | MethodDefinition |
+| Auth0GroupMapping#listAuth0Mappings | MethodDefinition |
+| Auth0GroupMapping#addAuth0Mapping | MethodDefinition |
+| Auth0GroupMapping#removeAuth0Mapping | MethodDefinition |
+| Auth0GroupMapping#groupsToRoles | MethodDefinition |
+| Auth0GroupMapping#_translateAuth0 | MethodDefinition |
+| Auth0GroupMapping#_addMapping | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+storage
+
+

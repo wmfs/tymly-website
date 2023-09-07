@@ -29,4 +29,31 @@ sidebar: auto
 
 # inventory
 
-* Boo
+::: tip Description
+Collates component information by scanning plugins. The results can then be used by tooling and documentation-generators
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| InventoryService | ClassDeclaration |
+| InventoryService#collateEverything | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+storage
+
+
+
+
+## Boot After
+
+Boot after property not found
+
+

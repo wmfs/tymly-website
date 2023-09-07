@@ -29,4 +29,32 @@ sidebar: auto
 
 # crypto
 
-* Boo
+::: tip Description
+Crypto Service
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| CryptoService | ClassDeclaration |
+| CryptoService#boot | MethodDefinition |
+| CryptoService#decrypt | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+Boot after property not found
+
+

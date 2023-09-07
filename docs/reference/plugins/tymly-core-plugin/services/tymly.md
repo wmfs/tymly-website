@@ -29,4 +29,32 @@ sidebar: auto
 
 # tymly
 
-* Boo
+::: tip Description
+Tymly Service
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| TymlyService | ClassDeclaration |
+| TymlyService#boot | MethodDefinition |
+| TymlyService#shutdown | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+Boot after property not found
+
+

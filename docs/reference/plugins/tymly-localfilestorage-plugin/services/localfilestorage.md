@@ -29,4 +29,38 @@ sidebar: auto
 
 # localfilestorage
 
-* Boo
+::: tip Description
+Implements a local filestorage provider for the cloudstorage plugin.
+:::
+
+
+  ## Properties
+| Name | Type |
+| ---- | ---- |
+| LocalFilestorage | ClassDeclaration |
+| LocalFilestorage#boot | MethodDefinition |
+| LocalFilestorage#rootPath | MethodDefinition |
+| LocalFilestorage#ensureFolderPath | MethodDefinition |
+| LocalFilestorage#listFolderContentsFromPath | MethodDefinition |
+| LocalFilestorage#deleteFile | MethodDefinition |
+| LocalFilestorage#copyFileToRemotePath | MethodDefinition |
+| LocalFilestorage#copyFileToLocalPath | MethodDefinition |
+| LocalFilestorage#resolvePath | MethodDefinition |
+
+
+
+
+
+
+## Boot Before
+
+Boot before property not found
+
+
+
+
+## Boot After
+
+cloudstorage
+
+
