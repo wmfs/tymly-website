@@ -54,7 +54,7 @@ jobs:
             cd docs/.vuepress/dist
             echo "Deploying"
             git checkout -f gh-pages
-            git add -f .
+            git add -f -A
             git commit -m "chore: deploy [skip ci]"
             git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git
 workflows:
