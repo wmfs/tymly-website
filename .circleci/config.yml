@@ -52,13 +52,11 @@ jobs:
             echo "Building"
             sudo yarn docs:build
             echo "Deploying"
-            git mv docs/.vuepress/dist/* /home/circleci/repo/deploy
-            sudo rm -rf docs
-            git mv deploy docs
-            cd docs
-            git add -f .
+            cd ./docs/.vuepress/dist
+            git init
+            git add -A
             git commit -m "chore: deploy [skip ci]"
-            git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git HEAD:gh-pages
+            git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git master:gh-pages
 workflows:
   version: 2
   manual:
