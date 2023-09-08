@@ -52,7 +52,6 @@ jobs:
             git config --global user.email "$GIT_COMMITTER_EMAIL"
             echo "Building"
             cd /home/circleci/repo/docs
-            find .
             sudo yarn docs:build
             echo "Cloning tymly-website"
             cd /home/circleci/repo
@@ -61,11 +60,11 @@ jobs:
             cd tymly-website
             git checkout gh-pages
             echo "Applying newly generated files to cloned tymly-website (gh-pages branch)"
-            mv -f -v /home/circleci/repo/docs/.vuepress/dist/* /home/circleci/repo/tymly-website/docs
-# echo "Pushing changes to gh-pages branch"
-# git add -A
-# git commit -m "chore: deploy [skip ci]"
-# git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git HEAD:gh-pages
+            sudo mv -f -v /home/circleci/repo/docs/.vuepress/dist/* /home/circleci/repo/tymly-website/docs
+            echo "Pushing changes to gh-pages branch"
+            git add -A
+            git commit -m "chore: deploy [skip ci]"
+            git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git HEAD:gh-pages
 workflows:
   version: 2
   manual:
