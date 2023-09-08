@@ -52,7 +52,7 @@ jobs:
             echo "Building"
             sudo yarn docs:build
             echo "Deploying"
-            git mv docs/.vuepress/dist/* docs/
+            sudo mv docs/.vuepress/dist/* docs/
             cd docs/
             git add -f .
             git commit -m "chore: deploy [skip ci]"
