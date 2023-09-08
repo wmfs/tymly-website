@@ -52,7 +52,11 @@ jobs:
             echo "Building"
             cd /home/circleci/repo/docs
             sudo yarn docs:build
+            echo "Pruning generated HTML files"
+            cd /home/circleci/repo/docs/.vuepress
+            rm -rf ./dist
             echo "Listing generated files"
+            cd /home/circleci/repo/docs
             find .
             echo "Cloning tymly-website"
             cd /home/circleci/repo
@@ -61,7 +65,7 @@ jobs:
             cd tymly-website
             git checkout gh-pages
             echo "Applying newly generated files to cloned tymly-website (gh-pages branch)"
-            sudo cp -r -f -v /home/circleci/repo/docs/.vuepress/dist/* /home/circleci/repo/tymly-website/docs
+            sudo cp -r -f -v /home/circleci/repo/docs/* /home/circleci/repo/tymly-website/docs
             echo "Pushing changes to gh-pages branch"
             git add -A
             git commit -m "chore: deploy [skip ci]"
