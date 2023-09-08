@@ -53,7 +53,7 @@ jobs:
             sudo yarn docs:build
             cd docs/.vuepress/dist
             echo "Deploying"
-            git checkout gh-pages
+            git checkout -f gh-pages
             git add -f .
             git commit -m "chore: deploy [skip ci]"
             git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git
