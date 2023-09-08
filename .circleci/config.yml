@@ -52,6 +52,8 @@ jobs:
             echo "Building"
             cd /home/circleci/repo/docs
             sudo yarn docs:build
+            echo "Listing generated files"
+            find .
             echo "Cloning tymly-website"
             cd /home/circleci/repo
             git clone https://github.com/wmfs/tymly-website.git
