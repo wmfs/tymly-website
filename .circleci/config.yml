@@ -36,9 +36,9 @@ jobs:
           name: bootstrap Tymly monorepo
           command: |
             cd tymly
-            lerna clean --yes
-            lerna bootstrap -- --production
-            lerna link --force-local
+            sudo lerna clean --yes
+            sudo lerna bootstrap -- --production
+            sudo lerna link --force-local
       - run:
           name: generate docs
           command: |
