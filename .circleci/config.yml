@@ -51,12 +51,14 @@ jobs:
             git config --global user.email "$GIT_COMMITTER_EMAIL"
             echo "Building"
             sudo yarn docs:build
-            echo "Deploying"
-            cd ./docs/.vuepress/dist
-            sudo git init
-            sudo git add -A
-            sudo git commit -m "chore: deploy [skip ci]"
-            sudo git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git master:gh-pages
+            echo "Deploying as $GIT_COMMITTER_NAME ($GIT_COMMITTER_EMAIL)"
+            git mv docs/.vuepress/dist/* /home/circleci/repo/deploy
+            sudo rm -rf docs
+            git mv deploy docs
+            cd docs
+            git add -f .
+            git commit -m "chore: deploy [skip ci]"
+            git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git HEAD:gh-pages
 workflows:
   version: 2
   manual:
