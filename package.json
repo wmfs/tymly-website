@@ -17,7 +17,7 @@
   },
   "main": "./lib/index.js",
   "dependencies": {
-    "vuepress": "0.14.8"
+    "vuepress": "1.9.10"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
