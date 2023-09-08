@@ -51,7 +51,8 @@ jobs:
             git config --global user.email "$GIT_COMMITTER_EMAIL"
             echo "Building"
             sudo yarn docs:build
-            echo "Deploying as $GIT_COMMITTER_NAME ($GIT_COMMITTER_EMAIL)"
+            echo "Deploying"
+            mkdir /home/circleci/repo/deploy
             git mv docs/.vuepress/dist/* /home/circleci/repo/deploy
             sudo rm -rf docs
             git mv deploy docs
