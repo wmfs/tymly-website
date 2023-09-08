@@ -21,7 +21,7 @@ jobs:
           command: |
             npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
             sudo npm install -g lerna@6.6.1
-            sudo npm install
+            yarn install
       - run:
           name: pull Tymly monorepo
           command: git clone https://github.com/wmfs/tymly.git
@@ -50,13 +50,15 @@ jobs:
             git config --global user.name "$GIT_COMMITTER_NAME"
             git config --global user.email "$GIT_COMMITTER_EMAIL"
             echo "Building"
-            sudo npm run docs:build
-            cd docs/.vuepress/dist
+            sudo yarn docs:build
             echo "Deploying"
+            cp -r docs/.vuepress/dist/* /tmp/deploy
+            rm -rf /tmp/deploy/.git
+            cd /tmp/deploy
             git init
             git add -A
             git commit -m "chore: deploy [skip ci]"
-            git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git master:gh-pages
+            git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git HEAD:gh-pages
 workflows:
   version: 2
   manual:
