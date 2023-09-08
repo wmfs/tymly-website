@@ -1,3 +1,5 @@
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/wmfs/tymly-website/tree/master.svg?style=svg&circle-token=df77729057b347e7bf1d968df883d4aaf9b590e8)](https://dl.circleci.com/status-badge/redirect/gh/wmfs/tymly-website/tree/master)
+
 # tymly-website
 
 > A dynamically generated, static website for Tymly
