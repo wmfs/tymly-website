@@ -43,21 +43,26 @@ jobs:
           name: generate docs
           command: |
             cd tymly/packages/tymly-doc-generator
-            TYMLY_MONOREPO_PATH=/home/circleci/repo/tymly TYMLY_DOCS_OUTPUT_PATH=/home/circleci/repo npm run generate
+            mkdir /home/circleci/repo/generated
+            TYMLY_MONOREPO_PATH=/home/circleci/repo/tymly TYMLY_DOCS_OUTPUT_PATH=/home/circleci/repo/generated npm run generate
       - run:
           name: deploy docs
           command: |
             git config --global user.name "$GIT_COMMITTER_NAME"
             git config --global user.email "$GIT_COMMITTER_EMAIL"
             echo "Building"
+            cd /home/circleci/repo/generated
             sudo yarn docs:build
-            echo "Deploying"
-            mkdir /home/circleci/repo/deploy
-            git mv docs/.vuepress/dist/* /home/circleci/repo/deploy
-            sudo rm -rf docs
-            git mv deploy docs
-            cd docs
-            git add -f .
+            echo "Cloning tymly-website"
+            cd /home/circleci/repo
+            git clone https://github.com/wmfs/tymly-website.git
+            echo "Switching to gh-pages branch of tymly-website"
+            cd tymly-website
+            git checkout gh-pages
+            echo "Applying newly generated files to cloned tymly-website (gh-pages branch)"
+            mv -f -v /home/circleci/repo/generated/docs/.vuepress/dist/* /home/circleci/repo/tymly-website/docs
+            echo "Pushing changes to gh-pages branch"
+            git add -A
             git commit -m "chore: deploy [skip ci]"
             git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git HEAD:gh-pages
 workflows:
