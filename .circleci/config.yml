@@ -59,7 +59,7 @@ jobs:
             cd tymly-website
             git checkout gh-pages
             echo "Applying newly generated files to cloned tymly-website (gh-pages branch)"
-            sudo mv -f -v /home/circleci/repo/docs/.vuepress/dist/* /home/circleci/repo/tymly-website/docs
+            sudo cp -r -f -v /home/circleci/repo/docs/.vuepress/dist/* /home/circleci/repo/tymly-website/docs
             echo "Pushing changes to gh-pages branch"
             git add -A
             git commit -m "chore: deploy [skip ci]"
