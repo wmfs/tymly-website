@@ -52,7 +52,7 @@ jobs:
             echo "Building"
             sudo yarn docs:build
             echo "Deploying"
-            git mv docs/.vuepress/dist/* /deploy
+            git mv docs/.vuepress/dist/* /home/circleci/repo/deploy
             sudo rm -rf docs
             git mv deploy docs
             cd docs
