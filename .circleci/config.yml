@@ -53,10 +53,10 @@ jobs:
             sudo yarn docs:build
             echo "Deploying"
             cd ./docs/.vuepress/dist
-            git init
-            git add -A
-            git commit -m "chore: deploy [skip ci]"
-            git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git master:gh-pages
+            sudo git init
+            sudo git add -A
+            sudo git commit -m "chore: deploy [skip ci]"
+            sudo git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git master:gh-pages
 workflows:
   version: 2
   manual:
