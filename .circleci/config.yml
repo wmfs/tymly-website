@@ -76,7 +76,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
   nightly:
     triggers:
       - schedule:
@@ -84,7 +84,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
     jobs:
       - generate docs:
           context:
@@ -93,4 +93,4 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
