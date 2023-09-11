@@ -54,7 +54,7 @@ jobs:
             sudo git init
             sudo git add -A
             sudo git commit -m "chore: deploy [skip ci]"
-            sudo git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git master:gh-pages
+            sudo git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git main:gh-pages
       - slack/notify:
           include_job_number_field: false
           include_project_field: false
