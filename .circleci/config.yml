@@ -56,6 +56,16 @@ jobs:
             sudo git add -A
             sudo git commit -m "chore: deploy [skip ci]"
             sudo git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git main:gh-pages
+      - slack/notify:
+          include_job_number_field: false
+          include_project_field: false
+          color: '#C9F0E9'
+          message: "Look at that! Tymly Website has been built. :tada:"
+      - slack/status:
+          include_job_number_field: false
+          include_project_field: false
+          fail_only: true
+          failure_message: "Ow! Tymly Website failed check the logs! :skull:"
 workflows:
   version: 2
   manual:
