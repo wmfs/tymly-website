@@ -51,6 +51,7 @@ jobs:
             sudo npm run docs:build
             cd docs/.vuepress/dist
             echo "Deploying"
+            sudo git config --global init.defaultBranch main
             sudo git init
             sudo git add -A
             sudo git commit -m "chore: deploy [skip ci]"
