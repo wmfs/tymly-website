@@ -45,8 +45,8 @@ jobs:
       - run:
           name: deploy docs
           command: |
-            git config --global user.name "$GIT_COMMITTER_NAME"
-            git config --global user.email "$GIT_COMMITTER_EMAIL"
+            sudo git config --global user.name "$GIT_COMMITTER_NAME"
+            sudo git config --global user.email "$GIT_COMMITTER_EMAIL"
             echo "Building"
             sudo npm run docs:build
             cd docs/.vuepress/dist
