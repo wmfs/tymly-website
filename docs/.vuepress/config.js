@@ -9,7 +9,6 @@ module.exports = {
   ],
   themeConfig: {
     repo: 'wmfs/tymly',
-    // logo: '/tymly-motif.svg',
     search: true,
     searchMaxSuggestions: 10,
     repoLabel: 'GitHub',
