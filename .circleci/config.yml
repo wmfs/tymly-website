@@ -8,11 +8,9 @@ jobs:
         auth:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_PASSWORD
-        environment:
-          TZ: "Europe/London"
     environment:
       DEBUG: "*"
-    resource_class: xlarge     
+    resource_class: xlarge
     working_directory: ~/repo
     steps:
       - checkout
@@ -20,8 +18,8 @@ jobs:
           name: npm install
           command: |
             npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
-            sudo npm install -g lerna@6.6.1
-            yarn install
+            sudo npm install -g lerna
+            sudo npm install
       - run:
           name: pull Tymly monorepo
           command: git clone https://github.com/wmfs/tymly.git
@@ -36,9 +34,9 @@ jobs:
           name: bootstrap Tymly monorepo
           command: |
             cd tymly
-            sudo lerna clean --yes
-            sudo lerna bootstrap -- --production
-            sudo lerna link --force-local
+            lerna clean --yes
+            lerna bootstrap -- --production
+            lerna link --force-local
       - run:
           name: generate docs
           command: |
@@ -50,26 +48,23 @@ jobs:
             git config --global user.name "$GIT_COMMITTER_NAME"
             git config --global user.email "$GIT_COMMITTER_EMAIL"
             echo "Building"
-            cd /home/circleci/repo/docs
-            sudo yarn docs:build
-            echo "Pruning generated HTML files"
-            cd /home/circleci/repo/docs/.vuepress
-            sudo rm -rf ./dist
-            echo "Listing generated files"
-            cd /home/circleci/repo/docs
-            find .
-            echo "Cloning tymly-website"
-            cd /home/circleci/repo
-            git clone https://github.com/wmfs/tymly-website.git
-            echo "Switching to gh-pages branch of tymly-website"
-            cd tymly-website
-            git checkout gh-pages
-            echo "Applying newly generated files to cloned tymly-website (gh-pages branch)"
-            sudo cp -r -f -v /home/circleci/repo/docs/* /home/circleci/repo/tymly-website/docs
-            echo "Pushing changes to gh-pages branch"
+            npm run docs:build
+            cd docs/.vuepress/dist
+            echo "Deploying"
+            git init
             git add -A
             git commit -m "chore: deploy [skip ci]"
-            git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git HEAD:gh-pages
+            git push -f https://${GIT_COMMITTER_NAME}:${GH_TOKEN}@github.com/wmfs/tymly-website.git master:gh-pages
+      - slack/notify:
+          include_job_number_field: false
+          include_project_field: false
+          color: '#C9F0E9'
+          message: "Look at that! Tymly Website has been built. :tada:"
+      - slack/status:
+          include_job_number_field: false
+          include_project_field: false
+          fail_only: true
+          failure_message: "Ow! Tymly Website failed check the logs! :skull:"
 workflows:
   version: 2
   manual:
@@ -78,7 +73,7 @@ workflows:
           context:
             - docker-hub-creds
             - build-env-vars
-          filters: 
+          filters:
             branches:
               only:
                 - master
@@ -95,7 +90,7 @@ workflows:
           context:
             - docker-hub-creds
             - build-env-vars
-          filters: 
+          filters:
             branches:
               only:
                 - master
