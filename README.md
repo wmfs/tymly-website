@@ -2,7 +2,7 @@
 
 # tymly-website
 
-> A dynamically generated, static website for Tymly
+> A dynamically generated (regenerated nightly), static website for Tymly
 
 ## <a name="install"></a>Install
 ```bash
